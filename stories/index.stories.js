@@ -3,20 +3,31 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
+import { withKnobs, text, select } from "@storybook/addon-knobs";
+import { sizes, variants } from "constants";
 
-import { Button, Welcome } from "@storybook/react/demo";
-import { Button as Boo } from "atoms";
+import { Welcome } from "@storybook/react/demo";
+import { Button } from "atoms";
 
-storiesOf("Welcome", module).add("to Storybook", () => (
-  <Welcome showApp={linkTo("Button")} />
-));
+const { SMALL, NORMAL, LARGE } = sizes;
+const { DEFAULT, DISABLED, INFO, POSITIVE, WARNING, NEGATIVE } = variants;
 
 storiesOf("Button", module)
-  .add("with text", () => <Boo onClick={action("clicked")}>Hello Button</Boo>)
-  .add("with some emoji", () => (
-    <Button onClick={action("clicked")}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ));
+  .addDecorator(withKnobs)
+  .add("with text", () => {
+    const name = text("Name", "Button", "name");
+    const size = select("Size", [SMALL, NORMAL, LARGE], NORMAL, "Size");
+    const variant = select(
+      "Variant",
+      [DEFAULT, DISABLED, INFO, POSITIVE, WARNING, NEGATIVE],
+      INFO,
+      "Variant"
+    );
+    return (
+      <Button
+        size={size}
+        variant={variant}
+        onClick={action("clicked")}
+      >{`Hello ${name}`}</Button>
+    );
+  });

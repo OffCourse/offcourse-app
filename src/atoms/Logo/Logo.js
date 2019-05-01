@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { identity } from "ramda";
 import LogoWrapper from "./LogoWrapper";
-import { sizes } from "@offcourse/constants";
+import { sizes } from "constants";
 
 const { SMALL, NORMAL, LARGE, EXTRA_LARGE } = sizes;
 /**

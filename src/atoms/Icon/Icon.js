@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as icons from "./icons";
 import IconWrapper from "./IconWrapper";
-import { sizes } from "@offcourse/constants";
+import { sizes } from "constants";
 
 const { SMALL, NORMAL, LARGE, EXTRA_LARGE } = sizes;
 

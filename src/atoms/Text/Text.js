@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
 import TextWrapper from "./TextWrapper";
-import { sizes } from "@offcourse/constants";
+import { sizes } from "constants";
 
 const { SMALL, NORMAL, LARGE } = sizes;
 

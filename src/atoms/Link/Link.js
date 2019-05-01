@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { identity } from "ramda";
 import { formatTitle } from "../helpers";
 import LinkWrapper from "./LinkWrapper";
-import { sizes } from "@offcourse/constants";
+import { sizes } from "constants";
 
 const { SMALL, NORMAL, LARGE } = sizes;
 

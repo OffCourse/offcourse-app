@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { formatTitle } from "../helpers";
 import { Text } from "..";
 import TagWrapper from "./TagWrapper";
-import { sizes } from "@offcourse/constants";
+import { sizes } from "constants";
 
 const { SMALL } = sizes;
 

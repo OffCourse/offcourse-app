@@ -1,5 +1,5 @@
 import logoSvg from "./offcourse-logo.svg";
-import { variants, errors } from "@offcourse/constants";
+import { variants, errors } from "constants";
 import avatarSVG from "./offcourse-avatar.svg";
 import contentError from "./offcourse-content-error.svg";
 import noSearchResults from "./offcourse-no-search-results.svg";
@@ -268,6 +268,7 @@ const globals = `
 `;
 
 const theme = {
+  name: "offcourse",
   breakpoints,
   fontSizes,
   lineHeights,

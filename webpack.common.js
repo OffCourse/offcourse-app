@@ -22,9 +22,12 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules|bower_components)/,
         use: {
-          loader: "babel-loader"
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]
+          }
         }
       },
       {
@@ -64,7 +67,9 @@ module.exports = {
     modules: [path.resolve(__dirname, "./src"), "node_modules"],
     extensions: [".js", ".jsx", ".json", ".mjs", ".graphql"],
     alias: {
-      atoms: path.resolve(__dirname, "./src/atoms")
+      atoms: path.resolve(__dirname, "./src/atoms"),
+      constants: path.resolve(__dirname, "./src/constants"),
+      themes: path.resolve(__dirname, "./src/themes")
     }
   },
   plugins: [

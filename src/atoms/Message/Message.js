@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import PropTypes from "prop-types";
 import { formatTitle } from "../helpers";
 import MessageWrapper, { BasicMessageWrapper } from "./MessageWrapper";
-import { variants } from "@offcourse/constants";
+import { variants } from "constants";
 
 const { DEFAULT, INFO, POSITIVE, WARNING, NEGATIVE } = variants;
 
