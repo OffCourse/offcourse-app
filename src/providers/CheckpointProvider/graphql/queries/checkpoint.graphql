@@ -1,0 +1,27 @@
+query checkpoint(
+  $checkpointQuery: CheckpointQuery!
+  $isAuthenticated: Boolean!
+) {
+  checkpoint(checkpointQuery: $checkpointQuery) {
+    checkpointId
+    task
+    tags
+    completed @include(if: $isAuthenticated)
+    resource {
+      resourceType
+      resourceUrl
+      title
+      tags
+      description
+      content {
+        ... on HTML {
+          markdown
+        }
+        ... on Video {
+          videoId
+          videoProvider
+        }
+      }
+    }
+  }
+}
