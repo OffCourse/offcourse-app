@@ -24,4 +24,4 @@ lerna-debug.log
 
 /packages/app/.next
 **/debug.log
-/packages/**/package-lock.json
+**/package-lock.json

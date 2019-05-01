@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import ButtonWrapper from "./ButtonWrapper";
 import { formatTitle } from "../helpers";
@@ -60,4 +60,4 @@ Button.defaultProps = {
   type: "button"
 };
 
-export default memo(Button);
+export default Button;
