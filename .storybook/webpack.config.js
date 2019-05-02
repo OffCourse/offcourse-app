@@ -13,6 +13,6 @@ module.exports = async ({ config, mode }) => {
   return {
     ...config,
     resolve: { ...config.resolve, ...custom.resolve },
-    module: { ...config.module, ...custom.module }
+    module: { ...config.module, rules: custom.module.rules }
   };
 };

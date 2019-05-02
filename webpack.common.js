@@ -48,6 +48,13 @@ module.exports = {
         type: "javascript/auto"
       },
       {
+        test: /\.(ts|tsx)$/,
+        loader: require.resolve("babel-loader"),
+        options: {
+          presets: [["react-app", { flow: false, typescript: true }]]
+        }
+      },
+      {
         test: /\.svg$/,
         use: [
           {
@@ -65,7 +72,7 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve(__dirname, "./src"), "node_modules"],
-    extensions: [".js", ".jsx", ".json", ".mjs", ".graphql"],
+    extensions: [".js", ".ts", ".tsx", ".json", ".mjs", ".graphql"],
     alias: {
       atoms: path.resolve(__dirname, "./src/atoms"),
       constants: path.resolve(__dirname, "./src/constants"),

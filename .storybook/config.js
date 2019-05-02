@@ -7,7 +7,7 @@ import * as themes from "themes";
 addDecorator(withInfo); // Globally in your .storybook/config.js.
 addDecorator(withThemesProvider(Object.values(themes)));
 
-const req = require.context("../stories", true, /\.stories\.js$/);
+const req = require.context("../src", true, /\.stories\.tsx$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
