@@ -1,7 +1,8 @@
+import { FunctionComponent } from "react";
 import system from "system-components";
 import styled from "styled-components";
 
-const BarWrapper = system(
+const _Bar = system(
   {
     display: "flex",
     height: "2.25rem",
@@ -23,10 +24,12 @@ const BarWrapper = system(
   "space"
 );
 
-export default styled(BarWrapper)`
+const Bar: any = styled(_Bar)`
   box-sizing: border-box;
   pointer-events: auto;
   &:hover {
     border-color: ${({ theme }) => theme.colors.primary};
   }
 `;
+
+export default Bar;

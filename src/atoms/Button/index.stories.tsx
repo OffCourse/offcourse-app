@@ -20,6 +20,7 @@ storiesOf("Button", module)
       INFO,
       "Variant"
     );
+
     return (
       <Button
         size={size}

@@ -7,10 +7,14 @@ import { Variant, Size } from "../enums";
 const { DEFAULT } = Variant;
 const { SMALL, NORMAL, LARGE } = Size;
 
-const widths = {
-  SMALL: "5.33333rem",
-  NORMAL: "8rem",
-  LARGE: ["100%", "16rem", "16rem"]
+interface Widths {
+  [key: string]: string | string[];
+}
+
+const widths: Widths = {
+  [SMALL]: "5.33333rem",
+  [NORMAL]: "8rem",
+  [LARGE]: ["100%", "16rem", "16rem"]
 };
 
 type ButtonProps = {
@@ -19,7 +23,7 @@ type ButtonProps = {
   mt?: number | null;
   tabindex?: number;
   variant?: Variant;
-  size?: Size;
+  size: Size;
   disabled?: boolean;
   isSubmit?: boolean;
 };
@@ -34,9 +38,9 @@ const Button: FunctionComponent<ButtonProps> = ({
   isSubmit = false,
   disabled = false,
   size = NORMAL
-}): any => {
+}) => {
   const buttonType: string = isSubmit ? "submit" : "button";
-  const label: string = formatTitle(children);
+  const label: string = formatTitle(children as string);
   return (
     <ButtonWrapper
       mt={mt}

@@ -1,19 +1,11 @@
-import React, { memo } from "react";
+import React, { memo, FunctionComponent, MouseEvent } from "react";
 import PropTypes from "prop-types";
 import AvatarWrapper from "./AvatarWrapper";
-import { errors } from "constants";
-import { Variant, Size } from "../enums";
+import { Size, ErrorStates } from "../enums";
 
-const { DEFAULT } = Variant;
 const { SMALL, NORMAL, LARGE, EXTRA_LARGE } = Size;
 
-const {
-  RESOURCE_NOT_LOADING,
-  TOTAL_PANIC,
-  NO_SEARCH_RESULTS,
-  COURSE_NOT_FOUND,
-  CHECKPOINT_NOT_FOUND
-} = errors;
+const { DEFAULT } = ErrorStates;
 
 const multiplier = {
   [SMALL]: 3,
@@ -22,8 +14,17 @@ const multiplier = {
   [EXTRA_LARGE]: 15
 };
 
-const Avatar = ({ size = SMALL, onClick, variant = DEFAULT }) => {
-  console.log(multiplier[size]);
+type AvatarProps = {
+  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
+  size?: Size;
+  variant?: ErrorStates;
+};
+
+const Avatar: FunctionComponent<AvatarProps> = ({
+  size = SMALL,
+  onClick,
+  variant = DEFAULT
+}) => {
   return (
     <AvatarWrapper
       variant={variant}
@@ -32,23 +33,5 @@ const Avatar = ({ size = SMALL, onClick, variant = DEFAULT }) => {
     />
   );
 };
-
-// Avatar.propTypes = {
-//   size: PropTypes.oneOf([SMALL, NORMAL, LARGE, EXTRA_LARGE]),
-//   variant: PropTypes.oneOf([
-//     DEFAULT,
-//     RESOURCE_NOT_LOADING,
-//     TOTAL_PANIC,
-//     NO_SEARCH_RESULTS,
-//     COURSE_NOT_FOUND,
-//     CHECKPOINT_NOT_FOUND
-//   ]),
-//   onClick: PropTypes.func
-// };
-
-// Avatar.defaultProps = {
-//   variant: DEFAULT,
-//   size: SMALL
-// };
 
 export default memo(Avatar);

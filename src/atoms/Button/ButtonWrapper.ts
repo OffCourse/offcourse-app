@@ -7,7 +7,7 @@ const buttonStyle = variant({
   key: "signalColorCombos"
 });
 
-const ButtonWrapper = system(
+const _ButtonWrapper = system(
   {
     is: "button",
     display: "flex",
@@ -37,6 +37,8 @@ const ButtonWrapper = system(
   })
 );
 
-export default memo(styled(ButtonWrapper)`
-  ${buttonStyle};
-`);
+const ButtonWrapper: any = styled(_ButtonWrapper)`
+  ${buttonStyle}
+`;
+
+export default memo(ButtonWrapper);

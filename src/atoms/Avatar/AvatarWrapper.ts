@@ -1,6 +1,6 @@
 import system from "system-components";
 
-const AvatarWrapper = system(
+const AvatarWrapper: any = system(
   {
     is: "div",
     bg: "black",
