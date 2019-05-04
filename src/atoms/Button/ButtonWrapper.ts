@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { variant, width, style } from "styled-system";
-import { Size, Variant } from "../enums";
+import { Size, Variant } from "enums";
 
 const buttonStyle = variant({
   key: "signalColorCombos"
