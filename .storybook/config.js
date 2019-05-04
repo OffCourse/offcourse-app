@@ -4,7 +4,7 @@ import { withThemesProvider } from "storybook-addon-styled-component-theme";
 import { withInfo } from "@storybook/addon-info";
 import * as themes from "themes";
 
-addDecorator(withInfo); // Globally in your .storybook/config.js.
+addDecorator(withInfo({ inline: true })); // Globally in your .storybook/config.js.
 addDecorator(withThemesProvider(Object.values(themes)));
 
 const req = require.context("../src", true, /\.stories\.tsx$/);

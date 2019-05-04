@@ -9,10 +9,22 @@
 const path = require("path");
 const custom = require("../webpack.common.js");
 
+const typescriptWithDocs = {
+  test: /\.tsx?$/,
+  include: path.resolve(__dirname, "../src"),
+  use: [
+    require.resolve("babel-loader"),
+    require.resolve("react-docgen-typescript-loader")
+  ]
+};
+
 module.exports = async ({ config, mode }) => {
   return {
     ...config,
     resolve: { ...config.resolve, ...custom.resolve },
-    module: { ...config.module, rules: custom.module.rules }
+    module: {
+      ...config.module,
+      rules: [...custom.module.rules, typescriptWithDocs]
+    }
   };
 };

@@ -1,4 +1,4 @@
-import React, { memo, FunctionComponent, MouseEvent } from "react";
+import React, { FunctionComponent, MouseEvent } from "react";
 import PropTypes from "prop-types";
 import AvatarWrapper from "./AvatarWrapper";
 import { Size, ErrorStates } from "../enums";
@@ -34,4 +34,4 @@ const Avatar: FunctionComponent<AvatarProps> = ({
   );
 };
 
-export default memo(Avatar);
+export default Avatar;

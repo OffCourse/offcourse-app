@@ -1,11 +1,12 @@
 import logoSvg from "./offcourse-logo.svg";
-import { variants, errors } from "constants";
+import { sizes, variants, errors } from "constants";
 import avatarSVG from "./offcourse-avatar.svg";
 import contentError from "./offcourse-content-error.svg";
 import noSearchResults from "./offcourse-no-search-results.svg";
 import notFound from "./offcourse-not-found.svg";
 import genericError from "./offcourse-generic-error.svg";
 
+const { SMALL, NORMAL, LARGE, EXTRA_LARGE } = sizes;
 const { DEFAULT, DISABLED, INFO, POSITIVE, WARNING, NEGATIVE } = variants;
 const {
   RESOURCE_NOT_LOADING,
@@ -123,6 +124,13 @@ const space = [
 ];
 
 const borders = [0, "0.0625rem solid", "0.125rem solid"];
+
+const buttonSizes = {
+  [SMALL]: "5.33333rem",
+  [NORMAL]: "8rem",
+  [LARGE]: "16rem",
+  [EXTRA_LARGE]: "100%"
+};
 
 const units = {
   sixteenth: "0.0625rem",
@@ -269,6 +277,7 @@ const globals = `
 
 const theme = {
   name: "offcourse",
+  buttonSizes,
   breakpoints,
   fontSizes,
   lineHeights,
