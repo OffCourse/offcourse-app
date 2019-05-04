@@ -1,3 +1,0 @@
-const messages = [];
-
-export { messages };

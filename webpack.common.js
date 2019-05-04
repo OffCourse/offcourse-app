@@ -58,13 +58,8 @@ module.exports = {
         test: /\.svg$/,
         use: [
           {
-            loader: "babel-loader"
-          },
-          {
-            loader: "react-svg-loader",
-            options: {
-              jsx: true // true outputs JSX tags
-            }
+            loader: "svg-url-loader",
+            options: {}
           }
         ]
       }
@@ -75,6 +70,7 @@ module.exports = {
     extensions: [".js", ".ts", ".tsx", ".json", ".mjs", ".graphql"],
     alias: {
       atoms: path.resolve(__dirname, "./src/atoms"),
+      enums: path.resolve(__dirname, "./src/enums"),
       constants: path.resolve(__dirname, "./src/constants"),
       themes: path.resolve(__dirname, "./src/themes")
     }

@@ -5,16 +5,17 @@ import contentError from "./offcourse-content-error.svg";
 import noSearchResults from "./offcourse-no-search-results.svg";
 import notFound from "./offcourse-not-found.svg";
 import genericError from "./offcourse-generic-error.svg";
+import { Size, Variant, ErrorStates } from "enums";
 
-const { SMALL, NORMAL, LARGE, EXTRA_LARGE } = sizes;
-const { DEFAULT, DISABLED, INFO, POSITIVE, WARNING, NEGATIVE } = variants;
+const { SMALL, NORMAL, LARGE, EXTRA_LARGE } = Size;
+const { DEFAULT, DISABLED, INFO, POSITIVE, WARNING, NEGATIVE } = Variant;
 const {
   RESOURCE_NOT_LOADING,
   TOTAL_PANIC,
   NO_SEARCH_RESULTS,
   COURSE_NOT_FOUND,
   CHECKPOINT_NOT_FOUND
-} = errors;
+} = ErrorStates;
 
 /**
  * @name Offcourse Theme

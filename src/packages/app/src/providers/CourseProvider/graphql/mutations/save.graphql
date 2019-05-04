@@ -1,6 +1,0 @@
-#import "../fragments/Course.graphql"
-mutation AddCourse($course: CourseInput!, $isAuthenticated: Boolean!) {
-  addCourse(course: $course) {
-    ...CourseData
-  }
-}

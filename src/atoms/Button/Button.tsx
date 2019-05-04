@@ -2,7 +2,7 @@ import React, { FunctionComponent, MouseEvent } from "react";
 import PropTypes from "prop-types";
 import ButtonWrapper from "./ButtonWrapper";
 import { formatTitle } from "../helpers";
-import { Variant, Size } from "../enums";
+import { Variant, Size } from "enums";
 
 const { DISABLED, DEFAULT } = Variant;
 const { NORMAL } = Size;

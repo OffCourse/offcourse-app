@@ -1,7 +1,7 @@
 import React, { FunctionComponent, MouseEvent } from "react";
 import PropTypes from "prop-types";
 import AvatarWrapper from "./AvatarWrapper";
-import { Size, ErrorStates } from "../enums";
+import { Size, ErrorStates } from "enums";
 
 const { SMALL, NORMAL, LARGE, EXTRA_LARGE } = Size;
 
