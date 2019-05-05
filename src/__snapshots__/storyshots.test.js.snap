@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button with text 1`] = `
+<button
+  className="ButtonWrapper-sc-4pr1vz-0 czTlJF"
+  disabled={false}
+  onClick={[Function]}
+  size="SMALL"
+  tabIndex={1}
+  type="button"
+>
+  Hello Sir
+</button>
+`;

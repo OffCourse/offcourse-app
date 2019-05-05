@@ -4,16 +4,12 @@ import ButtonWrapper from "./ButtonWrapper";
 import { formatTitle } from "../helpers";
 import { Variant, Size } from "enums";
 
-const { DISABLED, DEFAULT } = Variant;
-const { NORMAL } = Size;
-
 type ButtonProps = {
   onClick: (event: MouseEvent<HTMLButtonElement>) => void;
   href?: string | null;
   tabindex?: number;
   variant?: Variant;
   size: Size;
-  disabled?: boolean;
   isSubmit?: boolean;
 };
 
@@ -22,23 +18,26 @@ const Button: FunctionComponent<ButtonProps> = ({
   onClick,
   href = null,
   tabindex = 1,
-  variant = DEFAULT,
+  variant = Variant.DEFAULT,
   isSubmit = false,
-  disabled = false,
-  size = NORMAL
+  size = Size.NORMAL
 }) => {
   const buttonType = isSubmit ? "submit" : "button";
   const label: string = formatTitle(children as string);
   return (
     <ButtonWrapper
-      variant={disabled ? DISABLED : variant}
+      variant={variant}
       type={buttonType}
-      disabled={disabled}
+      disabled={variant === Variant.DISABLED}
       onClick={onClick}
-      tabIndex={tabindex || 1}
+      tabIndex={tabindex}
       size={size}
     >
-      {href ? <a href={!disabled ? href : undefined}>{label}</a> : label}
+      {href ? (
+        <a href={variant !== Variant.DISABLED ? href : undefined}>{label}</a>
+      ) : (
+        label
+      )}
     </ButtonWrapper>
   );
 };

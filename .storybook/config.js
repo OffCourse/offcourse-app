@@ -1,11 +1,16 @@
 import { configure } from "@storybook/react";
+import React from "react";
 import { addDecorator } from "@storybook/react";
-import { withThemesProvider } from "storybook-addon-styled-component-theme";
+import { ThemeProvider } from "styled-components";
 import { withInfo } from "@storybook/addon-info";
-import * as themes from "themes";
+import { offcourse } from "themes";
+
+addDecorator(story => (
+  <ThemeProvider theme={offcourse}>{story()}</ThemeProvider>
+));
 
 addDecorator(withInfo({ inline: true })); // Globally in your .storybook/config.js.
-addDecorator(withThemesProvider(Object.values(themes)));
+// addDecorator(withThemesProvider(Object.values(themes)));
 
 const req = require.context("../src", true, /\.stories\.tsx$/);
 function loadStories() {
