@@ -1,8 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Button with text 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #797B7A;
+  border-color: #658f7b;
+  color: #FFFFFF;
+  width: 5.33333rem;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: default;
+}
+
+.c0 > a: {
+  color: inherit;
+  textdecoration: inherit;
+}
+
+.c0:hover {
+  background-color: #658f7b;
+  color: #FFFFFF;
+  border-color: #797B7A;
+}
+
 <button
-  className="ButtonWrapper-sc-4pr1vz-0 czTlJF"
+  className="c0"
   disabled={false}
   onClick={[Function]}
   size="SMALL"
