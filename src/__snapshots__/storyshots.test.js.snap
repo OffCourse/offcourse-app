@@ -1,7 +1,276 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Button with text 1`] = `
+exports[`Storyshots Button different sizes 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #fdbe68;
+  border-color: #797B7A;
+  color: #000000;
+  width: 8rem;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:disabled {
+  cursor: default;
+}
+
+.c2 > a: {
+  color: inherit;
+  textdecoration: inherit;
+}
+
+.c2:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #fdbe68;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #fdbe68;
+  border-color: #797B7A;
+  color: #000000;
+  width: 5.33333rem;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:disabled {
+  cursor: default;
+}
+
+.c1 > a: {
+  color: inherit;
+  textdecoration: inherit;
+}
+
+.c1:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #fdbe68;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #fdbe68;
+  border-color: #797B7A;
+  color: #000000;
+  width: 16rem;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:disabled {
+  cursor: default;
+}
+
+.c3 > a: {
+  color: inherit;
+  textdecoration: inherit;
+}
+
+.c3:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #fdbe68;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #fdbe68;
+  border-color: #797B7A;
+  color: #000000;
+  width: 100%;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c4:disabled {
+  cursor: default;
+}
+
+.c4 > a: {
+  color: inherit;
+  textdecoration: inherit;
+}
+
+.c4:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #fdbe68;
+}
+
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.c0 > * {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+<div
+  className="c0"
+  direction="VERTICAL"
+>
+  <button
+    className="c1"
+    disabled={false}
+    onClick={[Function]}
+    size="SMALL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c2"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c3"
+    disabled={false}
+    onClick={[Function]}
+    size="LARGE"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c4"
+    disabled={false}
+    onClick={[Function]}
+    size="EXTRA_LARGE"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button different variants 1`] = `
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30,36 +299,363 @@ exports[`Storyshots Button with text 1`] = `
   background-color: #797B7A;
   border-color: #658f7b;
   color: #FFFFFF;
-  width: 5.33333rem;
+  width: 8rem;
 }
 
-.c0:focus {
+.c1:focus {
   outline: none;
 }
 
-.c0:disabled {
+.c1:disabled {
   cursor: default;
 }
 
-.c0 > a: {
+.c1 > a: {
   color: inherit;
   textdecoration: inherit;
 }
 
-.c0:hover {
+.c1:hover {
   background-color: #658f7b;
   color: #FFFFFF;
   border-color: #797B7A;
 }
 
-<button
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #C8CAC9;
+  border-color: #C8CAC9;
+  color: #f4f6f4;
+  width: 8rem;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:disabled {
+  cursor: default;
+}
+
+.c2 > a: {
+  color: inherit;
+  textdecoration: inherit;
+}
+
+.c2:hover {
+  background-color: #C8CAC9;
+  color: #FFFFFF;
+  border-color: #C8CAC9;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #658f7b;
+  border-color: #797B7A;
+  color: #FFFFFF;
+  width: 8rem;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:disabled {
+  cursor: default;
+}
+
+.c3 > a: {
+  color: inherit;
+  textdecoration: inherit;
+}
+
+.c3:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #658f7b;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #b5decb;
+  border-color: #797B7A;
+  color: #000000;
+  width: 8rem;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c4:disabled {
+  cursor: default;
+}
+
+.c4 > a: {
+  color: inherit;
+  textdecoration: inherit;
+}
+
+.c4:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #b5decb;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #fdbe68;
+  border-color: #797B7A;
+  color: #000000;
+  width: 8rem;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:disabled {
+  cursor: default;
+}
+
+.c5 > a: {
+  color: inherit;
+  textdecoration: inherit;
+}
+
+.c5:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #fdbe68;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #E2625E;
+  border-color: #797B7A;
+  color: #FFFFFF;
+  width: 8rem;
+}
+
+.c6:focus {
+  outline: none;
+}
+
+.c6:disabled {
+  cursor: default;
+}
+
+.c6 > a: {
+  color: inherit;
+  textdecoration: inherit;
+}
+
+.c6:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #E2625E;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.c0 > * {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+<div
   className="c0"
-  disabled={false}
-  onClick={[Function]}
-  size="SMALL"
-  tabIndex={1}
-  type="button"
+  direction="HORIZONTAL"
 >
-  Hello Sir
-</button>
+  <button
+    className="c1"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c2"
+    disabled={true}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c3"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c4"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c5"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c6"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+</div>
 `;
