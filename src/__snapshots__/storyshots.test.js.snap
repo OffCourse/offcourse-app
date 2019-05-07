@@ -659,3 +659,89 @@ exports[`Storyshots Button different variants 1`] = `
   </button>
 </div>
 `;
+
+exports[`Storyshots Button playground 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #797B7A;
+  border-color: #658f7b;
+  color: #FFFFFF;
+  width: 8rem;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:disabled {
+  cursor: default;
+}
+
+.c1 > a: {
+  color: inherit;
+  textdecoration: inherit;
+}
+
+.c1:hover {
+  background-color: #658f7b;
+  color: #FFFFFF;
+  border-color: #797B7A;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.c0 > * {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+<div
+  className="c0"
+  direction="VERTICAL"
+>
+  <button
+    className="c1"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+</div>
+`;

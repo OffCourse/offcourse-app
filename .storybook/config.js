@@ -12,10 +12,7 @@ addDecorator(
 ); // Globally in your .storybook/config.js.
 const GlobalStyle = createGlobalStyle(offcourse);
 addDecorator(story => (
-  <Fragment>
-    <GlobalStyle />
-    <ThemeProvider theme={offcourse}>{story()}</ThemeProvider>
-  </Fragment>
+  <ThemeProvider theme={offcourse}>{story()}</ThemeProvider>
 ));
 
 const req = require.context("../src", true, /\.stories\.tsx$/);
