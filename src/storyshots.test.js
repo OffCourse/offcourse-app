@@ -3,6 +3,7 @@ import Enzyme, { mount } from "enzyme";
 import { identity } from "ramda";
 import { createSerializer } from "enzyme-to-json";
 import React from "react";
+import 'jest-styled-components'
 
 jest.mock("@storybook/addon-info", () => ({
   withInfo: () => story => story(),
