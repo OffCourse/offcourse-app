@@ -3,7 +3,6 @@ import { themeGet as t } from "styled-system";
 
 const HeadingWrapper = system(
   {
-    m: 0,
     color: "inherit",
     lineHeight: 2,
     fontSize: 3,

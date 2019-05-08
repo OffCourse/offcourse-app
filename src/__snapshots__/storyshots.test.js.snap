@@ -1,7 +1,350 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Avatar different error states 1`] = `
+Array [
+  .c0 {
+  height: 3rem;
+  width: 3rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: transparent;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+<div
+    className="c0"
+    onClick={[Function]}
+  />,
+  .c0 {
+  height: 3rem;
+  width: 5.699999999999999rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: transparent;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+<div
+    className="c0"
+    onClick={[Function]}
+  />,
+  .c0 {
+  height: 4.32rem;
+  width: 3.3000000000000003rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: transparent;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+<div
+    className="c0"
+    onClick={[Function]}
+  />,
+  .c0 {
+  height: 4.32rem;
+  width: 3.3000000000000003rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: transparent;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+<div
+    className="c0"
+    onClick={[Function]}
+  />,
+  .c0 {
+  height: 3rem;
+  width: 4.5rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: transparent;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+<div
+    className="c0"
+    onClick={[Function]}
+  />,
+  .c0 {
+  height: 5.4rem;
+  width: 3rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: transparent;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+<div
+    className="c0"
+    onClick={[Function]}
+  />,
+]
+`;
+
+exports[`Storyshots Avatar different sizes 1`] = `
+Array [
+  .c0 {
+  height: 3rem;
+  width: 3rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: transparent;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+<div
+    className="c0"
+    onClick={[Function]}
+  />,
+  .c0 {
+  height: 6rem;
+  width: 6rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: transparent;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+<div
+    className="c0"
+    onClick={[Function]}
+  />,
+  .c0 {
+  height: 10rem;
+  width: 10rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: transparent;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+<div
+    className="c0"
+    onClick={[Function]}
+  />,
+  .c0 {
+  height: 15rem;
+  width: 15rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: transparent;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+<div
+    className="c0"
+    onClick={[Function]}
+  />,
+]
+`;
+
+exports[`Storyshots Avatar playground 1`] = `
+.c0 {
+  height: 6rem;
+  width: 6rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: transparent;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+<div
+  className="c0"
+  onClick={[Function]}
+/>
+`;
+
+exports[`Storyshots Bar different directions 1`] = `
+Array [
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  box-sizing: border-box;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  pointer-events: auto;
+  height: 2.25rem;
+  width: 100%;
+  z-index: 0;
+}
+
+.c0:hover {
+  border-color: #658f7b;
+}
+
+<div
+    style={
+      Object {
+        "height": "300px",
+      }
+    }
+  >
+    <div
+      className="c0"
+      direction="HORIZONTAL"
+      height="2.25rem"
+      width="30rem"
+    >
+      Hello
+    </div>
+  </div>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  box-sizing: border-box;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  pointer-events: auto;
+  height: 100%;
+  width: 30rem;
+  z-index: 0;
+}
+
+.c0:hover {
+  border-color: #658f7b;
+}
+
+<div
+    style={
+      Object {
+        "height": "300px",
+      }
+    }
+  >
+    <div
+      className="c0"
+      direction="VERTICAL"
+      height="2.25rem"
+      width="30rem"
+    >
+      Hello
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Bar different variants 1`] = `
+Array [
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  box-sizing: border-box;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  pointer-events: auto;
+  height: 2.25rem;
+  width: 100%;
+  z-index: 0;
+}
+
+.c0:hover {
+  border-color: #658f7b;
+}
+
+<div
+    className="c0"
+    direction="HORIZONTAL"
+    height="2.25rem"
+    width="30rem"
+  >
+    Hello
+  </div>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  box-sizing: border-box;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: white;
+  color: black;
+  pointer-events: auto;
+  height: 2.25rem;
+  width: 100%;
+  z-index: 0;
+}
+
+.c0:hover {
+  border-color: #658f7b;
+}
+
+<div
+    className="c0"
+    direction="HORIZONTAL"
+    height="2.25rem"
+    width="30rem"
+  >
+    Hello
+  </div>,
+]
+`;
+
 exports[`Storyshots Button different sizes 1`] = `
-.c2 {
+Array [
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10,7 +353,6 @@ exports[`Storyshots Button different sizes 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   height: 2.813rem;
   padding: 0.5rem 1rem;
   border: 0;
@@ -27,207 +369,30 @@ exports[`Storyshots Button different sizes 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: #fdbe68;
-  border-color: #797B7A;
-  color: #000000;
-  width: 8rem;
-}
-
-.c2:focus {
-  outline: none;
-}
-
-.c2:disabled {
-  cursor: default;
-}
-
-.c2 > a: {
-  color: inherit;
-  textdecoration: inherit;
-}
-
-.c2:hover {
-  background-color: #797B7A;
-  color: #FFFFFF;
-  border-color: #fdbe68;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  height: 2.813rem;
-  padding: 0.5rem 1rem;
-  border: 0;
-  border-bottom: 0.125rem solid;
-  font-size: 1rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  line-height: 1;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
   background-color: #fdbe68;
   border-color: #797B7A;
   color: #000000;
   width: 5.33333rem;
 }
 
-.c1:focus {
+.c0:focus {
   outline: none;
 }
 
-.c1:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c1 > a: {
-  color: inherit;
-  textdecoration: inherit;
-}
-
-.c1:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #fdbe68;
 }
 
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  height: 2.813rem;
-  padding: 0.5rem 1rem;
-  border: 0;
-  border-bottom: 0.125rem solid;
-  font-size: 1rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  line-height: 1;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: #fdbe68;
-  border-color: #797B7A;
-  color: #000000;
-  width: 16rem;
-}
-
-.c3:focus {
-  outline: none;
-}
-
-.c3:disabled {
-  cursor: default;
-}
-
-.c3 > a: {
-  color: inherit;
-  textdecoration: inherit;
-}
-
-.c3:hover {
-  background-color: #797B7A;
-  color: #FFFFFF;
-  border-color: #fdbe68;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  height: 2.813rem;
-  padding: 0.5rem 1rem;
-  border: 0;
-  border-bottom: 0.125rem solid;
-  font-size: 1rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  line-height: 1;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: #fdbe68;
-  border-color: #797B7A;
-  color: #000000;
-  width: 100%;
-}
-
-.c4:focus {
-  outline: none;
-}
-
-.c4:disabled {
-  cursor: default;
-}
-
-.c4 > a: {
-  color: inherit;
-  textdecoration: inherit;
-}
-
-.c4:hover {
-  background-color: #797B7A;
-  color: #FFFFFF;
-  border-color: #fdbe68;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-top: 2rem;
-  margin-right: 2rem;
-}
-
-.c0 > * {
-  margin-left: 2rem;
-  margin-bottom: 2rem;
-}
-
-<div
-  className="c0"
-  direction="VERTICAL"
->
-  <button
-    className="c1"
+<button
+    className="c0"
     disabled={false}
     onClick={[Function]}
     size="SMALL"
@@ -235,9 +400,56 @@ exports[`Storyshots Button different sizes 1`] = `
     type="button"
   >
     Hello
-  </button>
-  <button
-    className="c2"
+  </button>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  background-color: #fdbe68;
+  border-color: #797B7A;
+  color: #000000;
+  width: 8rem;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: default;
+}
+
+.c0:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #fdbe68;
+}
+
+<button
+    className="c0"
     disabled={false}
     onClick={[Function]}
     size="NORMAL"
@@ -245,9 +457,56 @@ exports[`Storyshots Button different sizes 1`] = `
     type="button"
   >
     Hello
-  </button>
-  <button
-    className="c3"
+  </button>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  background-color: #fdbe68;
+  border-color: #797B7A;
+  color: #000000;
+  width: 16rem;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: default;
+}
+
+.c0:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #fdbe68;
+}
+
+<button
+    className="c0"
     disabled={false}
     onClick={[Function]}
     size="LARGE"
@@ -255,9 +514,56 @@ exports[`Storyshots Button different sizes 1`] = `
     type="button"
   >
     Hello
-  </button>
-  <button
-    className="c4"
+  </button>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  background-color: #fdbe68;
+  border-color: #797B7A;
+  color: #000000;
+  width: 100%;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: default;
+}
+
+.c0:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #fdbe68;
+}
+
+<button
+    className="c0"
     disabled={false}
     onClick={[Function]}
     size="EXTRA_LARGE"
@@ -265,12 +571,13 @@ exports[`Storyshots Button different sizes 1`] = `
     type="button"
   >
     Hello
-  </button>
-</div>
+  </button>,
+]
 `;
 
 exports[`Storyshots Button different variants 1`] = `
-.c1 {
+Array [
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -279,7 +586,6 @@ exports[`Storyshots Button different variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   height: 2.813rem;
   padding: 0.5rem 1rem;
   border: 0;
@@ -296,32 +602,39 @@ exports[`Storyshots Button different variants 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
   background-color: #797B7A;
   border-color: #658f7b;
   color: #FFFFFF;
   width: 8rem;
 }
 
-.c1:focus {
+.c0:focus {
   outline: none;
 }
 
-.c1:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c1 > a: {
-  color: inherit;
-  textdecoration: inherit;
-}
-
-.c1:hover {
+.c0:hover {
   background-color: #658f7b;
   color: #FFFFFF;
   border-color: #797B7A;
 }
 
-.c2 {
+<button
+    className="c0"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -330,7 +643,6 @@ exports[`Storyshots Button different variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   height: 2.813rem;
   padding: 0.5rem 1rem;
   border: 0;
@@ -347,32 +659,40 @@ exports[`Storyshots Button different variants 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
   background-color: #C8CAC9;
   border-color: #C8CAC9;
   color: #f4f6f4;
   width: 8rem;
 }
 
-.c2:focus {
+.c0:focus {
   outline: none;
 }
 
-.c2:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c2 > a: {
-  color: inherit;
-  textdecoration: inherit;
-}
-
-.c2:hover {
+.c0:hover {
   background-color: #C8CAC9;
   color: #FFFFFF;
   border-color: #C8CAC9;
 }
 
-.c3 {
+<button
+    className="c0"
+    disabled={true}
+    href={null}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -381,7 +701,6 @@ exports[`Storyshots Button different variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   height: 2.813rem;
   padding: 0.5rem 1rem;
   border: 0;
@@ -398,32 +717,39 @@ exports[`Storyshots Button different variants 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
   background-color: #658f7b;
   border-color: #797B7A;
   color: #FFFFFF;
   width: 8rem;
 }
 
-.c3:focus {
+.c0:focus {
   outline: none;
 }
 
-.c3:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c3 > a: {
-  color: inherit;
-  textdecoration: inherit;
-}
-
-.c3:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #658f7b;
 }
 
-.c4 {
+<button
+    className="c0"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -432,7 +758,6 @@ exports[`Storyshots Button different variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   height: 2.813rem;
   padding: 0.5rem 1rem;
   border: 0;
@@ -449,32 +774,39 @@ exports[`Storyshots Button different variants 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
   background-color: #b5decb;
   border-color: #797B7A;
   color: #000000;
   width: 8rem;
 }
 
-.c4:focus {
+.c0:focus {
   outline: none;
 }
 
-.c4:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c4 > a: {
-  color: inherit;
-  textdecoration: inherit;
-}
-
-.c4:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #b5decb;
 }
 
-.c5 {
+<button
+    className="c0"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -483,7 +815,6 @@ exports[`Storyshots Button different variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   height: 2.813rem;
   padding: 0.5rem 1rem;
   border: 0;
@@ -500,32 +831,39 @@ exports[`Storyshots Button different variants 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
   background-color: #fdbe68;
   border-color: #797B7A;
   color: #000000;
   width: 8rem;
 }
 
-.c5:focus {
+.c0:focus {
   outline: none;
 }
 
-.c5:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c5 > a: {
-  color: inherit;
-  textdecoration: inherit;
-}
-
-.c5:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #fdbe68;
 }
 
-.c6 {
+<button
+    className="c0"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -534,7 +872,6 @@ exports[`Storyshots Button different variants 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   height: 2.813rem;
   padding: 0.5rem 1rem;
   border: 0;
@@ -551,54 +888,30 @@ exports[`Storyshots Button different variants 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
   background-color: #E2625E;
   border-color: #797B7A;
   color: #FFFFFF;
   width: 8rem;
 }
 
-.c6:focus {
+.c0:focus {
   outline: none;
 }
 
-.c6:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c6 > a: {
-  color: inherit;
-  textdecoration: inherit;
-}
-
-.c6:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #E2625E;
 }
 
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin-top: 2rem;
-  margin-right: 2rem;
-}
-
-.c0 > * {
-  margin-left: 2rem;
-  margin-bottom: 2rem;
-}
-
-<div
-  className="c0"
-  direction="HORIZONTAL"
->
-  <button
-    className="c1"
+<button
+    className="c0"
     disabled={false}
     onClick={[Function]}
     size="NORMAL"
@@ -606,62 +919,12 @@ exports[`Storyshots Button different variants 1`] = `
     type="button"
   >
     Hello
-  </button>
-  <button
-    className="c2"
-    disabled={true}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
-  <button
-    className="c3"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
-  <button
-    className="c4"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
-  <button
-    className="c5"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
-  <button
-    className="c6"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
-</div>
+  </button>,
+]
 `;
 
 exports[`Storyshots Button playground 1`] = `
-.c1 {
+.c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -670,7 +933,6 @@ exports[`Storyshots Button playground 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   height: 2.813rem;
   padding: 0.5rem 1rem;
   border: 0;
@@ -687,31 +949,274 @@ exports[`Storyshots Button playground 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
   background-color: #797B7A;
   border-color: #658f7b;
   color: #FFFFFF;
   width: 8rem;
 }
 
-.c1:focus {
+.c0:focus {
   outline: none;
 }
 
-.c1:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c1 > a: {
-  color: inherit;
-  textdecoration: inherit;
-}
-
-.c1:hover {
+.c0:hover {
   background-color: #658f7b;
   color: #FFFFFF;
   border-color: #797B7A;
 }
 
+<button
+  className="c0"
+  disabled={false}
+  onClick={[Function]}
+  size="NORMAL"
+  tabIndex={1}
+  type="button"
+>
+  Hello
+</button>
+`;
+
+exports[`Storyshots Button works with links 1`] = `
+Array [
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  background-color: #b5decb;
+  border-color: #797B7A;
+  color: #000000;
+  width: 5.33333rem;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: default;
+}
+
+.c0:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #b5decb;
+}
+
+<a
+    className="c0"
+    disabled={false}
+    href="https://offcourse.io"
+    size="SMALL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </a>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  background-color: #b5decb;
+  border-color: #797B7A;
+  color: #000000;
+  width: 8rem;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: default;
+}
+
+.c0:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #b5decb;
+}
+
+<a
+    className="c0"
+    disabled={false}
+    href="https://offcourse.io"
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </a>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  background-color: #b5decb;
+  border-color: #797B7A;
+  color: #000000;
+  width: 16rem;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: default;
+}
+
+.c0:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #b5decb;
+}
+
+<a
+    className="c0"
+    disabled={false}
+    href="https://offcourse.io"
+    size="LARGE"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </a>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  background-color: #b5decb;
+  border-color: #797B7A;
+  color: #000000;
+  width: 100%;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: default;
+}
+
+.c0:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #b5decb;
+}
+
+<a
+    className="c0"
+    disabled={false}
+    href="https://offcourse.io"
+    size="EXTRA_LARGE"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </a>,
+]
+`;
+
+exports[`Storyshots Card can be turned off 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -720,28 +1225,65 @@ exports[`Storyshots Button playground 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-top: 2rem;
-  margin-right: 2rem;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  border-bottom: none;
+  background: #FFFFFF;
+  border-color: #C8CAC9;
+  box-sizing: border-box;
 }
 
-.c0 > * {
-  margin-left: 2rem;
-  margin-bottom: 2rem;
+.c0:hover {
+  border-color: #658f7b;
+}
+
+.c0 section:last-child {
+  border-bottom: none;
 }
 
 <div
   className="c0"
-  direction="VERTICAL"
 >
-  <button
-    className="c1"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
+  <h1>
+    Hello World
+  </h1>
+</div>
+`;
+
+exports[`Storyshots Card selectable by default 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  border-bottom: 0.125rem solid;
+  background: #FFFFFF;
+  border-color: #C8CAC9;
+  box-sizing: border-box;
+}
+
+.c0:hover {
+  border-color: #658f7b;
+}
+
+.c0 section:last-child {
+  border-bottom: none;
+}
+
+<div
+  className="c0"
+>
+  <h1>
+    Hello World
+  </h1>
 </div>
 `;

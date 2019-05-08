@@ -15,10 +15,10 @@ const buttonSize = style({
 const ButtonWrapper = styled.button<{
   variant: Variant;
   size: Size;
+  href?: string | null;
 }>`
   display: flex;
   align-items: center;
-  margin: 0;
   height: 2.813rem;
   padding: ${({ theme }) => theme.space[4]} ${({ theme }) => theme.space[6]};
   border: ${({ theme }) => theme.borders[0]};
@@ -37,10 +37,7 @@ const ButtonWrapper = styled.button<{
     cursor: default;
   }
 
-  > a: {
-    color: inherit;
-    textdecoration: inherit;
-  }
+  text-decoration: inherit;
 
   ${buttonStyle}
   ${buttonSize}

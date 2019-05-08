@@ -9,7 +9,7 @@ import { offcourse } from "themes";
 
 addDecorator(
   withInfo({ inline: true, propsTablesExclude: [GlobalStyle, ThemeProvider] })
-); // Globally in your .storybook/config.js.
+);
 const GlobalStyle = createGlobalStyle(offcourse);
 addDecorator(story => (
   <ThemeProvider theme={offcourse}>{story()}</ThemeProvider>

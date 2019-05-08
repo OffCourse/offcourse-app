@@ -1,11 +1,10 @@
 import React, { FunctionComponent, MouseEvent } from "react";
 import PropTypes from "prop-types";
 import AvatarWrapper from "./AvatarWrapper";
-import { Size, ErrorStates } from "enums";
+import { Variant, Size, ErrorState } from "enums";
+import { identity } from "ramda";
 
 const { SMALL, NORMAL, LARGE, EXTRA_LARGE } = Size;
-
-const { DEFAULT } = ErrorStates;
 
 const multiplier = {
   [SMALL]: 3,
@@ -15,19 +14,19 @@ const multiplier = {
 };
 
 type AvatarProps = {
-  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (event: MouseEvent<HTMLDivElement>) => void;
   size?: Size;
-  variant?: ErrorStates;
+  error?: ErrorState;
 };
 
 const Avatar: FunctionComponent<AvatarProps> = ({
-  size = SMALL,
-  onClick,
-  variant = DEFAULT
+  size = Size.SMALL,
+  error,
+  onClick = identity
 }) => {
   return (
     <AvatarWrapper
-      variant={variant}
+      variant={error || Variant.DEFAULT}
       onClick={onClick}
       multiply={multiplier[size]}
     />

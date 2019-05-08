@@ -71,6 +71,7 @@ module.exports = {
     alias: {
       atoms: path.resolve(__dirname, "./src/atoms"),
       enums: path.resolve(__dirname, "./src/enums"),
+      helpers: path.resolve(__dirname, "./src/helpers"),
       constants: path.resolve(__dirname, "./src/constants"),
       themes: path.resolve(__dirname, "./src/themes")
     }

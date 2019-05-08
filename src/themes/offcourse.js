@@ -5,17 +5,18 @@ import contentError from "./offcourse-content-error.svg";
 import noSearchResults from "./offcourse-no-search-results.svg";
 import notFound from "./offcourse-not-found.svg";
 import genericError from "./offcourse-generic-error.svg";
-import { Size, Variant, ErrorStates } from "enums";
+import { Size, Variant, ErrorState } from "enums";
 
 const { SMALL, NORMAL, LARGE, EXTRA_LARGE } = Size;
 const { DEFAULT, DISABLED, INFO, POSITIVE, WARNING, NEGATIVE } = Variant;
 const {
+  NONE,
   RESOURCE_NOT_LOADING,
   TOTAL_PANIC,
   NO_SEARCH_RESULTS,
   COURSE_NOT_FOUND,
   CHECKPOINT_NOT_FOUND
-} = ErrorStates;
+} = ErrorState;
 
 /**
  * @name Offcourse Theme
@@ -27,35 +28,40 @@ const logo = {
   background: "black"
 };
 const avatars = {
+  [NONE]: {
+    svg: avatarSVG,
+    dimensions: { height: 1, width: 1 },
+    background: "transparent"
+  },
   [DEFAULT]: {
     svg: avatarSVG,
     dimensions: { height: 1, width: 1 },
-    background: "none"
+    background: "transparent"
   },
   [RESOURCE_NOT_LOADING]: {
     svg: contentError,
     dimensions: { height: 1, width: 1.9 },
-    background: "none"
+    background: "transparent"
   },
   [NO_SEARCH_RESULTS]: {
     svg: noSearchResults,
     dimensions: { height: 27 / 15, width: 1 },
-    background: "none"
+    background: "transparent"
   },
   [COURSE_NOT_FOUND]: {
     svg: notFound,
     dimensions: { height: 1.44, width: 1.1 },
-    background: "none"
+    background: "transparent"
   },
   [CHECKPOINT_NOT_FOUND]: {
     svg: notFound,
     dimensions: { height: 1.44, width: 1.1 },
-    background: "none"
+    background: "transparent"
   },
   [TOTAL_PANIC]: {
     svg: genericError,
     dimensions: { height: 1, width: 1.5 },
-    background: "none"
+    background: "transparent"
   }
 };
 

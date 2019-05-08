@@ -54,4 +54,4 @@ Heading.defaultProps = {
   variant: ACTIVE
 };
 
-export default memo(Heading);
+export default Heading;

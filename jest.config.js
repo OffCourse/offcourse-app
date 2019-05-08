@@ -67,7 +67,8 @@ module.exports = {
       "<rootDir>/__mocks__/fileMock.js",
     "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
     "^themes": "<rootDir>/src/themes",
-    "^enums": "<rootDir>/src/enums"
+    "^enums": "<rootDir>/src/enums",
+    "^helpers": "<rootDir>/src/helpers"
   },
   moduleFileExtensions: ["js", "json", "jsx", "ts", "tsx", "node"],
 
