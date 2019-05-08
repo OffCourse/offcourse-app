@@ -9,7 +9,7 @@ import { DocContainer as Container } from "helpers";
 import Card from "./Card";
 import { Direction, Affordance, Size, ErrorState } from "enums";
 
-storiesOf("Card", module)
+storiesOf("Atoms|Card", module)
   .addDecorator(withKnobs)
   .add("selectable by default", () => {
     return (

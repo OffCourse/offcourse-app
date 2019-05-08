@@ -7,7 +7,7 @@ import { map, values } from "ramda";
 import Bar from "./Bar";
 import { Variant, Direction } from "enums";
 
-storiesOf("Bar", module)
+storiesOf("Atoms|Bar", module)
   .addDecorator(withKnobs)
   .add("different directions", () => (
     <Fragment>

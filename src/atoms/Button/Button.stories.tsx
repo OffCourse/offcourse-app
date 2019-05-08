@@ -7,7 +7,7 @@ import { map, values } from "ramda";
 import Button from "./Button";
 import { Direction, Variant, Size } from "enums";
 
-storiesOf("Button", module)
+storiesOf("Atoms|Button", module)
   .addDecorator(withKnobs)
   .add("different variants", () => {
     const label = text("Label", "Hello");

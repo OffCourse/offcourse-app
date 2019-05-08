@@ -8,7 +8,7 @@ import { map, values } from "ramda";
 import Avatar from "./Avatar";
 import { Direction, Variant, Size, ErrorState } from "enums";
 
-storiesOf("Avatar", module)
+storiesOf("Atoms|Avatar", module)
   .addDecorator(withKnobs)
   .add("different error states", () => {
     return (
