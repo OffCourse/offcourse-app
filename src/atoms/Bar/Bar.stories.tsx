@@ -9,33 +9,25 @@ import { Variant, Direction } from "enums";
 
 storiesOf("Bar", module)
   .addDecorator(withKnobs)
-  .add("different directions", () => {
-    const label = text("Label", "Hello");
-    return (
-      <Fragment>
-        {map(
-          direction => (
-            <div key={direction} style={{ height: "300px" }}>
-              <Bar direction={direction}>{label}</Bar>
-            </div>
-          ),
-          [Direction.HORIZONTAL, Direction.VERTICAL]
-        )}
-      </Fragment>
-    );
-  })
-  .add("different variants", () => {
-    const label = text("Label", "Hello");
-    return (
-      <Fragment>
-        {map(
-          variant => (
-            <Bar key={variant} variant={variant}>
-              {label}
-            </Bar>
-          ),
-          [Variant.NEGATIVE, Variant.DEFAULT]
-        )}
-      </Fragment>
-    );
-  });
+  .add("different directions", () => (
+    <Fragment>
+      {map(
+        direction => (
+          <div key={direction} style={{ height: "300px" }}>
+            <Bar direction={direction} />
+          </div>
+        ),
+        [Direction.HORIZONTAL, Direction.VERTICAL]
+      )}
+    </Fragment>
+  ))
+  .add("different variants", () => (
+    <Fragment>
+      {map(
+        variant => (
+          <Bar key={variant} variant={variant} />
+        ),
+        [Variant.NEGATIVE, Variant.DEFAULT]
+      )}
+    </Fragment>
+  ));

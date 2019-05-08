@@ -202,9 +202,7 @@ Array [
       direction="HORIZONTAL"
       height="2.25rem"
       width="30rem"
-    >
-      Hello
-    </div>
+    />
   </div>,
   .c0 {
   display: -webkit-box;
@@ -250,9 +248,7 @@ Array [
       direction="VERTICAL"
       height="2.25rem"
       width="30rem"
-    >
-      Hello
-    </div>
+    />
   </div>,
 ]
 `;
@@ -296,9 +292,7 @@ Array [
     direction="HORIZONTAL"
     height="2.25rem"
     width="30rem"
-  >
-    Hello
-  </div>,
+  />,
   .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -336,9 +330,7 @@ Array [
     direction="HORIZONTAL"
     height="2.25rem"
     width="30rem"
-  >
-    Hello
-  </div>,
+  />,
 ]
 `;
 
