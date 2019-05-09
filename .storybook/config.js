@@ -1,14 +1,20 @@
-import { configure } from "@storybook/react";
-import React, { Fragment } from "react";
-import { addDecorator } from "@storybook/react";
+import React from "react";
+import { configure, addParameters, addDecorator } from "@storybook/react";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { withInfo } from "@storybook/addon-info";
 import { offcourse } from "themes";
 
 //import { withThemesProvider } from "storybook-addon-styled-component-theme";
+addParameters({
+  backgrounds: [
+    { name: "light", value: "#f4f6f4", default: true },
+    { name: "medium", value: "#C8CAC9" },
+    { name: "dark", value: "#797B7A" }
+  ]
+});
 
 addDecorator(
-  withInfo({ inline: true, propsTablesExclude: [GlobalStyle, ThemeProvider] })
+  withInfo({ inline: false, propsTablesExclude: [GlobalStyle, ThemeProvider] })
 );
 const GlobalStyle = createGlobalStyle(offcourse);
 addDecorator(story => (

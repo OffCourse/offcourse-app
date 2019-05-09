@@ -9,7 +9,7 @@ const OuterWrapper = system({
   alignItems: "center"
 });
 
-export default styled(OuterWrapper)`
+const Outer: any = styled(OuterWrapper)`
   user-select: none;
 
   grid-template-areas: "checkbox";
@@ -22,3 +22,5 @@ export default styled(OuterWrapper)`
     display: block;
   }
 `;
+
+export default Outer;

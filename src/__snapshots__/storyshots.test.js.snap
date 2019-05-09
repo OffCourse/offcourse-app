@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Avatar different error states 1`] = `
+exports[`Storyshots Atoms|Avatar different error states 1`] = `
 Array [
   .c0 {
   height: 3rem;
@@ -83,7 +83,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Avatar different sizes 1`] = `
+exports[`Storyshots Atoms|Avatar different sizes 1`] = `
 Array [
   .c0 {
   height: 3rem;
@@ -140,7 +140,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Avatar playground 1`] = `
+exports[`Storyshots Atoms|Avatar playground 1`] = `
 .c0 {
   height: 6rem;
   width: 6rem;
@@ -156,7 +156,25 @@ exports[`Storyshots Avatar playground 1`] = `
 />
 `;
 
-exports[`Storyshots Bar different directions 1`] = `
+exports[`Storyshots Atoms|Backdrop different directions 1`] = `
+.c0 {
+  display: block;
+  position: fixed;
+  background-color: #797B7A;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden auto;
+  pointer-events: none;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Storyshots Atoms|Bar different directions 1`] = `
 Array [
   .c0 {
   display: -webkit-box;
@@ -253,7 +271,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Bar different variants 1`] = `
+exports[`Storyshots Atoms|Bar different variants 1`] = `
 Array [
   .c0 {
   display: -webkit-box;
@@ -334,7 +352,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Button different sizes 1`] = `
+exports[`Storyshots Atoms|Button different sizes 1`] = `
 Array [
   .c0 {
   display: -webkit-box;
@@ -567,7 +585,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Button different variants 1`] = `
+exports[`Storyshots Atoms|Button different variants 1`] = `
 Array [
   .c0 {
   display: -webkit-box;
@@ -915,7 +933,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Button playground 1`] = `
+exports[`Storyshots Atoms|Button playground 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -975,7 +993,7 @@ exports[`Storyshots Button playground 1`] = `
 </button>
 `;
 
-exports[`Storyshots Button works with links 1`] = `
+exports[`Storyshots Atoms|Button works with links 1`] = `
 Array [
   .c0 {
   display: -webkit-box;
@@ -1208,7 +1226,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Card can be turned off 1`] = `
+exports[`Storyshots Atoms|Card can be turned off 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1244,7 +1262,7 @@ exports[`Storyshots Card can be turned off 1`] = `
 </div>
 `;
 
-exports[`Storyshots Card selectable by default 1`] = `
+exports[`Storyshots Atoms|Card selectable by default 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;

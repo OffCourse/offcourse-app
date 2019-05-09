@@ -1,7 +1,7 @@
 import system from "system-components";
 import styled from "styled-components";
 
-const LabelWrapper = system(
+const LabelWrapper: any = system(
   {
     is: "label",
     size: "1rem",

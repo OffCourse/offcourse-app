@@ -31,6 +31,7 @@ module.exports = api => {
     plugins: [
       "@babel/plugin-syntax-dynamic-import",
       "react-hot-loader/babel",
+      "@babel/plugin-proposal-class-properties",
       [
         "babel-plugin-styled-components",
         {
