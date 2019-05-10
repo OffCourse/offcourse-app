@@ -9,8 +9,8 @@ import { Direction, Variant, Size } from "enums";
 
 storiesOf("Atoms|Checkbox", module)
   .addDecorator(withKnobs)
-  .add("off by default", () => <Checkbox onToggle={action("clicked")} />)
-  .add("on", () => <Checkbox checked={true} onToggle={action("clicked")} />)
+  .add("off by default", () => <Checkbox onToggle={action("toggled")} />)
+  .add("on", () => <Checkbox isChecked={true} onToggle={action("toggled")} />)
   .add("large", () => (
-    <Checkbox size={Size.LARGE} checked={true} onToggle={action("clicked")} />
+    <Checkbox size={Size.LARGE} isChecked={true} onToggle={action("toggled")} />
   ));

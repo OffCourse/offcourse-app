@@ -4,35 +4,24 @@ import React, {
   useState,
   useEffect
 } from "react";
-import PropTypes from "prop-types";
-import { Icon } from "..";
-import CheckboxWrapper from "./CheckboxWrapper";
-import LabelWrapper from "./LabelWrapper";
+import Icon from "../Icon";
 import { Size } from "enums";
 
-const { NORMAL, LARGE } = Size;
-
-const boxProps: any = {
-  NORMAL: { boxSize: "1.25rem", labelSize: "1rem" },
-  LARGE: { boxSize: "1.66666667rem", labelSize: "1.333333rem" }
-};
+import CheckboxWrapper from "./CheckboxWrapper";
 
 type CheckboxProps = {
   size?: Size.NORMAL | Size.LARGE;
-  bg?: string | string[];
   isChecked?: boolean;
-  onToggle: (opts: { checked: true | false }) => void;
+  onToggle?: (opts: { checked: boolean }) => void;
 };
 
 const Checkbox: FunctionComponent<CheckboxProps> = ({
   size = Size.NORMAL,
-  bg,
   isChecked = false,
-  onToggle
+  onToggle = () => null
 }) => {
   const [checked, setChecked] = useState(isChecked);
-  const { boxSize, labelSize } = boxProps[size];
-  const handleClick: (event: MouseEvent<HTMLDivElement>) => void = e => {
+  const handleClick: (event: MouseEvent<HTMLDivElement>) => void = (e) => {
     e.preventDefault();
     e.stopPropagation();
     setChecked(c => !c);
@@ -43,11 +32,11 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
   });
 
   return (
-    <CheckboxWrapper size={boxSize} bg={bg} onClick={handleClick}>
+    <CheckboxWrapper size={size} onClick={handleClick}>
       <input type="checkbox" readOnly checked={checked} />
-      <LabelWrapper bg={bg} size={labelSize}>
+      <label>
         <Icon size={size} name="checkmark" />
-      </LabelWrapper>
+      </label>
     </CheckboxWrapper>
   );
 };
