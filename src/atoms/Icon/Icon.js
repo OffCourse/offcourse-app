@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as icons from "./icons";
@@ -48,4 +48,4 @@ Icon.propTypes = {
   is: PropTypes.string
 };
 
-export default memo(Icon);
+export default Icon;
