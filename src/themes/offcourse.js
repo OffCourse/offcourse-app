@@ -107,7 +107,7 @@ const breakpoints = ["30rem", "48rem", "64rem"];
 
 const baseUnit = 16;
 
-const fontSizes = ["0.75rem", "1rem", "1.375rem", "1.75rem", "2.5rem"];
+const fontSizes = ["0.75rem", "1rem", "1.375rem", "1.75rem", "2.5rem", "4rem"];
 
 const lineHeights = [
   "1rem",
@@ -115,7 +115,8 @@ const lineHeights = [
   "1.375rem",
   "1.75rem",
   "1.875rem",
-  "3rem"
+  "3rem",
+  "4.5rem"
 ];
 
 const space = [

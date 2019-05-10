@@ -353,8 +353,54 @@ Array [
 `;
 
 exports[`Storyshots Atoms|Button different sizes 1`] = `
-Array [
-  .c0 {
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  background-color: #fdbe68;
+  border-color: #797B7A;
+  color: #000000;
+  width: 8rem;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:disabled {
+  cursor: default;
+}
+
+.c2:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #fdbe68;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -387,88 +433,21 @@ Array [
   width: 5.33333rem;
 }
 
-.c0:focus {
+.c1:focus {
   outline: none;
 }
 
-.c0:disabled {
+.c1:disabled {
   cursor: default;
 }
 
-.c0:hover {
+.c1:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #fdbe68;
 }
 
-<button
-    className="c0"
-    disabled={false}
-    onClick={[Function]}
-    size="SMALL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>,
-  .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 2.813rem;
-  padding: 0.5rem 1rem;
-  border: 0;
-  border-bottom: 0.125rem solid;
-  font-size: 1rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  line-height: 1;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  background-color: #fdbe68;
-  border-color: #797B7A;
-  color: #000000;
-  width: 8rem;
-}
-
-.c0:focus {
-  outline: none;
-}
-
-.c0:disabled {
-  cursor: default;
-}
-
-.c0:hover {
-  background-color: #797B7A;
-  color: #FFFFFF;
-  border-color: #fdbe68;
-}
-
-<button
-    className="c0"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>,
-  .c0 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -501,31 +480,21 @@ Array [
   width: 16rem;
 }
 
-.c0:focus {
+.c3:focus {
   outline: none;
 }
 
-.c0:disabled {
+.c3:disabled {
   cursor: default;
 }
 
-.c0:hover {
+.c3:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #fdbe68;
 }
 
-<button
-    className="c0"
-    disabled={false}
-    onClick={[Function]}
-    size="LARGE"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>,
-  .c0 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -558,22 +527,78 @@ Array [
   width: 100%;
 }
 
-.c0:focus {
+.c4:focus {
   outline: none;
 }
 
-.c0:disabled {
+.c4:disabled {
   cursor: default;
 }
 
-.c0:hover {
+.c4:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #fdbe68;
 }
 
-<button
-    className="c0"
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 100vw;
+  height: 700px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+  className="c0"
+  direction="HORIZONTAL"
+>
+  <button
+    className="c1"
+    disabled={false}
+    onClick={[Function]}
+    size="SMALL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c2"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c3"
+    disabled={false}
+    onClick={[Function]}
+    size="LARGE"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c4"
     disabled={false}
     onClick={[Function]}
     size="EXTRA_LARGE"
@@ -581,13 +606,12 @@ Array [
     type="button"
   >
     Hello
-  </button>,
-]
+  </button>
+</div>
 `;
 
 exports[`Storyshots Atoms|Button different variants 1`] = `
-Array [
-  .c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -620,31 +644,21 @@ Array [
   width: 8rem;
 }
 
-.c0:focus {
+.c1:focus {
   outline: none;
 }
 
-.c0:disabled {
+.c1:disabled {
   cursor: default;
 }
 
-.c0:hover {
+.c1:hover {
   background-color: #658f7b;
   color: #FFFFFF;
   border-color: #797B7A;
 }
 
-<button
-    className="c0"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>,
-  .c0 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -677,32 +691,21 @@ Array [
   width: 8rem;
 }
 
-.c0:focus {
+.c2:focus {
   outline: none;
 }
 
-.c0:disabled {
+.c2:disabled {
   cursor: default;
 }
 
-.c0:hover {
+.c2:hover {
   background-color: #C8CAC9;
   color: #FFFFFF;
   border-color: #C8CAC9;
 }
 
-<button
-    className="c0"
-    disabled={true}
-    href={null}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>,
-  .c0 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -735,31 +738,21 @@ Array [
   width: 8rem;
 }
 
-.c0:focus {
+.c3:focus {
   outline: none;
 }
 
-.c0:disabled {
+.c3:disabled {
   cursor: default;
 }
 
-.c0:hover {
+.c3:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #658f7b;
 }
 
-<button
-    className="c0"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>,
-  .c0 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -792,31 +785,21 @@ Array [
   width: 8rem;
 }
 
-.c0:focus {
+.c4:focus {
   outline: none;
 }
 
-.c0:disabled {
+.c4:disabled {
   cursor: default;
 }
 
-.c0:hover {
+.c4:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #b5decb;
 }
 
-<button
-    className="c0"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>,
-  .c0 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -849,31 +832,21 @@ Array [
   width: 8rem;
 }
 
-.c0:focus {
+.c5:focus {
   outline: none;
 }
 
-.c0:disabled {
+.c5:disabled {
   cursor: default;
 }
 
-.c0:hover {
+.c5:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #fdbe68;
 }
 
-<button
-    className="c0"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>,
-  .c0 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -906,22 +879,48 @@ Array [
   width: 8rem;
 }
 
-.c0:focus {
+.c6:focus {
   outline: none;
 }
 
-.c0:disabled {
+.c6:disabled {
   cursor: default;
 }
 
-.c0:hover {
+.c6:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #E2625E;
 }
 
-<button
-    className="c0"
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 100vw;
+  height: 700px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+  className="c0"
+  direction="HORIZONTAL"
+>
+  <button
+    className="c1"
     disabled={false}
     onClick={[Function]}
     size="NORMAL"
@@ -929,8 +928,59 @@ Array [
     type="button"
   >
     Hello
-  </button>,
-]
+  </button>
+  <button
+    className="c2"
+    disabled={true}
+    href={null}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c3"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c4"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c5"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+  <button
+    className="c6"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>
+</div>
 `;
 
 exports[`Storyshots Atoms|Button playground 1`] = `
@@ -994,65 +1044,7 @@ exports[`Storyshots Atoms|Button playground 1`] = `
 `;
 
 exports[`Storyshots Atoms|Button works with links 1`] = `
-Array [
-  .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 2.813rem;
-  padding: 0.5rem 1rem;
-  border: 0;
-  border-bottom: 0.125rem solid;
-  font-size: 1rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  line-height: 1;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  background-color: #b5decb;
-  border-color: #797B7A;
-  color: #000000;
-  width: 5.33333rem;
-}
-
-.c0:focus {
-  outline: none;
-}
-
-.c0:disabled {
-  cursor: default;
-}
-
-.c0:hover {
-  background-color: #797B7A;
-  color: #FFFFFF;
-  border-color: #b5decb;
-}
-
-<a
-    className="c0"
-    disabled={false}
-    href="https://offcourse.io"
-    size="SMALL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </a>,
-  .c0 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1085,31 +1077,68 @@ Array [
   width: 8rem;
 }
 
-.c0:focus {
+.c2:focus {
   outline: none;
 }
 
-.c0:disabled {
+.c2:disabled {
   cursor: default;
 }
 
-.c0:hover {
+.c2:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #b5decb;
 }
 
-<a
-    className="c0"
-    disabled={false}
-    href="https://offcourse.io"
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </a>,
-  .c0 {
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  background-color: #b5decb;
+  border-color: #797B7A;
+  color: #000000;
+  width: 5.33333rem;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:disabled {
+  cursor: default;
+}
+
+.c1:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #b5decb;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1142,31 +1171,21 @@ Array [
   width: 16rem;
 }
 
-.c0:focus {
+.c3:focus {
   outline: none;
 }
 
-.c0:disabled {
+.c3:disabled {
   cursor: default;
 }
 
-.c0:hover {
+.c3:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #b5decb;
 }
 
-<a
-    className="c0"
-    disabled={false}
-    href="https://offcourse.io"
-    size="LARGE"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </a>,
-  .c0 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1199,22 +1218,78 @@ Array [
   width: 100%;
 }
 
-.c0:focus {
+.c4:focus {
   outline: none;
 }
 
-.c0:disabled {
+.c4:disabled {
   cursor: default;
 }
 
-.c0:hover {
+.c4:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #b5decb;
 }
 
-<a
-    className="c0"
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 100vw;
+  height: 700px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+  className="c0"
+  direction="HORIZONTAL"
+>
+  <a
+    className="c1"
+    disabled={false}
+    href="https://offcourse.io"
+    size="SMALL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </a>
+  <a
+    className="c2"
+    disabled={false}
+    href="https://offcourse.io"
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </a>
+  <a
+    className="c3"
+    disabled={false}
+    href="https://offcourse.io"
+    size="LARGE"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </a>
+  <a
+    className="c4"
     disabled={false}
     href="https://offcourse.io"
     size="EXTRA_LARGE"
@@ -1222,8 +1297,8 @@ Array [
     type="button"
   >
     Hello
-  </a>,
-]
+  </a>
+</div>
 `;
 
 exports[`Storyshots Atoms|Card can be turned off 1`] = `
@@ -1289,10 +1364,33 @@ exports[`Storyshots Atoms|Card selectable by default 1`] = `
   border-bottom: none;
 }
 
+.c1 {
+  display: block;
+  color: #000000;
+  line-height: 1.375rem;
+  font-size: 1.75rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c1:hover {
+  color: #658f7b;
+}
+
 <div
   className="c0"
 >
-  <h1>
+  <h1
+    className="c1"
+    onClick={[Function]}
+    size="NORMAL"
+  >
     Hello World
   </h1>
 </div>
@@ -1589,8 +1687,387 @@ exports[`Storyshots Atoms|Checkbox on 1`] = `
 </div>
 `;
 
-exports[`Storyshots Atoms|Heading normal size 1`] = `
+exports[`Storyshots Atoms|Group horizontal orientation 1`] = `
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 100vw;
+  height: 700px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c2 {
+  display: block;
+  color: #000000;
+  line-height: 1.375rem;
+  font-size: 1.75rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c2:hover {
+  color: #658f7b;
+}
+
+.c1 {
+  display: block;
+  color: #000000;
+  line-height: 1rem;
+  font-size: 1.375rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c1:hover {
+  color: #658f7b;
+}
+
+.c3 {
+  display: block;
+  color: #000000;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c3:hover {
+  color: #658f7b;
+}
+
+.c4 {
+  display: block;
+  color: #000000;
+  line-height: 4rem;
+  font-size: 4rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c4:hover {
+  color: #658f7b;
+}
+
+<div
+  className="c0"
+  direction="HORIZONTAL"
+>
+  <h1
+    className="c1"
+    onClick={[Function]}
+    size="SMALL"
+  >
+    Hello
+  </h1>
+  <h1
+    className="c2"
+    onClick={[Function]}
+    size="NORMAL"
+  >
+    Hello
+  </h1>
+  <h1
+    className="c3"
+    onClick={[Function]}
+    size="LARGE"
+  >
+    Hello
+  </h1>
+  <h1
+    className="c4"
+    onClick={[Function]}
+    size="EXTRA_LARGE"
+  >
+    Hello
+  </h1>
+</div>
+`;
+
+exports[`Storyshots Atoms|Group vertical orientation 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 100vw;
+  height: 700px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c2 {
+  display: block;
+  color: #000000;
+  line-height: 1.375rem;
+  font-size: 1.75rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c2:hover {
+  color: #658f7b;
+}
+
+.c1 {
+  display: block;
+  color: #000000;
+  line-height: 1rem;
+  font-size: 1.375rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c1:hover {
+  color: #658f7b;
+}
+
+.c3 {
+  display: block;
+  color: #000000;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c3:hover {
+  color: #658f7b;
+}
+
+.c4 {
+  display: block;
+  color: #000000;
+  line-height: 4rem;
+  font-size: 4rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c4:hover {
+  color: #658f7b;
+}
+
+<div
+  className="c0"
+  direction="VERTICAL"
+>
+  <h1
+    className="c1"
+    onClick={[Function]}
+    size="SMALL"
+  >
+    Hello
+  </h1>
+  <h1
+    className="c2"
+    onClick={[Function]}
+    size="NORMAL"
+  >
+    Hello
+  </h1>
+  <h1
+    className="c3"
+    onClick={[Function]}
+    size="LARGE"
+  >
+    Hello
+  </h1>
+  <h1
+    className="c4"
+    onClick={[Function]}
+    size="EXTRA_LARGE"
+  >
+    Hello
+  </h1>
+</div>
+`;
+
+exports[`Storyshots Atoms|Heading different sizes 1`] = `
+Array [
+  .c0 {
+  display: block;
+  color: #000000;
+  line-height: 1rem;
+  font-size: 1.375rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c0:hover {
+  color: #658f7b;
+}
+
+<h1
+    className="c0"
+    onClick={[Function]}
+    size="SMALL"
+  >
+    Hello
+  </h1>,
+  .c0 {
+  display: block;
+  color: #000000;
+  line-height: 1.375rem;
+  font-size: 1.75rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c0:hover {
+  color: #658f7b;
+}
+
+<h1
+    className="c0"
+    onClick={[Function]}
+    size="NORMAL"
+  >
+    Hello
+  </h1>,
+  .c0 {
+  display: block;
+  color: #000000;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c0:hover {
+  color: #658f7b;
+}
+
+<h1
+    className="c0"
+    onClick={[Function]}
+    size="LARGE"
+  >
+    Hello
+  </h1>,
+  .c0 {
+  display: block;
+  color: #000000;
+  line-height: 4rem;
+  font-size: 4rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c0:hover {
+  color: #658f7b;
+}
+
+<h1
+    className="c0"
+    onClick={[Function]}
+    size="EXTRA_LARGE"
+  >
+    Hello
+  </h1>,
+]
+`;
+
+exports[`Storyshots Atoms|Heading different variants 1`] = `
+Array [
+  .c0 {
+  display: block;
   color: #000000;
   line-height: 1.375rem;
   font-size: 1.75rem;
@@ -1609,12 +2086,39 @@ exports[`Storyshots Atoms|Heading normal size 1`] = `
 }
 
 <a
-  className="c0"
-  href="bla"
-  onClick={[Function]}
->
-  Hello
-</a>
+    className="c0"
+    href="bla"
+    onClick={[Function]}
+    size="NORMAL"
+  >
+    Hello
+  </a>,
+  .c0 {
+  display: block;
+  color: #C8CAC9;
+  line-height: 1.375rem;
+  font-size: 1.75rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  cursor: cursor;
+}
+
+.c0:hover {
+  color: #C8CAC9;
+}
+
+<a
+    className="c0"
+    size="NORMAL"
+  >
+    Hello
+  </a>,
+]
 `;
 
 exports[`Storyshots Atoms|Icon large size 1`] = `

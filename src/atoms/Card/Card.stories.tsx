@@ -7,6 +7,7 @@ import { map, values } from "ramda";
 import { DocContainer as Container } from "helpers";
 
 import Card from "./Card";
+import Heading from "../Heading";
 import { Direction, Affordance, Size, ErrorState } from "enums";
 
 storiesOf("Atoms|Card", module)
@@ -14,7 +15,7 @@ storiesOf("Atoms|Card", module)
   .add("selectable by default", () => {
     return (
       <Card>
-        <h1>Hello World</h1>
+        <Heading>Hello World</Heading>
       </Card>
     );
   })

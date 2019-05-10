@@ -1,43 +1,51 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import GroupWrapper from "./GroupWrapper";
+import styled from "styled-components";
+import { Direction, Alignment } from "enums";
 
-class Group extends Component {
-  componentDidMount() {
-    const { onResize } = this.props;
-    if (onResize) {
-      this.handleResize();
-      window.addEventListener("resize", this.handleResize);
-    }
+const returnAlign: (args: {
+  direction: Direction;
+  alignment: Alignment[];
+}) => "space-between" | "flex-start" = ({ direction, alignment }) => {
+  const index = direction === Direction.HORIZONTAL ? 1 : 0;
+  switch (alignment[index]) {
+    case Alignment.FULL:
+      return "space-between";
+    default:
+      return "flex-start";
   }
+};
 
-  handleResize = () => {
-    if (!this.group) return null;
-    const { onResize } = this.props;
-    const { offsetWidth } = this.group;
-    onResize({ width: offsetWidth });
-  };
-
-  render() {
-    const { children, direction, onResize, ...rest } = this.props;
-    return (
-      <GroupWrapper
-        ref={el => {
-          this.group = el;
-        }}
-        {...rest}
-      >
-        {children}
-      </GroupWrapper>
-    );
+const returnJustify: (args: {
+  direction: Direction;
+  alignment: Alignment[];
+}) => "space-between" | "flex-start" = ({ direction, alignment }) => {
+  const index = direction === Direction.HORIZONTAL ? 0 : 1;
+  switch (alignment[index]) {
+    case Alignment.FULL:
+      return "space-between";
+    default:
+      return "flex-start";
   }
-}
+};
 
-Group.Wrapper = GroupWrapper;
+const Group = styled.div<{
+  direction?: Direction;
+  alignment?: Alignment[];
+}>`
+  display: flex;
+  flex-direction: ${({ direction }) =>
+    direction === Direction.HORIZONTAL ? "row" : "column"};
+  align-content: ${({ direction, alignment }) =>
+    returnAlign({ direction: direction!, alignment: alignment! })};
+  justify-content: ${({ direction, alignment }) =>
+    returnJustify({ direction: direction!, alignment: alignment! })};
+  max-width: 100vw;
+  height: 700px;
+  flex: 1;
+`;
 
-Group.propTypes = {
-  children: PropTypes.node,
-  onResize: PropTypes.func
+Group.defaultProps = {
+  direction: Direction.HORIZONTAL,
+  alignment: [Alignment.FULL, Alignment.FULL]
 };
 
 export default Group;

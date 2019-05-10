@@ -36,3 +36,10 @@ export enum Affordance {
   SHRINKABLE = "SHRINKABLE",
   SELECTABLE = "SELECTABLE"
 }
+
+export enum Alignment {
+  START = "START",
+  END = "END",
+  FULL = "FULL",
+  CENTERED = "CENTERED"
+}
