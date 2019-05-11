@@ -353,54 +353,8 @@ Array [
 `;
 
 exports[`Storyshots Atoms|Button different sizes 1`] = `
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 2.813rem;
-  padding: 0.5rem 1rem;
-  border: 0;
-  border-bottom: 0.125rem solid;
-  font-size: 1rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  line-height: 1;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  background-color: #fdbe68;
-  border-color: #797B7A;
-  color: #000000;
-  width: 8rem;
-}
-
-.c2:focus {
-  outline: none;
-}
-
-.c2:disabled {
-  cursor: default;
-}
-
-.c2:hover {
-  background-color: #797B7A;
-  color: #FFFFFF;
-  border-color: #fdbe68;
-}
-
-.c1 {
+Array [
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -433,21 +387,88 @@ exports[`Storyshots Atoms|Button different sizes 1`] = `
   width: 5.33333rem;
 }
 
-.c1:focus {
+.c0:focus {
   outline: none;
 }
 
-.c1:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c1:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #fdbe68;
 }
 
-.c3 {
+<button
+    className="c0"
+    disabled={false}
+    onClick={[Function]}
+    size="SMALL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  background-color: #fdbe68;
+  border-color: #797B7A;
+  color: #000000;
+  width: 8rem;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: default;
+}
+
+.c0:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #fdbe68;
+}
+
+<button
+    className="c0"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -480,21 +501,31 @@ exports[`Storyshots Atoms|Button different sizes 1`] = `
   width: 16rem;
 }
 
-.c3:focus {
+.c0:focus {
   outline: none;
 }
 
-.c3:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c3:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #fdbe68;
 }
 
-.c4 {
+<button
+    className="c0"
+    disabled={false}
+    onClick={[Function]}
+    size="LARGE"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -527,78 +558,22 @@ exports[`Storyshots Atoms|Button different sizes 1`] = `
   width: 100%;
 }
 
-.c4:focus {
+.c0:focus {
   outline: none;
 }
 
-.c4:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c4:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #fdbe68;
 }
 
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-content: space-between;
-  -ms-flex-line-pack: space-between;
-  align-content: space-between;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  max-width: 100vw;
-  height: 700px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-<div
-  className="c0"
-  direction="HORIZONTAL"
->
-  <button
-    className="c1"
-    disabled={false}
-    onClick={[Function]}
-    size="SMALL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
-  <button
-    className="c2"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
-  <button
-    className="c3"
-    disabled={false}
-    onClick={[Function]}
-    size="LARGE"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
-  <button
-    className="c4"
+<button
+    className="c0"
     disabled={false}
     onClick={[Function]}
     size="EXTRA_LARGE"
@@ -606,12 +581,13 @@ exports[`Storyshots Atoms|Button different sizes 1`] = `
     type="button"
   >
     Hello
-  </button>
-</div>
+  </button>,
+]
 `;
 
 exports[`Storyshots Atoms|Button different variants 1`] = `
-.c1 {
+Array [
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -644,21 +620,31 @@ exports[`Storyshots Atoms|Button different variants 1`] = `
   width: 8rem;
 }
 
-.c1:focus {
+.c0:focus {
   outline: none;
 }
 
-.c1:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c1:hover {
+.c0:hover {
   background-color: #658f7b;
   color: #FFFFFF;
   border-color: #797B7A;
 }
 
-.c2 {
+<button
+    className="c0"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -691,21 +677,32 @@ exports[`Storyshots Atoms|Button different variants 1`] = `
   width: 8rem;
 }
 
-.c2:focus {
+.c0:focus {
   outline: none;
 }
 
-.c2:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c2:hover {
+.c0:hover {
   background-color: #C8CAC9;
   color: #FFFFFF;
   border-color: #C8CAC9;
 }
 
-.c3 {
+<button
+    className="c0"
+    disabled={true}
+    href={null}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -738,21 +735,31 @@ exports[`Storyshots Atoms|Button different variants 1`] = `
   width: 8rem;
 }
 
-.c3:focus {
+.c0:focus {
   outline: none;
 }
 
-.c3:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c3:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #658f7b;
 }
 
-.c4 {
+<button
+    className="c0"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -785,21 +792,31 @@ exports[`Storyshots Atoms|Button different variants 1`] = `
   width: 8rem;
 }
 
-.c4:focus {
+.c0:focus {
   outline: none;
 }
 
-.c4:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c4:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #b5decb;
 }
 
-.c5 {
+<button
+    className="c0"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -832,21 +849,31 @@ exports[`Storyshots Atoms|Button different variants 1`] = `
   width: 8rem;
 }
 
-.c5:focus {
+.c0:focus {
   outline: none;
 }
 
-.c5:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c5:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #fdbe68;
 }
 
-.c6 {
+<button
+    className="c0"
+    disabled={false}
+    onClick={[Function]}
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </button>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -879,48 +906,22 @@ exports[`Storyshots Atoms|Button different variants 1`] = `
   width: 8rem;
 }
 
-.c6:focus {
+.c0:focus {
   outline: none;
 }
 
-.c6:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c6:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #E2625E;
 }
 
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-content: space-between;
-  -ms-flex-line-pack: space-between;
-  align-content: space-between;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  max-width: 100vw;
-  height: 700px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-<div
-  className="c0"
-  direction="HORIZONTAL"
->
-  <button
-    className="c1"
+<button
+    className="c0"
     disabled={false}
     onClick={[Function]}
     size="NORMAL"
@@ -928,59 +929,8 @@ exports[`Storyshots Atoms|Button different variants 1`] = `
     type="button"
   >
     Hello
-  </button>
-  <button
-    className="c2"
-    disabled={true}
-    href={null}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
-  <button
-    className="c3"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
-  <button
-    className="c4"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
-  <button
-    className="c5"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
-  <button
-    className="c6"
-    disabled={false}
-    onClick={[Function]}
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </button>
-</div>
+  </button>,
+]
 `;
 
 exports[`Storyshots Atoms|Button playground 1`] = `
@@ -1044,54 +994,8 @@ exports[`Storyshots Atoms|Button playground 1`] = `
 `;
 
 exports[`Storyshots Atoms|Button works with links 1`] = `
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 2.813rem;
-  padding: 0.5rem 1rem;
-  border: 0;
-  border-bottom: 0.125rem solid;
-  font-size: 1rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  line-height: 1;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  background-color: #b5decb;
-  border-color: #797B7A;
-  color: #000000;
-  width: 8rem;
-}
-
-.c2:focus {
-  outline: none;
-}
-
-.c2:disabled {
-  cursor: default;
-}
-
-.c2:hover {
-  background-color: #797B7A;
-  color: #FFFFFF;
-  border-color: #b5decb;
-}
-
-.c1 {
+Array [
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1124,21 +1028,88 @@ exports[`Storyshots Atoms|Button works with links 1`] = `
   width: 5.33333rem;
 }
 
-.c1:focus {
+.c0:focus {
   outline: none;
 }
 
-.c1:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c1:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #b5decb;
 }
 
-.c3 {
+<a
+    className="c0"
+    disabled={false}
+    href="https://offcourse.io"
+    size="SMALL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </a>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.813rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-bottom: 0.125rem solid;
+  font-size: 1rem;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+  background-color: #b5decb;
+  border-color: #797B7A;
+  color: #000000;
+  width: 8rem;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0:disabled {
+  cursor: default;
+}
+
+.c0:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #b5decb;
+}
+
+<a
+    className="c0"
+    disabled={false}
+    href="https://offcourse.io"
+    size="NORMAL"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </a>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1171,21 +1142,31 @@ exports[`Storyshots Atoms|Button works with links 1`] = `
   width: 16rem;
 }
 
-.c3:focus {
+.c0:focus {
   outline: none;
 }
 
-.c3:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c3:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #b5decb;
 }
 
-.c4 {
+<a
+    className="c0"
+    disabled={false}
+    href="https://offcourse.io"
+    size="LARGE"
+    tabIndex={1}
+    type="button"
+  >
+    Hello
+  </a>,
+  .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1218,78 +1199,22 @@ exports[`Storyshots Atoms|Button works with links 1`] = `
   width: 100%;
 }
 
-.c4:focus {
+.c0:focus {
   outline: none;
 }
 
-.c4:disabled {
+.c0:disabled {
   cursor: default;
 }
 
-.c4:hover {
+.c0:hover {
   background-color: #797B7A;
   color: #FFFFFF;
   border-color: #b5decb;
 }
 
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-content: space-between;
-  -ms-flex-line-pack: space-between;
-  align-content: space-between;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  max-width: 100vw;
-  height: 700px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-<div
-  className="c0"
-  direction="HORIZONTAL"
->
-  <a
-    className="c1"
-    disabled={false}
-    href="https://offcourse.io"
-    size="SMALL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </a>
-  <a
-    className="c2"
-    disabled={false}
-    href="https://offcourse.io"
-    size="NORMAL"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </a>
-  <a
-    className="c3"
-    disabled={false}
-    href="https://offcourse.io"
-    size="LARGE"
-    tabIndex={1}
-    type="button"
-  >
-    Hello
-  </a>
-  <a
-    className="c4"
+<a
+    className="c0"
     disabled={false}
     href="https://offcourse.io"
     size="EXTRA_LARGE"
@@ -1297,8 +1222,8 @@ exports[`Storyshots Atoms|Button works with links 1`] = `
     type="button"
   >
     Hello
-  </a>
-</div>
+  </a>,
+]
 `;
 
 exports[`Storyshots Atoms|Card can be turned off 1`] = `
@@ -1684,274 +1609,6 @@ exports[`Storyshots Atoms|Checkbox on 1`] = `
       </svg>
     </i>
   </label>
-</div>
-`;
-
-exports[`Storyshots Atoms|Group horizontal orientation 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-content: space-between;
-  -ms-flex-line-pack: space-between;
-  align-content: space-between;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  max-width: 100vw;
-  height: 700px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c2 {
-  display: block;
-  color: #000000;
-  line-height: 1.375rem;
-  font-size: 1.75rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  cursor: cursor;
-}
-
-.c2:hover {
-  color: #658f7b;
-}
-
-.c1 {
-  display: block;
-  color: #000000;
-  line-height: 1rem;
-  font-size: 1.375rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  cursor: cursor;
-}
-
-.c1:hover {
-  color: #658f7b;
-}
-
-.c3 {
-  display: block;
-  color: #000000;
-  line-height: 2.5rem;
-  font-size: 2.5rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  cursor: cursor;
-}
-
-.c3:hover {
-  color: #658f7b;
-}
-
-.c4 {
-  display: block;
-  color: #000000;
-  line-height: 4rem;
-  font-size: 4rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  cursor: cursor;
-}
-
-.c4:hover {
-  color: #658f7b;
-}
-
-<div
-  className="c0"
-  direction="HORIZONTAL"
->
-  <h1
-    className="c1"
-    onClick={[Function]}
-    size="SMALL"
-  >
-    Hello
-  </h1>
-  <h1
-    className="c2"
-    onClick={[Function]}
-    size="NORMAL"
-  >
-    Hello
-  </h1>
-  <h1
-    className="c3"
-    onClick={[Function]}
-    size="LARGE"
-  >
-    Hello
-  </h1>
-  <h1
-    className="c4"
-    onClick={[Function]}
-    size="EXTRA_LARGE"
-  >
-    Hello
-  </h1>
-</div>
-`;
-
-exports[`Storyshots Atoms|Group vertical orientation 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-content: space-between;
-  -ms-flex-line-pack: space-between;
-  align-content: space-between;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  max-width: 100vw;
-  height: 700px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c2 {
-  display: block;
-  color: #000000;
-  line-height: 1.375rem;
-  font-size: 1.75rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  cursor: cursor;
-}
-
-.c2:hover {
-  color: #658f7b;
-}
-
-.c1 {
-  display: block;
-  color: #000000;
-  line-height: 1rem;
-  font-size: 1.375rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  cursor: cursor;
-}
-
-.c1:hover {
-  color: #658f7b;
-}
-
-.c3 {
-  display: block;
-  color: #000000;
-  line-height: 2.5rem;
-  font-size: 2.5rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  cursor: cursor;
-}
-
-.c3:hover {
-  color: #658f7b;
-}
-
-.c4 {
-  display: block;
-  color: #000000;
-  line-height: 4rem;
-  font-size: 4rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-text-decoration: inherit;
-  text-decoration: inherit;
-  cursor: cursor;
-}
-
-.c4:hover {
-  color: #658f7b;
-}
-
-<div
-  className="c0"
-  direction="VERTICAL"
->
-  <h1
-    className="c1"
-    onClick={[Function]}
-    size="SMALL"
-  >
-    Hello
-  </h1>
-  <h1
-    className="c2"
-    onClick={[Function]}
-    size="NORMAL"
-  >
-    Hello
-  </h1>
-  <h1
-    className="c3"
-    onClick={[Function]}
-    size="LARGE"
-  >
-    Hello
-  </h1>
-  <h1
-    className="c4"
-    onClick={[Function]}
-    size="EXTRA_LARGE"
-  >
-    Hello
-  </h1>
 </div>
 `;
 
@@ -4739,4 +4396,659 @@ Array [
     </svg>
   </button>,
 ]
+`;
+
+exports[`Storyshots Atoms|Input password input 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  alignitems: center;
+  padding: 0.5rem 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  grid-template-areas: "input";
+  border-color: #E2625E;
+  background-color: #f4f6f4;
+}
+
+.c0 .icons,
+.c0 button {
+  padding: 0;
+  background-color: rgba(255,255,255,0);
+  color: #C8CAC9;
+  grid-area: input;
+  justify-self: end;
+  z-index: 1;
+}
+
+.c0 > input,
+.c0 textarea {
+  width: 100%;
+  padding: 0 1rem;
+  background-color: #f4f6f4;
+  margin: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  border: 0;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.c0 > input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::placeholder,
+.c0 textarea::placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::selection,
+.c0 textarea::selection {
+  background: #658f7b;
+  color: white;
+}
+
+.c0 > input:focus,
+.c0 textarea:focus {
+  outline: none;
+}
+
+.c0 > textarea {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  height: 6rem;
+  resize: none;
+}
+
+.c0 > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+<div
+  className="c0"
+  size="NORMAL"
+>
+  <input
+    autoComplete="false"
+    autoFocus={false}
+    disabled={false}
+    name="password"
+    placeholder="Enter Your Password"
+    type="password"
+  />
+</div>
+`;
+
+exports[`Storyshots Atoms|Input text input 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  alignitems: center;
+  padding: 0.5rem 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  grid-template-areas: "input";
+  border-color: #E2625E;
+  background-color: #f4f6f4;
+}
+
+.c0 .icons,
+.c0 button {
+  padding: 0;
+  background-color: rgba(255,255,255,0);
+  color: #C8CAC9;
+  grid-area: input;
+  justify-self: end;
+  z-index: 1;
+}
+
+.c0 > input,
+.c0 textarea {
+  width: 100%;
+  padding: 0 1rem;
+  background-color: #f4f6f4;
+  margin: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  border: 0;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.c0 > input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::placeholder,
+.c0 textarea::placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::selection,
+.c0 textarea::selection {
+  background: #658f7b;
+  color: white;
+}
+
+.c0 > input:focus,
+.c0 textarea:focus {
+  outline: none;
+}
+
+.c0 > textarea {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  height: 6rem;
+  resize: none;
+}
+
+.c0 > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+<div
+  className="c0"
+  size="NORMAL"
+>
+  <input
+    autoComplete="false"
+    autoFocus={false}
+    disabled={false}
+    name="normal"
+    placeholder="Enter Your Name"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots Atoms|Input textarea 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  alignitems: center;
+  padding: 0.5rem 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  grid-template-areas: "input";
+  border-color: #E2625E;
+  background-color: #f4f6f4;
+}
+
+.c0 .icons,
+.c0 button {
+  padding: 0;
+  background-color: rgba(255,255,255,0);
+  color: #C8CAC9;
+  grid-area: input;
+  justify-self: end;
+  z-index: 1;
+}
+
+.c0 > input,
+.c0 textarea {
+  width: 100%;
+  padding: 0 1rem;
+  background-color: #f4f6f4;
+  margin: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  border: 0;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.c0 > input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::placeholder,
+.c0 textarea::placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::selection,
+.c0 textarea::selection {
+  background: #658f7b;
+  color: white;
+}
+
+.c0 > input:focus,
+.c0 textarea:focus {
+  outline: none;
+}
+
+.c0 > textarea {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  height: 6rem;
+  resize: none;
+}
+
+.c0 > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+<div
+  className="c0"
+  size="SMALL"
+>
+  <textarea
+    autoComplete="false"
+    autoFocus={false}
+    disabled={false}
+    name="textarea"
+    placeholder="Enter some text"
+    rows={4}
+  />
+</div>
+`;
+
+exports[`Storyshots Atoms|Input with errors 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  alignitems: center;
+  padding: 0.5rem 0;
+  border: 0.125rem solid;
+  margin: 0;
+  box-sizing: border-box;
+  grid-template-areas: "input";
+  border-color: #E2625E;
+  background-color: #f4f6f4;
+}
+
+.c0 .icons,
+.c0 button {
+  padding: 0;
+  background-color: rgba(255,255,255,0);
+  color: #C8CAC9;
+  grid-area: input;
+  justify-self: end;
+  z-index: 1;
+}
+
+.c0 > input,
+.c0 textarea {
+  width: 100%;
+  padding: 0 1rem;
+  background-color: #f4f6f4;
+  margin: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  border: 0;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.c0 > input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::placeholder,
+.c0 textarea::placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::selection,
+.c0 textarea::selection {
+  background: #658f7b;
+  color: white;
+}
+
+.c0 > input:focus,
+.c0 textarea:focus {
+  outline: none;
+}
+
+.c0 > textarea {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  height: 6rem;
+  resize: none;
+}
+
+.c0 > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+<div
+  className="c0"
+  size="NORMAL"
+>
+  <input
+    autoComplete="false"
+    autoFocus={false}
+    disabled={false}
+    name="errors"
+    placeholder="Correct Your Mistake"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots Atoms|Input with icons 1`] = `
+.c1 {
+  box-sizing: border-box;
+  color: #000000;
+  background-color: transparent;
+  border: 0;
+  font-size: 1;
+  margin: 0 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.c1:hover {
+  color: #000000;
+}
+
+.c1:focus {
+  outline: none;
+  color: #658f7b;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  alignitems: center;
+  padding: 0.5rem 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  grid-template-areas: "input";
+  border-color: #E2625E;
+  background-color: #f4f6f4;
+}
+
+.c0 .icons,
+.c0 button {
+  padding: 0;
+  background-color: rgba(255,255,255,0);
+  color: #C8CAC9;
+  grid-area: input;
+  justify-self: end;
+  z-index: 1;
+}
+
+.c0 > input,
+.c0 textarea {
+  width: 100%;
+  padding: 0 1rem;
+  background-color: #f4f6f4;
+  margin: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  border: 0;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.c0 > input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::placeholder,
+.c0 textarea::placeholder {
+  color: #797B7A;
+}
+
+.c0 > input::selection,
+.c0 textarea::selection {
+  background: #658f7b;
+  color: white;
+}
+
+.c0 > input:focus,
+.c0 textarea:focus {
+  outline: none;
+}
+
+.c0 > textarea {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  height: 6rem;
+  resize: none;
+}
+
+.c0 > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+<div
+  className="c0"
+  size="NORMAL"
+>
+  <input
+    autoComplete="false"
+    autoFocus={false}
+    disabled={false}
+    name="textarea"
+    placeholder="Enter Some Text"
+    type="text"
+  />
+  <div>
+    <i
+      className="c1"
+      tabIndex={0}
+      target="_blank"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-bars fa-w-14 fa-1x "
+        data-icon="bars"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </i>
+  </div>
+</div>
 `;

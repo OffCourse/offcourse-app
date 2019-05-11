@@ -1,11 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, text, select } from "@storybook/addon-knobs";
 import { map, values } from "ramda";
 
 import Button from "./Button";
-import Group from "../Group";
 import { Direction, Variant, Size } from "enums";
 
 storiesOf("Atoms|Button", module)
@@ -13,7 +12,7 @@ storiesOf("Atoms|Button", module)
   .add("different variants", () => {
     const label = text("Label", "Hello");
     return (
-      <Group direction={Direction.HORIZONTAL}>
+      <Fragment>
         {map(
           variant => (
             <Button
@@ -27,13 +26,13 @@ storiesOf("Atoms|Button", module)
           ),
           values(Variant)
         )}
-      </Group>
+      </Fragment>
     );
   })
   .add("different sizes", () => {
     const label = text("Label", "Hello");
     return (
-      <Group direction={Direction.HORIZONTAL}>
+      <Fragment>
         {map(
           size => (
             <Button
@@ -47,13 +46,13 @@ storiesOf("Atoms|Button", module)
           ),
           values(Size)
         )}
-      </Group>
+      </Fragment>
     );
   })
   .add("works with links", () => {
     const label = text("Label", "Hello");
     return (
-      <Group direction={Direction.HORIZONTAL}>
+      <Fragment>
         {map(
           size => (
             <Button
@@ -67,7 +66,7 @@ storiesOf("Atoms|Button", module)
           ),
           values(Size)
         )}
-      </Group>
+      </Fragment>
     );
   })
   .add("playground", () => {
