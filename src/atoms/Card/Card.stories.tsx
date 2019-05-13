@@ -22,7 +22,7 @@ storiesOf("Atoms|Card", module)
   .add("can be turned off", () => {
     return (
       <Card affordance={Affordance.NONE}>
-        <h1>Hello World</h1>
+        <Heading>Hello World</Heading>
       </Card>
     );
   });

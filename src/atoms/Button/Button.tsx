@@ -11,6 +11,7 @@ type ButtonProps = {
   variant?: Variant;
   size: Size;
   isSubmit?: boolean;
+  children: string;
 };
 
 const Button: FunctionComponent<ButtonProps> = ({
@@ -23,7 +24,7 @@ const Button: FunctionComponent<ButtonProps> = ({
   size = Size.NORMAL
 }) => {
   const buttonType = isSubmit ? "submit" : "button";
-  const label: string = formatTitle(children as string);
+  const label: string = formatTitle(children);
   return (
     <ButtonWrapper
       as={href ? "a" : "button"}
