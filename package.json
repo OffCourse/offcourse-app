@@ -35,7 +35,7 @@
     "markdown-to-jsx": "6.7.2",
     "prop-types": "^15.5.4",
     "punycode": "^2.1.1",
-    "ramda": "^0.25.0",
+    "ramda": "^0.26.1",
     "react": "^16.8.2",
     "react-adopt": "^0.6.0",
     "react-apollo": "^2.2.4",

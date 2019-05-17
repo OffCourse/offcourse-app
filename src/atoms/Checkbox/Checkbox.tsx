@@ -1,12 +1,8 @@
-import React, {
-  FunctionComponent,
-  MouseEvent,
-  useState,
-  useEffect
-} from "react";
-import Icon from "../Icon";
+import React, { FunctionComponent } from "react";
+import { useToggle } from "hooks";
 import { Size } from "enums";
 
+import Icon from "../Icon";
 import CheckboxWrapper from "./CheckboxWrapper";
 
 type CheckboxProps = {
@@ -20,19 +16,9 @@ const Checkbox: FunctionComponent<CheckboxProps> = ({
   isChecked = false,
   onToggle = () => null
 }) => {
-  const [checked, setChecked] = useState(isChecked);
-  const handleClick: (event: MouseEvent<HTMLDivElement>) => void = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setChecked(c => !c);
-  };
-
-  useEffect(() => {
-    onToggle({ checked });
-  });
-
+  const [checked, setChecked] = useToggle(isChecked, onToggle);
   return (
-    <CheckboxWrapper size={size} onClick={handleClick}>
+    <CheckboxWrapper size={size} onClick={setChecked}>
       <input type="checkbox" readOnly checked={checked} />
       <label>
         <Icon size={size} name="checkmark" />

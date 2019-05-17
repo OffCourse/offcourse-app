@@ -283,6 +283,10 @@ const globals = `
   }
 `;
 
+const widths = {
+  card: ["100%", "18rem", "18rem"]
+};
+
 const theme = {
   name: "offcourse",
   buttonSizes,
@@ -299,7 +303,8 @@ const theme = {
   grayScale,
   globals,
   signalColorCombos,
-  signalColors
+  signalColors,
+  widths
 };
 
 export default theme;

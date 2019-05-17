@@ -4,7 +4,8 @@ import { width, space, opacity } from "styled-system";
 import { Affordance } from "enums";
 
 const Card = styled.div<{
-  affordance?: any;
+  affordance?: Affordance;
+  width?: string | string[];
 }>`
   display: flex;
   flex-direction: column;
@@ -17,16 +18,17 @@ const Card = styled.div<{
   &:hover {
     border-color: ${({ theme }) => theme.colors.primary};
   }
-
   section {
     &:last-child {
       border-bottom: none;
     }
   }
+  ${width}
 `;
 
 Card.defaultProps = {
-  affordance: Affordance.SELECTABLE
+  affordance: Affordance.SELECTABLE,
+  width: ["100%", "18rem", "18rem"]
 };
 
 export default Card;
