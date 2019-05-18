@@ -68,6 +68,7 @@ module.exports = {
     "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
     "^themes": "<rootDir>/src/themes",
     "^enums": "<rootDir>/src/enums",
+    "^types": "<rootDir>/src/types",
     "^hooks": "<rootDir>/src/hooks",
     "^helpers": "<rootDir>/src/helpers"
   },

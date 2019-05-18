@@ -15,9 +15,9 @@ const Masonry: FunctionComponent<MasonryProps> = ({
   children = [],
   breakpoints = []
 }) => {
-  const [masonryRef, grid] = useMasonry(breakpoints, children, onResize);
+  const { ref, grid } = useMasonry(breakpoints, children, onResize);
   return (
-    <MasonryWrapper ref={masonryRef}>
+    <MasonryWrapper ref={ref}>
       <Grid grid={grid} />
     </MasonryWrapper>
   );

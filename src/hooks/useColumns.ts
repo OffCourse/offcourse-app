@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { reduceWhile, inc, identity } from "ramda";
+import useSize from "./useSize";
 
 const getNumberOfColumns: (
   containerWidth: number,
@@ -15,32 +16,27 @@ const getNumberOfColumns: (
 
 const useColumns: (
   breakpoints: number[],
-  onResize: (opts: { width: number; numberOfColumns: number }) => void
-) => [any, number] = (breakpoints, onResize) => {
+  onResize?: (opts: { width: number; numberOfColumns: number }) => void
+) => { ref: any; numberOfColumns: number; width: number; height: number } = (
+  breakpoints,
+  onResize
+) => {
   const [numberOfColumns, setNumberOfColumns] = useState(1);
-  const [width, setWidth] = useState(0);
-  const masonryRef = useRef<HTMLElement>(null);
+  const { width, height, ref } = useSize();
 
-  const handleResize = () => {
-    if (masonryRef && masonryRef.current) {
-      const { offsetWidth } = masonryRef.current;
-      const proposal = getNumberOfColumns(offsetWidth, breakpoints);
-      setWidth(offsetWidth);
-      setNumberOfColumns(proposal);
+  useEffect(() => {
+    const proposal = getNumberOfColumns(width, breakpoints);
+    setNumberOfColumns(proposal);
+  }, [width]);
+
+  useEffect(() => {
+    if (!onResize) {
+      return;
     }
-  };
-
-  useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
     onResize({ width, numberOfColumns });
-  }, [width, numberOfColumns]);
+  }, [numberOfColumns]);
 
-  return [masonryRef, numberOfColumns];
+  return { ref, numberOfColumns, width, height };
 };
 
 export default useColumns;

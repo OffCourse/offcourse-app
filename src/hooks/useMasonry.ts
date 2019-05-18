@@ -24,13 +24,20 @@ const useMasonry: (
   breakpoints: number[],
   children: ReactNode[],
   onResize: (opts: { width: number; numberOfColumns: number }) => void
-) => [any, any[]] = (breakpoints, children, onResize) => {
-  const [masonryRef, numberOfColumns] = useColumns(breakpoints, onResize);
+) => { ref: any; grid: ReactNode[]; width: number; height: number } = (
+  breakpoints,
+  children,
+  onResize
+) => {
+  const { ref, width, height, numberOfColumns } = useColumns(
+    breakpoints,
+    onResize
+  );
   const grid = useMemo(() => prepareGrid(children, numberOfColumns), [
     children,
     numberOfColumns
   ]);
-  return [masonryRef, grid];
+  return {ref, grid, width, height };
 };
 
 export default useMasonry;

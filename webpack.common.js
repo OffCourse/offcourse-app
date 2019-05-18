@@ -71,6 +71,7 @@ module.exports = {
     alias: {
       hooks: path.resolve(__dirname, "./src/hooks"),
       enums: path.resolve(__dirname, "./src/enums"),
+      types: path.resolve(__dirname, "./src/types"),
       helpers: path.resolve(__dirname, "./src/helpers"),
       themes: path.resolve(__dirname, "./src/themes")
     }

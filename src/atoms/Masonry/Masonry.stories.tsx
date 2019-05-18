@@ -28,7 +28,7 @@ const breakpoints = [624, 928];
 
 storiesOf("Atoms|Masonry", module)
   .addDecorator(withKnobs)
-  .add("different error states", () => {
+  .add("resizes on different breakpoints", () => {
     return (
       <Masonry breakpoints={breakpoints}>
         {mapWithIndex(
