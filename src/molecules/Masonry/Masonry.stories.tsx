@@ -5,7 +5,7 @@ import { action } from "@storybook/addon-actions";
 import { withKnobs, select } from "@storybook/addon-knobs";
 import { map, values, addIndex } from "ramda";
 
-import Card from "../Card";
+import { Card } from "atoms";
 import Masonry from "./Masonry";
 import { Direction, Variant, Size, ErrorState } from "enums";
 const mapWithIndex = addIndex(map);
@@ -26,7 +26,7 @@ const fragments = [0, 1, 2, 3, 4, 5, 6, 7, 8].map(createFragment);
 
 const breakpoints = [624, 928];
 
-storiesOf("Atoms|Masonry", module)
+storiesOf("Molecules|Masonry", module)
   .addDecorator(withKnobs)
   .add("resizes on different breakpoints", () => {
     return (

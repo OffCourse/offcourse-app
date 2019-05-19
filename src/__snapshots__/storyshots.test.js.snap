@@ -212,12 +212,11 @@ Array [
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #FFFFFF;
   pointer-events: auto;
   height: 2.25rem;
   width: 100%;
-  z-index: 0;
 }
 
 .c0:hover {
@@ -235,7 +234,7 @@ Array [
       className="c0"
       direction="HORIZONTAL"
       height="2.25rem"
-      width="30rem"
+      width="100%"
     />
   </div>,
   .c0 {
@@ -258,12 +257,11 @@ Array [
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #FFFFFF;
   pointer-events: auto;
   height: 100%;
   width: 30rem;
-  z-index: 0;
 }
 
 .c0:hover {
@@ -280,7 +278,7 @@ Array [
     <div
       className="c0"
       direction="VERTICAL"
-      height="2.25rem"
+      height="100%"
       width="30rem"
     />
   </div>,
@@ -309,12 +307,11 @@ Array [
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #FFFFFF;
   pointer-events: auto;
   height: 2.25rem;
   width: 100%;
-  z-index: 0;
 }
 
 .c0:hover {
@@ -323,9 +320,8 @@ Array [
 
 <div
     className="c0"
-    direction="HORIZONTAL"
     height="2.25rem"
-    width="30rem"
+    width="100%"
   />,
   .c0 {
   display: -webkit-box;
@@ -347,12 +343,11 @@ Array [
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: white;
-  color: black;
+  background-color: #FFFFFF;
+  color: #000000;
   pointer-events: auto;
   height: 2.25rem;
   width: 100%;
-  z-index: 0;
 }
 
 .c0:hover {
@@ -361,9 +356,8 @@ Array [
 
 <div
     className="c0"
-    direction="HORIZONTAL"
     height="2.25rem"
-    width="30rem"
+    width="100%"
   />,
 ]
 `;
@@ -5350,7 +5344,110 @@ exports[`Storyshots Atoms|Link small 1`] = `
 </a>
 `;
 
-exports[`Storyshots Atoms|Masonry resizes on different breakpoints 1`] = `
+exports[`Storyshots Atoms|Logo different sizes 1`] = `
+Array [
+  .c0 {
+  height: 2.25rem;
+  width: 10.499985rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: black;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+.c0:hover {
+  background-color: #658f7b;
+}
+
+<div
+    className="c0"
+    height={2.25}
+    size="SMALL"
+    width={10.499985}
+  />,
+  .c0 {
+  height: 4rem;
+  width: 18.66664rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: black;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+.c0:hover {
+  background-color: #658f7b;
+}
+
+<div
+    className="c0"
+    height={4}
+    size="NORMAL"
+    width={18.66664}
+  />,
+  .c0 {
+  height: 6rem;
+  width: 27.99996rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: black;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+.c0:hover {
+  background-color: #658f7b;
+}
+
+<div
+    className="c0"
+    height={6}
+    size="LARGE"
+    width={27.99996}
+  />,
+  .c0 {
+  height: 8rem;
+  width: 37.33328rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: black;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+.c0:hover {
+  background-color: #658f7b;
+}
+
+<div
+    className="c0"
+    height={8}
+    size="EXTRA_LARGE"
+    width={37.33328}
+  />,
+]
+`;
+
+exports[`Storyshots Atoms|Logo playground 1`] = `
+.c0 {
+  height: 4rem;
+  width: 18.66664rem;
+  background: url(test-file-stub) no-repeat top left;
+  background-color: black;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+.c0:hover {
+  background-color: #658f7b;
+}
+
+<div
+  className="c0"
+  height={4}
+  size="NORMAL"
+  width={18.66664}
+/>
+`;
+
+exports[`Storyshots Molecules|Masonry resizes on different breakpoints 1`] = `
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5474,7 +5571,7 @@ exports[`Storyshots Atoms|Masonry resizes on different breakpoints 1`] = `
           ]
         }
       >
-        mblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred w
+        . Butcher locavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartori
       </div>
     </div>
     <div
@@ -5490,7 +5587,7 @@ exports[`Storyshots Atoms|Masonry resizes on different breakpoints 1`] = `
           ]
         }
       >
-        r amet small batch heirloom thundercats sartorial irony crucifix. Butcher locavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillol
+        eirloom thundercats sartorial irony crucifix. Butcher locavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic biodiesel. Portland pop-up sh
       </div>
     </div>
     <div
@@ -5506,7 +5603,7 @@ exports[`Storyshots Atoms|Masonry resizes on different breakpoints 1`] = `
           ]
         }
       >
-        ebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic biodiesel. Portland pop-up shabby chic gastropub mlkshk bushwick shoreditch befo
+        oom thundercats sartorial irony crucifix. Butcher locavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic biodiesel. Portland pop-up shabby chic gastropub mlkshk bushwick shoreditch before they sold out craft beer color
       </div>
     </div>
     <div
@@ -5522,7 +5619,7 @@ exports[`Storyshots Atoms|Masonry resizes on different breakpoints 1`] = `
           ]
         }
       >
-        ag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic biodiesel. Portland pop-up shabby chic gastropub mlkshk bushwick shoredit
+        cavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic b
       </div>
     </div>
     <div
@@ -5538,7 +5635,7 @@ exports[`Storyshots Atoms|Masonry resizes on different breakpoints 1`] = `
           ]
         }
       >
-        dolor amet small batch heirloom thundercats sartorial irony crucifix. Butcher locavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights c
+        umblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing au
       </div>
     </div>
     <div
@@ -5554,7 +5651,7 @@ exports[`Storyshots Atoms|Masonry resizes on different breakpoints 1`] = `
           ]
         }
       >
-        orial irony crucifix. Butcher locavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic biodiesel. Portland pop-u
+        agon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillolo
       </div>
     </div>
     <div
@@ -5570,7 +5667,7 @@ exports[`Storyshots Atoms|Masonry resizes on different breakpoints 1`] = `
           ]
         }
       >
-        m ipsum dolor amet small batch heirloom thundercats sartorial irony crucifix. Butcher locavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic biodiesel. Portland po
+        y crucifix. Butcher locavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subwa
       </div>
     </div>
     <div
@@ -5586,7 +5683,7 @@ exports[`Storyshots Atoms|Masonry resizes on different breakpoints 1`] = `
           ]
         }
       >
-        irony crucifix. Butcher locavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic biodiesel. Portland
+        brag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic biodiesel. Portland pop-up shabby chic gastropub mlkshk bushwick shor
       </div>
     </div>
     <div
@@ -5602,7 +5699,7 @@ exports[`Storyshots Atoms|Masonry resizes on different breakpoints 1`] = `
           ]
         }
       >
-        Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic biodiesel. Portland pop-up shabby chic gastropub mlkshk bushwick shoreditch before they sold out craft beer coloring book.
+        blebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jian
       </div>
     </div>
   </div>

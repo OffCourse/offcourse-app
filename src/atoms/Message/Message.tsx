@@ -2,9 +2,9 @@ import React, { memo } from "react";
 import PropTypes from "prop-types";
 import { formatTitle } from "../helpers";
 import MessageWrapper, { BasicMessageWrapper } from "./MessageWrapper";
-import { variants } from "constants";
+import { Variant } from "enums";
 
-const { DEFAULT, INFO, POSITIVE, WARNING, NEGATIVE } = variants;
+const { DEFAULT, INFO, POSITIVE, WARNING, NEGATIVE } = Variant;
 
 const Message = ({ children, basic, variant }) => {
   const Wrapper = basic ? BasicMessageWrapper : MessageWrapper;

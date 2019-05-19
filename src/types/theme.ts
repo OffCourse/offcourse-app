@@ -1,4 +1,4 @@
-type Avatar = {
+type SVG = {
   svg: string;
   dimensions: {
     width: number;
@@ -6,6 +6,9 @@ type Avatar = {
   };
   background: string;
 };
+
+type Logo = SVG;
+type Avatar = SVG;
 
 type Colors = {
   primary: string;
@@ -19,6 +22,7 @@ type Theme = {
   colors: Colors;
   grayScale: GrayScale;
   avatars: { [error: string]: Avatar };
+  logo: Logo;
 };
 
 export default Theme;

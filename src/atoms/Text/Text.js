@@ -1,9 +1,9 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
 import TextWrapper from "./TextWrapper";
-import { sizes } from "constants";
+import { Size } from "enums";
 
-const { SMALL, NORMAL, LARGE } = sizes;
+const { SMALL, NORMAL, LARGE } = Size;
 
 const Text = ({ size, children, mb }) => {
   const textProps = {

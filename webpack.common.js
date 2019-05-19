@@ -69,6 +69,7 @@ module.exports = {
     modules: [path.resolve(__dirname, "./src"), "node_modules"],
     extensions: [".js", ".ts", ".tsx", ".json", ".mjs", ".graphql"],
     alias: {
+      atoms: path.resolve(__dirname, "./src/atoms"),
       hooks: path.resolve(__dirname, "./src/hooks"),
       enums: path.resolve(__dirname, "./src/enums"),
       types: path.resolve(__dirname, "./src/types"),
