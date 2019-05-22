@@ -7,7 +7,8 @@ import { offcourse } from "themes";
 //import { withThemesProvider } from "storybook-addon-styled-component-theme";
 addParameters({
   backgrounds: [
-    { name: "light", value: "#f4f6f4", default: true },
+    { name: "white", value: "white", default: true },
+    { name: "light", value: "#f4f6f4" },
     { name: "medium", value: "#C8CAC9" },
     { name: "dark", value: "#797B7A" }
   ]

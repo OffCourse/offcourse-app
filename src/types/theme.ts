@@ -27,6 +27,7 @@ type Theme = {
   space: string[];
   fontSizes: string[];
   lineHeights: string[];
+  borders: string[];
 };
 
 export default Theme;

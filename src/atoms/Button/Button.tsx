@@ -9,7 +9,7 @@ type ButtonProps = {
   href?: string | null;
   tabindex?: number;
   variant?: Variant;
-  size: Size;
+  size?: Size;
   isSubmit?: boolean;
   children: string;
 };

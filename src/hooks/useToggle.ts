@@ -1,8 +1,10 @@
 import React, { MouseEvent, useState, useEffect } from "react";
+import identity from "ramda";
+
 const useToggle: (
   isChecked: boolean,
-  callback: (opts: { checked: boolean }) => void
-) => [boolean, any] = (isChecked, callback) => {
+  callback?: (opts: { checked: boolean }) => void
+) => [boolean, any] = (isChecked, callback = ({ checked }) => null) => {
   const [checked, setChecked] = useState(isChecked);
 
   useEffect(() => {
