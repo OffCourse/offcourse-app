@@ -24,10 +24,6 @@ const MessageWrapper = system(
 
 export const BasicMessageWrapper = styled(MessageWrapper)`
   ${basicMessageStyle};
-  span::after {
-    content: ": ";
-    white-space: pre;
-  }
 `;
 
 export default styled(MessageWrapper)`

@@ -23,6 +23,10 @@ type Theme = {
   grayScale: GrayScale;
   avatars: { [error: string]: Avatar };
   logo: Logo;
+  fonts: { [fontName: string]: string };
+  space: string[];
+  fontSizes: string[];
+  lineHeights: string[];
 };
 
 export default Theme;
