@@ -5149,13 +5149,17 @@ exports[`Storyshots Atoms|Label A Label 1`] = `
 exports[`Storyshots Atoms|Link Active 1`] = `
 .c0 {
   line-height: 1.375rem;
+  font-size: 1rem;
   padding-bottom: 0;
   color: #658f7b;
-  font-size: 1rem;
   font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
   border-bottom: 0.125rem solid;
   border-color: #000000;
-  cursor: pointer user-select:none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   box-sizing: border-box;
   -webkit-text-decoration: inherit;
   text-decoration: inherit;
@@ -5172,7 +5176,11 @@ exports[`Storyshots Atoms|Link Active 1`] = `
 
 <a
   className="c0"
+  cursor="pointer"
+  fontFamily="Nitti Grotesk Bold, Helvetica Bold, sans-serif"
+  fontSize="1rem"
   href="slksdflad"
+  onClick={[Function]}
   size="NORMAL"
 >
   Hello World
@@ -5182,13 +5190,17 @@ exports[`Storyshots Atoms|Link Active 1`] = `
 exports[`Storyshots Atoms|Link Basic 1`] = `
 .c0 {
   line-height: 1.375rem;
+  font-size: 1rem;
   padding-bottom: 0;
   color: #000000;
-  font-size: 1rem;
-  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
   border-bottom: 0;
   border-color: #000000;
-  cursor: pointer user-select:none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   box-sizing: border-box;
   -webkit-text-decoration: inherit;
   text-decoration: inherit;
@@ -5205,7 +5217,11 @@ exports[`Storyshots Atoms|Link Basic 1`] = `
 
 <a
   className="c0"
+  cursor="pointer"
+  fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+  fontSize="1rem"
   href="slksdflad"
+  onClick={[Function]}
   size="NORMAL"
 >
   Hello World
@@ -5215,13 +5231,17 @@ exports[`Storyshots Atoms|Link Basic 1`] = `
 exports[`Storyshots Atoms|Link Disabled 1`] = `
 .c0 {
   line-height: 1.375rem;
+  font-size: 1rem;
   padding-bottom: 0;
   color: #C8CAC9;
-  font-size: 1rem;
   font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
   border-bottom: 0.125rem solid;
   border-color: #C8CAC9;
-  cursor: default user-select:none;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   box-sizing: border-box;
   -webkit-text-decoration: inherit;
   text-decoration: inherit;
@@ -5238,7 +5258,10 @@ exports[`Storyshots Atoms|Link Disabled 1`] = `
 
 <a
   className="c0"
-  onClick={[Function]}
+  cursor="default"
+  fontFamily="Nitti Grotesk Bold, Helvetica Bold, sans-serif"
+  fontSize="1rem"
+  href="slksdflad"
   size="NORMAL"
 >
   Hello World
@@ -5248,13 +5271,17 @@ exports[`Storyshots Atoms|Link Disabled 1`] = `
 exports[`Storyshots Atoms|Link large 1`] = `
 .c0 {
   line-height: 1.75rem;
+  font-size: 1.375rem;
   padding-bottom: 0;
   color: #000000;
-  font-size: 1.375rem;
   font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
   border-bottom: 0.125rem solid;
   border-color: #000000;
-  cursor: pointer user-select:none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   box-sizing: border-box;
   -webkit-text-decoration: inherit;
   text-decoration: inherit;
@@ -5271,7 +5298,11 @@ exports[`Storyshots Atoms|Link large 1`] = `
 
 <a
   className="c0"
+  cursor="pointer"
+  fontFamily="Nitti Grotesk Bold, Helvetica Bold, sans-serif"
+  fontSize="1.375rem"
   href="slksdflad"
+  onClick={[Function]}
   size="LARGE"
 >
   Hello World
@@ -5281,13 +5312,17 @@ exports[`Storyshots Atoms|Link large 1`] = `
 exports[`Storyshots Atoms|Link normal 1`] = `
 .c0 {
   line-height: 1.375rem;
+  font-size: 1rem;
   padding-bottom: 0;
   color: #000000;
-  font-size: 1rem;
   font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
   border-bottom: 0.125rem solid;
   border-color: #000000;
-  cursor: pointer user-select:none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   box-sizing: border-box;
   -webkit-text-decoration: inherit;
   text-decoration: inherit;
@@ -5304,7 +5339,11 @@ exports[`Storyshots Atoms|Link normal 1`] = `
 
 <a
   className="c0"
+  cursor="pointer"
+  fontFamily="Nitti Grotesk Bold, Helvetica Bold, sans-serif"
+  fontSize="1rem"
   href="slksdflad"
+  onClick={[Function]}
   size="NORMAL"
 >
   Hello World
@@ -5314,13 +5353,17 @@ exports[`Storyshots Atoms|Link normal 1`] = `
 exports[`Storyshots Atoms|Link small 1`] = `
 .c0 {
   line-height: 1rem;
+  font-size: 0.75rem;
   padding-bottom: 0;
   color: #000000;
-  font-size: 0.75rem;
   font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
   border-bottom: 0.125rem solid;
   border-color: #000000;
-  cursor: pointer user-select:none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   box-sizing: border-box;
   -webkit-text-decoration: inherit;
   text-decoration: inherit;
@@ -5337,7 +5380,11 @@ exports[`Storyshots Atoms|Link small 1`] = `
 
 <a
   className="c0"
+  cursor="pointer"
+  fontFamily="Nitti Grotesk Bold, Helvetica Bold, sans-serif"
+  fontSize="0.75rem"
   href="slksdflad"
+  onClick={[Function]}
   size="SMALL"
 >
   Hello World
@@ -5447,261 +5494,718 @@ exports[`Storyshots Atoms|Logo playground 1`] = `
 />
 `;
 
-exports[`Storyshots Molecules|Masonry resizes on different breakpoints 1`] = `
-.c3 {
+exports[`Storyshots Atoms|Message basic flavor 1`] = `
+Array [
+  .c0 {
+  color: #797B7A;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  border-bottom: 0.125rem solid;
-  background: #FFFFFF;
-  border-color: #C8CAC9;
-  box-sizing: border-box;
-  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  min-height: 0;
 }
 
-.c3:hover {
+.c0 span::after {
+  content: ": ";
+  white-space: pre;
+}
+
+<div
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+  >
+    Hello
+  </div>,
+  .c0 {
+  color: #C8CAC9;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  min-height: 0;
+}
+
+.c0 span::after {
+  content: ": ";
+  white-space: pre;
+}
+
+<div
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+  >
+    Hello
+  </div>,
+  .c0 {
+  color: #658f7b;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  min-height: 0;
+}
+
+.c0 span::after {
+  content: ": ";
+  white-space: pre;
+}
+
+<div
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+  >
+    Hello
+  </div>,
+  .c0 {
+  color: #b5decb;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  min-height: 0;
+}
+
+.c0 span::after {
+  content: ": ";
+  white-space: pre;
+}
+
+<div
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+  >
+    Hello
+  </div>,
+  .c0 {
+  color: #fdbe68;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  min-height: 0;
+}
+
+.c0 span::after {
+  content: ": ";
+  white-space: pre;
+}
+
+<div
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+  >
+    Hello
+  </div>,
+  .c0 {
+  color: #E2625E;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  min-height: 0;
+}
+
+.c0 span::after {
+  content: ": ";
+  white-space: pre;
+}
+
+<div
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+  >
+    Hello
+  </div>,
+]
+`;
+
+exports[`Storyshots Atoms|Message different variants 1`] = `
+Array [
+  .c0 {
+  background-color: #797B7A;
+  border-color: #658f7b;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.5rem 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  min-height: 2.25rem;
+}
+
+.c0:hover {
+  background-color: #658f7b;
+  color: #FFFFFF;
+  border-color: #797B7A;
+}
+
+.c0 span::after {
+  content: ": ";
+  white-space: pre;
+}
+
+<div
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+  >
+    Hello
+  </div>,
+  .c0 {
+  background-color: #C8CAC9;
+  border-color: #C8CAC9;
+  color: #f4f6f4;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.5rem 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  min-height: 2.25rem;
+}
+
+.c0:hover {
+  background-color: #C8CAC9;
+  color: #FFFFFF;
+  border-color: #C8CAC9;
+}
+
+.c0 span::after {
+  content: ": ";
+  white-space: pre;
+}
+
+<div
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+  >
+    Hello
+  </div>,
+  .c0 {
+  background-color: #658f7b;
+  border-color: #797B7A;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.5rem 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  min-height: 2.25rem;
+}
+
+.c0:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
   border-color: #658f7b;
 }
 
-.c3 section:last-child {
-  border-bottom: none;
+.c0 span::after {
+  content: ": ";
+  white-space: pre;
 }
 
-.c0 {
+<div
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+  >
+    Hello
+  </div>,
+  .c0 {
+  background-color: #b5decb;
+  border-color: #797B7A;
+  color: #000000;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.5rem 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  min-height: 2.25rem;
 }
 
-.c1 {
+.c0:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #b5decb;
+}
+
+.c0 span::after {
+  content: ": ";
+  white-space: pre;
+}
+
+<div
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+  >
+    Hello
+  </div>,
+  .c0 {
+  background-color: #fdbe68;
+  border-color: #797B7A;
+  color: #000000;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.5rem 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  min-height: 2.25rem;
+}
+
+.c0:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #fdbe68;
+}
+
+.c0 span::after {
+  content: ": ";
+  white-space: pre;
+}
+
+<div
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+  >
+    Hello
+  </div>,
+  .c0 {
+  background-color: #E2625E;
+  border-color: #797B7A;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.5rem 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  min-height: 2.25rem;
+}
+
+.c0:hover {
+  background-color: #797B7A;
+  color: #FFFFFF;
+  border-color: #E2625E;
+}
+
+.c0 span::after {
+  content: ": ";
+  white-space: pre;
+}
+
+<div
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+  >
+    Hello
+  </div>,
+]
+`;
+
+exports[`Storyshots Atoms|Section display text 1`] = `
+Array [
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 1rem 1rem;
+  border-bottom: 0.0625rem solid;
+  border-color: #f4f6f4;
 }
 
-.c2 {
-  margin-bottom: 1rem;
-  margin-right: 0px;
+.c1 {
+  margin: 0;
+  padding: 0;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  word-break: break-word;
 }
 
-@media screen and (min-width:30rem) {
-  .c3 {
-    width: 18rem;
-  }
+<section
+    className="c0"
+  >
+    <p
+      className="c1"
+      fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+      fontSize="1rem"
+    >
+      Hello There
+    </p>
+  </section>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 1rem 1rem;
+  border-bottom: 0.0625rem solid;
+  border-color: #f4f6f4;
 }
 
-@media screen and (min-width:48rem) {
-  .c3 {
-    width: 18rem;
-  }
+.c1 {
+  margin: 0;
+  padding: 0;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  word-break: break-word;
 }
 
-@media screen and (min-width:30rem) {
-  .c1 {
-    width: auto;
-  }
+<section
+    className="c0"
+  >
+    <p
+      className="c1"
+      fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+      fontSize="1rem"
+    >
+      Where is Everyone...?
+    </p>
+  </section>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 1rem 1rem;
+  border-bottom: 0.0625rem solid;
+  border-color: #f4f6f4;
 }
 
-@media screen and (min-width:48rem) {
-  .c1 {
-    width: auto;
-  }
+.c1 {
+  margin: 0;
+  padding: 0;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  word-break: break-word;
 }
 
-@media screen and (min-width:30rem) {
-  .c2 {
-    margin-right: 1rem;
-  }
+<section
+    className="c0"
+  >
+    <p
+      className="c1"
+      fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+      fontSize="1rem"
+    >
+      Anyone Here?????
+    </p>
+  </section>,
+]
+`;
+
+exports[`Storyshots Atoms|Tag display text 1`] = `
+.c0 {
+  display: inline-block;
+  color: #000000;
+  background-color: #f4f6f4;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: Nitti Grotesk Bold,Helvetica Bold,sans-serif;
+  font-weight: 700;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
 }
 
-@media screen and (min-width:48rem) {
-  .c2 {
-    margin-right: 1rem;
-  }
+.c0:hover {
+  background-color: #658f7b;
+  color: #FFFFFF;
+}
+
+.c1 {
+  margin: 0;
+  padding: 0;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  word-break: break-word;
 }
 
 <div
   className="c0"
+  fontFamily="Nitti Grotesk Bold, Helvetica Bold, sans-serif"
+  href="/hafjl"
+  onClick={[Function]}
 >
-  <div
+  <p
     className="c1"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+    fontSize="0.75rem"
+    size="SMALL"
   >
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-        width={
-          Array [
-            "100%",
-            "18rem",
-            "18rem",
-          ]
-        }
-      >
-        . Butcher locavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartori
-      </div>
-    </div>
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-        width={
-          Array [
-            "100%",
-            "18rem",
-            "18rem",
-          ]
-        }
-      >
-        eirloom thundercats sartorial irony crucifix. Butcher locavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic biodiesel. Portland pop-up sh
-      </div>
-    </div>
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-        width={
-          Array [
-            "100%",
-            "18rem",
-            "18rem",
-          ]
-        }
-      >
-        oom thundercats sartorial irony crucifix. Butcher locavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic biodiesel. Portland pop-up shabby chic gastropub mlkshk bushwick shoreditch before they sold out craft beer color
-      </div>
-    </div>
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-        width={
-          Array [
-            "100%",
-            "18rem",
-            "18rem",
-          ]
-        }
-      >
-        cavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic b
-      </div>
-    </div>
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-        width={
-          Array [
-            "100%",
-            "18rem",
-            "18rem",
-          ]
-        }
-      >
-        umblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing au
-      </div>
-    </div>
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-        width={
-          Array [
-            "100%",
-            "18rem",
-            "18rem",
-          ]
-        }
-      >
-        agon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillolo
-      </div>
-    </div>
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-        width={
-          Array [
-            "100%",
-            "18rem",
-            "18rem",
-          ]
-        }
-      >
-        y crucifix. Butcher locavore cloud bread humblebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subwa
-      </div>
-    </div>
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-        width={
-          Array [
-            "100%",
-            "18rem",
-            "18rem",
-          ]
-        }
-      >
-        brag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jianbing authentic biodiesel. Portland pop-up shabby chic gastropub mlkshk bushwick shor
-      </div>
-    </div>
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-        width={
-          Array [
-            "100%",
-            "18rem",
-            "18rem",
-          ]
-        }
-      >
-        blebrag meh celiac hexagon biodiesel sustainable kale chips messenger bag. Ramps forage next level leggings, retro kale chips disrupt photo booth shaman farm-to-table cornhole neutra bicycle rights cred woke. Vexillologist cornhole vape, subway tile microdosing sartorial jian
-      </div>
-    </div>
-  </div>
+    Hello World
+  </p>
+</div>
+`;
+
+exports[`Storyshots Atoms|Text display text 1`] = `
+Array [
+  .c0 {
+  margin: 0;
+  padding: 0;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  word-break: break-word;
+}
+
+<p
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+    fontSize="0.75rem"
+    size="SMALL"
+  >
+    Hello World
+  </p>,
+  .c0 {
+  margin: 0;
+  padding: 0;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  word-break: break-word;
+}
+
+<p
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+    fontSize="1rem"
+    size="NORMAL"
+  >
+    Hello World
+  </p>,
+  .c0 {
+  margin: 0;
+  padding: 0;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  word-break: break-word;
+}
+
+<p
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+    fontSize="1.375rem"
+    size="LARGE"
+  >
+    Hello World
+  </p>,
+  .c0 {
+  margin: 0;
+  padding: 0;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.875rem;
+  word-break: break-word;
+}
+
+<p
+    className="c0"
+    fontFamily="Nitti Grotesk, Helvetica, sans-serif"
+    fontSize="1.75rem"
+    size="EXTRA_LARGE"
+  >
+    Hello World
+  </p>,
+]
+`;
+
+exports[`Storyshots Molecules|Breadcrumbs display text 1`] = `
+.c0 {
+  line-height: 1.375rem;
+  font-size: 1rem;
+  padding-bottom: 0;
+  color: #000000;
+  font-family: Nitti Grotesk,Helvetica,sans-serif;
+  border-bottom: 0;
+  border-color: #000000;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+}
+
+.c0:focus {
+  outline: "none";
+}
+
+.c0:hover {
+  color: #000000;
+  border-color: #658f7b;
+}
+
+<div>
+  <a
+    className="c0"
+    cursor="pointer"
+    fontFamily="base"
+    fontSize="1rem"
+  >
+    &lt; Hello
+  </a>
+  <a
+    className="c0"
+    cursor="pointer"
+    fontFamily="base"
+    fontSize="1rem"
+  >
+    &lt; World
+  </a>
 </div>
 `;

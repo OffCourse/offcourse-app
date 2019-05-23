@@ -12,6 +12,7 @@ type Avatar = SVG;
 
 type Colors = {
   primary: string;
+  disabled: string;
   black: string;
   white: string;
 };

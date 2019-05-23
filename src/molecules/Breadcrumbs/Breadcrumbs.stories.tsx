@@ -5,11 +5,12 @@ import { action } from "@storybook/addon-actions";
 import { withKnobs, text, select } from "@storybook/addon-knobs";
 import { map, values } from "ramda";
 
-import Tag from "./Tag";
+import Breadcrumbs from "./Breadcrumbs";
 import { Direction, Variant, Size, ErrorState } from "enums";
 
-storiesOf("Atoms|Tag", module)
+storiesOf("Molecules|Breadcrumbs", module)
   .addDecorator(withKnobs)
   .add("display text", () => {
-    return <Tag href="/hafjl">Hello World</Tag>;
+    const breadcrumbs = [{ text: "Hello" }, { text: "World" }];
+    return <Breadcrumbs breadcrumbs={breadcrumbs} />;
   });
