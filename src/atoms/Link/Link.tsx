@@ -5,16 +5,14 @@ import { formatTitle } from "../helpers";
 import styled from "styled-components";
 import { Theme } from "types";
 import { Direction, Variant, Size, ErrorState } from "enums";
+import { Link as LinkType } from "types";
 
-type LinkProps = {
+type LinkProps = LinkType & {
   theme: Theme;
   size?: Size;
   isBasic?: boolean;
   isActive?: boolean;
   isDisabled?: boolean;
-  href?: string;
-  children: string;
-  onClick?: any;
 };
 
 const textProps = {
@@ -38,25 +36,30 @@ const Link = styled.a.attrs(
     const { fonts, colors } = theme;
     const { base, bold } = fonts;
     const { disabled, black, primary } = colors;
+    const lineHeight = theme.lineHeights[textProps[size].lineHeight];
     return {
-      lineHeight: theme.lineHeights[textProps[size].lineHeight],
+      as: onClick ? "button" : "a",
+      onClick: isDisabled ? onClick : identity,
+      href: isDisabled ? undefined : href,
+      children: formatTitle(children),
       cursor: isDisabled ? "default" : "pointer",
       fontSize: theme.fontSizes[textProps[size].textSize],
       fontFamily: isBasic ? base : bold,
       borderBottom: isBasic ? theme.borders[0] : theme.borders[2],
       borderColor: isDisabled ? disabled : black,
-      onClick: isDisabled ? onClick : identity,
-      href: isDisabled ? undefined : href,
-      children: formatTitle(children),
       textColor: isActive ? primary : isDisabled ? disabled : black,
       hoverColor: isDisabled ? disabled : black,
-      hoverBorderColor: isDisabled ? disabled : primary
+      hoverBorderColor: isDisabled ? disabled : primary,
+      lineHeight
     };
   }
 )<LinkProps>`
+  border: none;
+  background-color: transparent;
   line-height: ${({ lineHeight }) => lineHeight};
   font-size: ${({ fontSize }) => fontSize};
-  padding-bottom: 0;
+  text-align: inherit;
+  padding: 0;
   color: ${({ textColor }) => textColor};
   font-family: ${({ fontFamily }) => fontFamily};
   border-bottom: ${({ borderBottom }) => borderBottom};
@@ -66,7 +69,7 @@ const Link = styled.a.attrs(
   box-sizing: border-box;
   text-decoration: inherit;
   :focus {
-    outline: "none";
+    outline: none;
   }
   :hover {
     color: ${({ hoverColor }) => hoverColor};

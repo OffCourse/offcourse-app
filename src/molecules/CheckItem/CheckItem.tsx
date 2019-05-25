@@ -1,21 +1,21 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
-import { Checkbox, Item } from "@offcourse/atoms";
+import { Checkbox, Link, ListItem } from "atoms";
 
 const CheckItem = ({ is, href, onClick, children, checked, id, onToggle }) => (
-  <Item is={is} gridTemplateColumns="2rem 1fr">
+  <ListItem is={is} gridTemplateColumns="2rem 1fr">
     <Checkbox
       onToggle={({ checked }) => onToggle({ id, checked })}
       checked={checked}
     />
     {href || onClick ? (
-      <Item.Link href={href} onClick={onClick}>
+      <Link href={href} onClick={onClick}>
         {children}
-      </Item.Link>
+      </Link>
     ) : (
-      <Item.Content>{children}</Item.Content>
+      <div>{children}</div>
     )}
-  </Item>
+  </ListItem>
 );
 
 CheckItem.propTypes = {

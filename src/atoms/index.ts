@@ -9,6 +9,7 @@ export { default as Icon } from "./Icon";
 export { default as Input } from "./Input";
 export { default as Label } from "./Label";
 export { default as Link } from "./Link";
+export { default as ListItem } from "./ListItem";
 export { default as Logo } from "./Logo";
 export { default as Message } from "./Message";
 export { default as Portal } from "./Portal";

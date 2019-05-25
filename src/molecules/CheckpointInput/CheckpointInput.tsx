@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
 import CheckpointInputWrapper from "./CheckpointInputWrapper";
-import { Group, Input } from "@offcourse/atoms";
+import { Input } from "atoms";
 
 const CheckpointInput = ({
   name,
@@ -13,7 +13,7 @@ const CheckpointInput = ({
 }) => {
   return (
     <CheckpointInputWrapper border={hasErrors ? 2 : 0}>
-      <Group alignItems="stretch" className="inputs">
+      <div alignItems="stretch" className="inputs">
         <Input
           onChange={onChange}
           onBlur={onBlur}
@@ -34,11 +34,11 @@ const CheckpointInput = ({
           value={value.resourceUrl}
           placeholder="Resource URL"
         />
-      </Group>
+      </div>
       {children && (
-        <Group px={6} alignItems="flex-end">
+        <div px={6} alignItems="flex-end">
           {children}
-        </Group>
+        </div>
       )}
     </CheckpointInputWrapper>
   );

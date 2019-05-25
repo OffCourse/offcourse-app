@@ -43,6 +43,7 @@ const Button = styled.button.attrs(
       fontFamily: theme.fonts.bold,
       fontSize: theme.fontSizes[1],
       children: formatTitle(children),
+      lineHeight: theme.lineHeights[1],
       buttonStyle,
       buttonSize
     };
@@ -55,9 +56,9 @@ const Button = styled.button.attrs(
   border-bottom: ${({ borderBottom }) => borderBottom};
   padding: ${({ padding }) => padding};
   font-family: ${({ fontFamily }) => fontFamily};
-  font-family: ${({ fontSize }) => fontSize};
+  font-size: ${({ fontSize }) => fontSize};
   justify-content: center;
-  line-height: 1;
+  line-height: ${({ lineHeight }) => lineHeight}
   box-sizing: border-box;
   user-select: none;
 

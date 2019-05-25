@@ -29,7 +29,7 @@ storiesOf("Molecules|ButtonGroup", module)
       { title: "hello world", onClick },
       { title: "where are you?", onClick }
     ];
-    return <ButtonGroup variant={Variant.POSITIVE} buttons={buttons} />;
+    return <ButtonGroup variant={Variant.DISABLED} buttons={buttons} />;
   })
   .add("can be displayed vertically", () => {
     const onClick = identity;

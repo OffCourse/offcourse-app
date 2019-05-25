@@ -30,7 +30,7 @@ storiesOf("Atoms|Button", module)
     );
   })
   .add("different sizes", () => {
-    const label = text("Label", "Hello");
+    const label = text("Label", "hello");
     return (
       <Fragment>
         {map(
