@@ -17,10 +17,9 @@ const Breadcrumbs = styled.div.attrs(({ trail = [] }: BreadcrumbsProps) => {
   return { children, display: isEmpty(trail) ? "none" : "flex" };
 })<BreadcrumbsProps>`
   display: ${({ display }) => display};
-  flexdirection: column;
-  alignitems: flex-start;
-  justifycontent: flex-start;
-  maxwidth: 100vw;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex: 1;
   ${Link} {
     margin-right: 0.5rem;

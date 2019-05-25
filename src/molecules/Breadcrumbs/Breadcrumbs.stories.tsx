@@ -15,6 +15,9 @@ storiesOf("Molecules|Breadcrumbs", module)
   })
   .add("with an array of crumbs", () => {
     const onClick = identity;
-    const trail = [{ text: "hello", onClick }, { text: "world", onClick }];
+    const trail = [
+      { text: "hello world", onClick },
+      { text: "where are you?", onClick }
+    ];
     return <Breadcrumbs trail={trail} />;
   });
