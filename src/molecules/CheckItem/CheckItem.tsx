@@ -1,32 +1,42 @@
-import React, { memo } from "react";
-import PropTypes from "prop-types";
-import { Checkbox, Link, ListItem } from "atoms";
+import React, { FunctionComponent } from "react";
+import styled from "styled-components";
+import { identity } from "ramda";
+import { Checkbox, Link } from "atoms";
+import { ListItem as ListItemType } from "types";
+import CheckItemWrapper from "./CheckItemWrapper";
 
-const CheckItem = ({ is, href, onClick, children, checked, id, onToggle }) => (
-  <ListItem is={is} gridTemplateColumns="2rem 1fr">
+type Id = string | number;
+
+type CheckItemProps = ListItemType & {
+  className?: string;
+  children: string;
+  isChecked?: boolean;
+  id?: Id;
+  onToggle?: (opts: { id?: Id; checked: boolean }) => void;
+};
+
+const CheckItem: FunctionComponent<CheckItemProps> = ({
+  href,
+  className,
+  onClick,
+  children,
+  isChecked = true,
+  id,
+  onToggle = identity
+}) => (
+  <CheckItemWrapper className={className}>
     <Checkbox
       onToggle={({ checked }) => onToggle({ id, checked })}
-      checked={checked}
+      isChecked={isChecked}
     />
     {href || onClick ? (
-      <Link href={href} onClick={onClick}>
+      <Link isBasic href={href} onClick={onClick}>
         {children}
       </Link>
     ) : (
-      <div>{children}</div>
+      children
     )}
-  </ListItem>
+  </CheckItemWrapper>
 );
 
-CheckItem.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
-    .isRequired,
-  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  is: PropTypes.func,
-  checked: PropTypes.bool,
-  onToggle: PropTypes.func.isRequired,
-  href: PropTypes.string,
-  onClick: PropTypes.func
-};
-
-export default memo(CheckItem);
+export default styled(CheckItem)``;

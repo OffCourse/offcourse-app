@@ -10,14 +10,9 @@ import CheckItem from "./CheckItem";
 
 storiesOf("Molecules|CheckItem", module)
   .addDecorator(withKnobs)
-  .add("defaults to an empty trail and display none", () => {
-    return <CheckItem />;
+  .add("without link", () => {
+    return <CheckItem isChecked={true}>Do Something</CheckItem>;
   })
-  .add("with an array of crumbs", () => {
-    const onClick = identity;
-    const trail = [
-      { text: "hello world", onClick },
-      { text: "where are you?", onClick }
-    ];
-    return <CheckItem trail={trail} />;
+  .add("with link", () => {
+    return <CheckItem href="/fsdajlsdfkl">Do Something</CheckItem>;
   });

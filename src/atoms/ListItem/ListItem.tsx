@@ -1,57 +1,17 @@
-import React, { FunctionComponent, ReactNode, MouseEvent } from "react";
-import styled from "styled-components";
+import React, { FunctionComponent } from "react";
 import { formatTitle } from "../helpers";
+import { ListItem as ListItemType } from "types";
 import { Link } from "atoms";
-import { Theme, ListItem as ListItemType } from "types";
+import ListItemWrapper from "./ListItemWrapper";
 
-type ListItemWrapperProps = {
-  theme: Theme;
-  isLink?: boolean;
+type ListItemProps = ListItemType & {
+  className?: string;
+  children: any[];
 };
 
-const ListItemWrapper = styled.li.attrs(
-  ({ theme, isLink = false }: ListItemWrapperProps) => {
-    const { black, white, primary } = theme.colors;
-    return {
-      backgroundColor: theme.grayScale[1],
-      textColor: black,
-      fontFamily: theme.fonts.bold,
-      hoverBackgroundColor: primary,
-      hoverTextColor: white,
-      lineHeight: theme.lineHeights[2],
-      fontSize: theme.fontSizes[1],
-      padding: `${theme.space[4]} ${theme.space[4]}`
-    };
-  }
-)<ListItemWrapperProps>`
-  display: grid;
-  padding: ${({ padding }) => padding};
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  background-color: ${({ backgroundColor }) => backgroundColor};
-  color: ${({ textColor }) => textColor};
-  font-family: ${({ fontFamily }) => fontFamily};
-  font-size: ${({ fontSize }) => fontSize};
-  line-height: ${({ lineHeight }) => lineHeight};
-  user-select: none;
-  :hover {
-    background: ${({ hoverBackgroundColor }) => hoverBackgroundColor};
-  }
-  :hover {
-    color: ${({ hoverTextColor }) => hoverTextColor};
-    > ${Link} {
-      color: ${({ hoverTextColor }) => hoverTextColor};
-    }
-  }
-
-  > ${Link} {
-    font-family: ${({ fontFamily }) => fontFamily};
-  }
-`;
-
-const ListItem: FunctionComponent<ListItemType> = ({
+const ListItem: FunctionComponent<ListItemProps> = ({
   children,
+  className,
   onClick,
   href
 }) => {
@@ -64,9 +24,13 @@ const ListItem: FunctionComponent<ListItemType> = ({
     ) : (
       formatTitle(children)
     );
-    return <ListItemWrapper isLink={isLink}>{content}</ListItemWrapper>;
+    return (
+      <ListItemWrapper className={className} isLink={isLink}>
+        {content}
+      </ListItemWrapper>
+    );
   }
-  return <ListItemWrapper>{children}</ListItemWrapper>;
+  return <ListItemWrapper className={className}>{children}</ListItemWrapper>;
 };
 
 export default ListItem;

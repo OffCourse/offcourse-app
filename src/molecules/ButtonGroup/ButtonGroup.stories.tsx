@@ -26,6 +26,7 @@ storiesOf("Molecules|ButtonGroup", module)
   .add("can be initialized with a series of buttons", () => {
     const onClick = identity;
     const buttons = [
+      { onClick },
       { title: "hello world", onClick },
       { title: "where are you?", onClick }
     ];

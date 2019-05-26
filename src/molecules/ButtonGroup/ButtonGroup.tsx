@@ -22,7 +22,11 @@ const createButton: (
   button: ButtonType,
   defaults: ButtonType,
   index: number
-) => ReactNode = ({ title, size, variant, ...rest }, defaults, index) => (
+) => ReactNode = (
+  { title = "click me", size, variant, ...rest },
+  defaults,
+  index
+) => (
   <Button
     size={size || defaults.size}
     variant={variant || defaults.variant}

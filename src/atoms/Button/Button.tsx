@@ -1,80 +1,42 @@
 import React, { FunctionComponent, MouseEvent } from "react";
-import PropTypes from "prop-types";
+import { identity } from "ramda";
 import { formatTitle } from "../helpers";
 import { Variant, Size } from "enums";
+import ButtonWrapper from "./ButtonWrapper";
+import { Button as ButtonType } from "types";
 import styled from "styled-components";
-import { variant as v, width, style } from "styled-system";
-import { Theme, Button as ButtonType } from "types";
 
 type ButtonProps = ButtonType & {
-  theme: Theme;
+  className?: string;
   children: string;
 };
 
-const Button = styled.button.attrs(
-  ({
-    theme,
-    href,
-    variant = Variant.DEFAULT,
-    isSubmit,
-    children,
-    onClick,
-    tabIndex
-  }: ButtonProps) => {
-    const isDisabled = variant === Variant.DISABLED;
-    const buttonStyle = v({
-      key: "signalColorCombos"
-    });
-    const buttonSize = style({
-      prop: "size",
-      cssProperty: "width",
-      key: "buttonSizes"
-    });
-    return {
-      as: href ? "a" : "button",
-      href: isDisabled ? null : href,
-      disabled: isDisabled,
-      tabindex: tabIndex,
-      onClick,
-      type: isSubmit ? "submit" : "button",
-      border: theme.borders[0],
-      borderBottom: theme.borders[2],
-      padding: `${theme.space[4]} ${theme.space[6]}`,
-      fontFamily: theme.fonts.bold,
-      fontSize: theme.fontSizes[1],
-      children: formatTitle(children),
-      lineHeight: theme.lineHeights[1],
-      buttonStyle,
-      buttonSize
-    };
-  }
-)<ButtonProps>`
-  display: flex;
-  align-items: center;
-  height: 2.813rem;
-  border: ${({ border }) => border};
-  border-bottom: ${({ borderBottom }) => borderBottom};
-  padding: ${({ padding }) => padding};
-  font-family: ${({ fontFamily }) => fontFamily};
-  font-size: ${({ fontSize }) => fontSize};
-  justify-content: center;
-  line-height: ${({ lineHeight }) => lineHeight}
-  box-sizing: border-box;
-  user-select: none;
+const Button: FunctionComponent<ButtonProps> = ({
+  children,
+  className,
+  href,
+  size = Size.NORMAL,
+  onClick,
+  variant = Variant.DEFAULT,
+  isSubmit = false,
+  tabIndex = 1
+}) => {
+  const isDisabled = variant === Variant.DISABLED;
+  return (
+    <ButtonWrapper
+      as={href ? "a" : "button"}
+      type={isSubmit ? "submit" : "button"}
+      href={isDisabled ? null : href}
+      tabIndex={tabIndex}
+      onClick={isDisabled ? identity : onClick}
+      isDisabled={isDisabled}
+      variant={variant}
+      className={className}
+      size={size}
+    >
+      {formatTitle(children)}
+    </ButtonWrapper>
+  );
+};
 
-  :focus {
-    outline: none;
-  }
-  :disabled {
-    cursor: default;
-  }
-
-  text-decoration: inherit;
-
-  ${({ buttonStyle }) => buttonStyle}
-  ${({ buttonSize }) => buttonSize}
-`;
-
-Button.defaultProps = { variant: Variant.DEFAULT };
-
-export default Button;
+export default styled(Button)``;
