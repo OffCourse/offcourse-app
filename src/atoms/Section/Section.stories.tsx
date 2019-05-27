@@ -10,17 +10,27 @@ import { Direction, Variant, Size, ErrorState } from "enums";
 
 storiesOf("Atoms|Section", module)
   .addDecorator(withKnobs)
-  .add("display text", () => {
+  .add("horizontal", () => {
     return (
-      <Fragment>
+      <Section>
         {map(
           text => (
-            <Section key={text}>
-              <Text>{text}</Text>
-            </Section>
+            <Text key={text}>{text}</Text>
           ),
           ["Hello There", "Where is Everyone...?", "Anyone Here?????"]
         )}
-      </Fragment>
+      </Section>
+    );
+  })
+  .add("vertical", () => {
+    return (
+      <Section direction={Direction.VERTICAL}>
+        {map(
+          text => (
+            <Text key={text}>{text}</Text>
+          ),
+          ["Hello There", "Where is Everyone...?", "Anyone Here?????"]
+        )}
+      </Section>
     );
   });
