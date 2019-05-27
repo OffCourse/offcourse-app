@@ -6,7 +6,7 @@ const useExpandable: (
     initialLevel?: number;
     layout: string[][];
   },
-  callback?: (opts: { level: number; visibleSections: string[] }) => void
+  callback?: (opts?: { level?: number; visibleSections?: string[] }) => void
 ) => [number, () => void] = ({ initialLevel, layout }, callback = identity) => {
   const [level, setLevel] = useState(
     isNil(initialLevel) ? layout.length - 1 : initialLevel

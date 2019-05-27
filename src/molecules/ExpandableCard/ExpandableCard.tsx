@@ -16,6 +16,7 @@ type CardProps = {
   affordance?: Affordance.EXPANDABLE | Affordance.SELECTABLE | Affordance.NONE;
   initialLevel?: number;
   layout?: string[][];
+  onCardResize?: (opts: { level?: number; visibleSections?: string[] }) => void;
 };
 
 const ExpandableCard: FunctionComponent<CardProps> = ({

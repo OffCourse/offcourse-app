@@ -16,9 +16,15 @@ const Debug = () => {
     visibleSections: []
   });
 
+  const setDebugState: (opts: any) => void = ({ level, visibleSections }) =>
+    setState({ level, visibleSections });
+
   return (
     <div style={{ display: "flex" }}>
-      <Card onCardResize={setState} layout={[["heading"], ["heading", "body"]]}>
+      <Card
+        onCardResize={setDebugState}
+        layout={[["heading"], ["heading", "body"]]}
+      >
         <Section section="heading">
           <Heading>Hello World</Heading>
         </Section>
