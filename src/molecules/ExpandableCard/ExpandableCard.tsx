@@ -31,12 +31,15 @@ const ExpandableCard: FunctionComponent<CardProps> = ({
     { initialLevel, layout },
     onCardResize
   );
-  const isSelectable = affordance === Affordance.EXPANDABLE;
+  const isExpandable = affordance === Affordance.EXPANDABLE;
   return (
-    <Card affordance={isSelectable ? Affordance.SELECTABLE : Affordance.NONE}>
-      <Section direction={Direction.VERTICAL}>
-        <Button onClick={changeLevel}>Change Level</Button>
-      </Section>
+    <Card affordance={isExpandable ? Affordance.SELECTABLE : Affordance.NONE}>
+      {children}
+      {isExpandable && (
+        <Section direction={Direction.VERTICAL}>
+          <Button onClick={changeLevel}>Change Level</Button>
+        </Section>
+      )}
     </Card>
   );
 };

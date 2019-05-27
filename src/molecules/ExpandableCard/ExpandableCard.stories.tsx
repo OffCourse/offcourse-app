@@ -47,17 +47,19 @@ storiesOf("Molecules|ExpandableCard", module)
   .addDecorator(withKnobs)
   .add("selectable by default", () => {
     return <Debug />;
+  })
+  .add("can be turned off", () => {
+    return (
+      <Card
+        affordance={Affordance.NONE}
+        layout={[["heading"], ["heading", "body"]]}
+      >
+        <Section section="heading">
+          <Heading>Hello World</Heading>
+        </Section>
+        <Section section="body">
+          <Heading>How Are You?</Heading>
+        </Section>
+      </Card>
+    );
   });
-//   .add("can be turned off", () => {
-//     return (
-//       <Card
-//         affordance={Affordance.NONE}
-//         layout={[["heading"], ["heading", "body"]]}
-//       >
-//         <ResizeButton section="heading" />
-//         <Section section="body">
-//           <Heading>How Are You?</Heading>
-//         </Section>
-//       </Card>
-//     );
-//   });
