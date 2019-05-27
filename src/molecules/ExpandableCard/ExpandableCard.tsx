@@ -1,14 +1,16 @@
 import React, {
-  FunctionComponent,
+  Fragment,
   useState,
+  useCallback,
+  FunctionComponent,
   Children,
   cloneElement
 } from "react";
-import { Card, Text, Section } from "atoms";
+import { Card, Text, Section, Button } from "atoms";
 import { identity, isEmpty, contains, isNil, omit } from "ramda";
-import PropTypes from "prop-types";
 import { Variant, Affordance, Direction } from "enums";
 import { Card as CardType } from "types";
+import { useExpandable } from "hooks";
 
 type CardProps = {
   affordance?: Affordance.EXPANDABLE | Affordance.SELECTABLE | Affordance.NONE;
@@ -20,18 +22,19 @@ const ExpandableCard: FunctionComponent<CardProps> = ({
   affordance = Affordance.EXPANDABLE,
   children,
   layout = [],
-  initialLevel
+  initialLevel,
+  onCardResize
 }) => {
-  const [level, setLevel] = useState(
-    isNil(initialLevel) ? layout.length - 1 : initialLevel
+  console.log("render once");
+  const [level, changeLevel] = useExpandable(
+    { initialLevel, layout },
+    onCardResize
   );
   const isSelectable = affordance === Affordance.EXPANDABLE;
   return (
     <Card affordance={isSelectable ? Affordance.SELECTABLE : Affordance.NONE}>
-      {children}
       <Section direction={Direction.VERTICAL}>
-        <Text>Current Level: {level}</Text>
-        <Text>Visible Sections: {layout[level].join(" ")}</Text>
+        <Button onClick={changeLevel}>Change Level</Button>
       </Section>
     </Card>
   );
@@ -139,12 +142,12 @@ const ExpandableCard: FunctionComponent<CardProps> = ({
 //   ])
 // };
 
-ExpandableCard.defaultProps = {
-  onResize: identity,
-  layout: [],
-  variant: Variant.DEFAULT,
-  onIconClick: identity,
-  affordance: Affordance.EXPANDABLE
-};
+// ExpandableCard.defaultProps = {
+//   onResize: identity,
+//   layout: [],
+//   variant: Variant.DEFAULT,
+//   onIconClick: identity,
+//   affordance: Affordance.EXPANDABLE
+// };
 
 export default ExpandableCard;

@@ -16,10 +16,10 @@ const getNumberOfColumns: (
 
 const useColumns: (
   breakpoints: number[],
-  onResize?: (opts: { width: number; numberOfColumns: number }) => void
+  callback?: (opts: { width: number; numberOfColumns: number }) => void
 ) => { ref: any; numberOfColumns: number; width: number; height: number } = (
   breakpoints,
-  onResize
+  callback
 ) => {
   const [numberOfColumns, setNumberOfColumns] = useState(1);
   const { width, height, ref } = useSize();
@@ -30,10 +30,10 @@ const useColumns: (
   }, [width]);
 
   useEffect(() => {
-    if (!onResize) {
+    if (!callback) {
       return;
     }
-    onResize({ width, numberOfColumns });
+    callback({ width, numberOfColumns });
   }, [numberOfColumns]);
 
   return { ref, numberOfColumns, width, height };
