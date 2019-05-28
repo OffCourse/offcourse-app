@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { reduceWhile, inc, identity } from "ramda";
-import useSize from "./useSize";
+import useSize from "../useSize";
 
 const getNumberOfColumns: (
   containerWidth: number,

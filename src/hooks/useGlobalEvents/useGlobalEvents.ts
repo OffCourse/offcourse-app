@@ -1,5 +1,5 @@
 import { useEffect, useContext } from "react";
-import { AppStateContext } from "../contexts";
+import { AppStateContext } from "../../contexts";
 
 const useGlobalEvents = () => {
   const { searchbar, sidebar, overlay } = useContext(AppStateContext);

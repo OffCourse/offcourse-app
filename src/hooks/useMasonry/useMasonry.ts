@@ -1,5 +1,5 @@
 import { ReactNode, useMemo } from "react";
-import useColumns from "./useColumns";
+import useColumns from "../useColumns";
 import { append, adjust, repeat, reduce, addIndex } from "ramda";
 
 const reduceIndexed: (x: any, y: any, z: any) => any = addIndex(reduce);
@@ -37,7 +37,7 @@ const useMasonry: (
     children,
     numberOfColumns
   ]);
-  return {ref, grid, width, height };
+  return { ref, grid, width, height };
 };
 
 export default useMasonry;

@@ -26,7 +26,6 @@ const ExpandableCard: FunctionComponent<CardProps> = ({
   initialLevel,
   onCardResize
 }) => {
-  console.log("render once");
   const [level, changeLevel] = useExpandable(
     { initialLevel, layout },
     onCardResize
@@ -35,11 +34,6 @@ const ExpandableCard: FunctionComponent<CardProps> = ({
   return (
     <Card affordance={isExpandable ? Affordance.SELECTABLE : Affordance.NONE}>
       {children}
-      {isExpandable && (
-        <Section direction={Direction.VERTICAL}>
-          <Button onClick={changeLevel}>Change Level</Button>
-        </Section>
-      )}
     </Card>
   );
 };
