@@ -1,24 +1,23 @@
 import { useCallback, useState, useEffect } from "react";
 import { isNil, identity } from "ramda";
-import { useCount } from "../useCount";
+import useCount from "../useCount";
 
-const useExpandable: (
-  opts: {
-    initialLevel?: number;
-    layout?: string[][];
-  },
-  callback?: (opts?: { level?: number; visibleSections?: string[] }) => void
-) => [{ count: number; visibleSections: string[]; changeCount: () => void }] = (
+type UseExpandable = (opts: {
+  initialLevel?: number;
+  layout?: string[][];
+}) => { level: number; visibleSections: string[]; cycle: () => void };
+
+const useExpandable: UseExpandable = (
   { initialLevel, layout = [] },
   callback = identity
 ) => {
-  const initialCount = isNil(initialLevel)
-    ? layout.length === 0
-      ? 0
-      : layout.length - 1
-    : initialLevel;
+  const maxCount = layout.length > 0 ? layout.length - 1 : 0;
+  const initialCount = initialLevel ? initialLevel : maxCount;
 
-  const { count: level, changeCount } = useCount(initialCount, layout.length);
+  const { count: level, cycle } = useCount({
+    initialCount,
+    maxCount
+  });
 
   const visibleSections = layout[level] || [];
 
@@ -26,7 +25,7 @@ const useExpandable: (
     callback({ level, visibleSections });
   }, [level]);
 
-  return { level, visibleSections, changeLevel: changeCount };
+  return { level, visibleSections, cycle };
 };
 
 export default useExpandable;

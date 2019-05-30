@@ -24,7 +24,9 @@ export enum ErrorState {
 }
 export enum Direction {
   HORIZONTAL = "HORIZONTAL",
-  VERTICAL = "VERTICAL"
+  VERTICAL = "VERTICAL",
+  UP = "UP",
+  DOWN = "DOWN"
 }
 
 export enum Affordance {

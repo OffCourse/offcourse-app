@@ -14,8 +14,8 @@ storiesOf("Hooks|useExpandable", module)
   .addDecorator(withKnobs)
   .add("selectable by default", () => {
     const Component = () => {
-      const { level, visibleSections, changeLevel } = useExpandable({
-        layout: [["HI"], ["Hello"]]
+      const { level, visibleSections, cycle } = useExpandable({
+        layout: [["HI"], ["Hello"], ["Bye Bye"]]
       });
       return (
         <Card>
@@ -24,7 +24,7 @@ storiesOf("Hooks|useExpandable", module)
             <Text>{`Visible Sections: ${visibleSections.join(" ")}`}</Text>
           </Section>
           <Section direction={Direction.VERTICAL}>
-            <Button onClick={changeLevel}>Change Level</Button>
+            <Button onClick={cycle}>Change Level</Button>
           </Section>
         </Card>
       );

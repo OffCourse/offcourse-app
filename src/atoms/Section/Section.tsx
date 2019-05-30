@@ -5,7 +5,7 @@ import { Direction } from "enums";
 
 type SectionProps = {
   theme: Theme;
-  direction: Direction;
+  direction?: Direction;
 };
 
 const Section = styled.section.attrs(
