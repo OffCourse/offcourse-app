@@ -7,28 +7,36 @@ import { map, values, identity, equals } from "ramda";
 import { DocContainer as Container } from "helpers";
 
 import Card from "./ExpandableCard";
-import { Card as BasicCard, Icon, Heading, Section, Text } from "atoms";
+import { Card as BasicCard, Button, Icon, Heading, Section, Text } from "atoms";
 import { Direction, Affordance, Size, ErrorState } from "enums";
 
 const Debug = () => {
-  const [{ level, visibleSections }, setState] = useState({
+  const [{ level, sectionNames, cycle }, setState] = useState({
     level: 0,
-    visibleSections: []
+    sectionNames: [],
+    cycle: identity
   });
 
-  const setDebugState: (opts: any) => void = ({ level, visibleSections }) =>
-    setState({ level, visibleSections });
+  const setDebugState: (opts: any) => void = ({ level, sectionNames, cycle }) =>
+    setState({ level, sectionNames, cycle });
 
   return (
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", alignItems: "flex-start" }}>
       <Card
         onCardResize={setDebugState}
-        layout={[["heading"], ["heading", "body"]]}
+        layout={[
+          ["heading"],
+          ["heading", "body" ],
+          ["heading", "body", "body2"]
+        ]}
       >
-        <Section section="heading">
+        <Section name="heading">
           <Heading>Hello World</Heading>
         </Section>
-        <Section section="body">
+        <Section name="body">
+          <Heading>How Are You?</Heading>
+        </Section>
+        <Section name="body2">
           <Heading>How Are You?</Heading>
         </Section>
       </Card>
@@ -36,7 +44,10 @@ const Debug = () => {
       <BasicCard>
         <Section direction={Direction.VERTICAL}>
           <Text>{`Current Level: ${level}`}</Text>
-          <Text>{`Visible Sections: ${visibleSections.join(" ")}`}</Text>
+          <Text>{`Visible Sections: ${sectionNames.join(" ")}`}</Text>
+        </Section>
+        <Section direction={Direction.VERTICAL}>
+          <Button onClick={cycle}>Resize</Button>
         </Section>
       </BasicCard>
     </div>

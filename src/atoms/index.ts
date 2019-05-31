@@ -13,6 +13,6 @@ export { default as ListItem } from "./ListItem";
 export { default as Logo } from "./Logo";
 export { default as Message } from "./Message";
 export { default as Portal } from "./Portal";
-export { default as Section } from "./Section";
+export { default as Section, SectionType } from "./Section";
 export { default as Tag } from "./Tag";
 export { default as Text } from "./Text";

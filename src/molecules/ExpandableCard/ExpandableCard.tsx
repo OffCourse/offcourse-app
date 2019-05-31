@@ -1,152 +1,82 @@
 import React, {
   Fragment,
   useState,
+  useEffect,
   useCallback,
   FunctionComponent,
+  ReactElement,
   Children,
   cloneElement
 } from "react";
-import { Card, Text, Section, Button } from "atoms";
+import posed, { PoseGroup } from "react-pose";
+import styled from "styled-components";
+import { Card, Text, Section, SectionType, Button } from "atoms";
 import { identity, isEmpty, contains, isNil, omit } from "ramda";
 import { Variant, Affordance, Direction } from "enums";
 import { Card as CardType } from "types";
 import { useExpandable } from "hooks";
 
+const AnimSection = posed(Section)({
+  visible: {
+    opacity: ({ isVisible }) => (isVisible ? 1 : 0),
+    height: ({ isVisible }) => (isVisible ? "auto" : 0)
+  },
+  invisible: {
+    opacity: ({ isVisible }) => (isVisible ? 1 : 0),
+    height: ({ isVisible }) => (isVisible ? "auto" : 0)
+  }
+});
+
+const AnimCard = posed(Card)({
+  visible: { staggerChildren: 300 },
+  invisible: { staggerChildren: 300, staggerDirection: -1 }
+});
+
 type CardProps = {
   affordance?: Affordance.EXPANDABLE | Affordance.SELECTABLE | Affordance.NONE;
+  variant?: Variant;
   initialLevel?: number;
   layout?: string[][];
-  onCardResize?: (opts: { level?: number; visibleSections?: string[] }) => void;
+  children: SectionType | SectionType[];
+  onCardResize?: (opts: { level?: number; sectionNames?: string[] }) => void;
 };
 
 const ExpandableCard: FunctionComponent<CardProps> = ({
   affordance = Affordance.EXPANDABLE,
-  children,
+  variant = Variant.DEFAULT,
   layout = [],
   initialLevel,
-  onCardResize
+  children,
+  onCardResize: callback
 }) => {
-  const { level, visibleSections, cycle } = useExpandable(
-    { initialLevel, layout },
-    onCardResize
-  );
   const isExpandable = affordance === Affordance.EXPANDABLE;
+  const [on, setOn] = useState(false);
+  const isDisabled = variant === Variant.DISABLED;
+  const { level, sections, cycle } = useExpandable({
+    initialLevel,
+    layout,
+    sections: children,
+    callback
+  });
+
+  console.log("0", level);
+
+  useEffect(() => {
+    console.log("1", level);
+    setOn(!on);
+  }, [level]);
+
   return (
-    <Card affordance={isExpandable ? Affordance.SELECTABLE : Affordance.NONE}>
-      {children}
-      <Button onClick={cycle}>Resize</Button>
-    </Card>
+    <AnimCard
+      pose={on ? "invisible" : "visible"}
+      affordance={isExpandable ? Affordance.SELECTABLE : Affordance.NONE}
+    >
+      {sections.map(({ props }, index) => {
+        const { name, ...rest } = props;
+        return <AnimSection key={name} {...rest} />;
+      })}
+    </AnimCard>
   );
 };
-
-// class ExpandableCard extends Component {
-//   state = {
-//     level: isNil(this.props.initialLevel)
-//       ? this.props.layout.length - 1
-//       : this.props.initialLevel
-//   };
-
-//   handleResize = () => {
-//     const { onResize } = this.props;
-//     this.setState(
-//       ({ level }, { layout }) => {
-//         const nextLevel = (level + 1) % layout.length;
-//         return { level: nextLevel || 0 };
-//       },
-//       () => onResize(this.state.level)
-//     );
-//   };
-
-//   renderElem = (child, index) => {
-//     const { layout, onIconClick, affordance, variant } = this.props;
-//     const { level } = this.state;
-
-//     if (index === 0 && affordance === Affordance.EXPANDABLE) {
-//       return cloneElement(child, {
-//         ...child.props,
-//         variant,
-//         onIconClick: this.handleResize,
-//         affordance:
-//           level === layout.length - 1
-//             ? Affordance.SHRINKABLE
-//             : Affordance.EXPANDABLE
-//       });
-//     }
-
-//     if (index === 0) {
-//       return cloneElement(child, {
-//         ...child.props,
-//         variant,
-//         affordance
-//       });
-//     }
-//     return child;
-//   };
-
-//   augmentSections = () => {
-//     const { variant, children, layout } = this.props;
-
-//     if (variant === Variant.DISABLED) {
-//       return Children.map(children, (child, index) => {
-//         if (!child || index !== 0) return null;
-//         return this.renderElem(child, index);
-//       });
-//     }
-
-//     return Children.map(children, (child, index) => {
-//       if (!child) return null;
-//       const { section } = child.props;
-//       const { level } = this.state;
-//       const isVisible = layout[level] && contains(section, layout[level]);
-//       return (isEmpty(layout) || isVisible) && this.renderElem(child, index);
-//     });
-//   };
-
-//   render() {
-//     const { affordance } = this.props;
-//     const rest = omit(
-//       ["initialLevel", "layout", "children", "onResize", "onIconClick"],
-//       this.props
-//     );
-//     return (
-//       <Card
-//         {...rest}
-//         affordance={
-//           affordance === Affordance.EXPANDABLE
-//             ? Affordance.SELECTABLE
-//             : affordance
-//         }
-//       >
-//         {this.augmentSections()}
-//       </Card>
-//     );
-//   }
-// }
-
-// ExpandableCard.Section = Section;
-
-// ExpandableCard.propTypes = {
-//   onResize: PropTypes.func,
-//   initialLevel: PropTypes.number,
-//   layout: PropTypes.array,
-//   variant: PropTypes.oneOf([ACTIVE, INACTIVE]),
-//   affordance: PropTypes.oneOf([
-//     NONE,
-//     CHECKABLE,
-//     UNCHECKABLE,
-//     CLOSEABLE,
-//     SELECTABLE,
-//     EXPANDABLE,
-//     SHRINKABLE
-//   ])
-// };
-
-// ExpandableCard.defaultProps = {
-//   onResize: identity,
-//   layout: [],
-//   variant: Variant.DEFAULT,
-//   onIconClick: identity,
-//   affordance: Affordance.EXPANDABLE
-// };
 
 export default ExpandableCard;

@@ -1,16 +1,40 @@
-import { useCallback, useState, useEffect } from "react";
-import { isNil, identity } from "ramda";
+import {
+  Children,
+  cloneElement,
+  useCallback,
+  useState,
+  useEffect
+} from "react";
+import { identity, contains, isEmpty } from "ramda";
 import useCount from "../useCount";
+import { SectionType as Section } from "atoms";
+
+type VisibleSection = Section | null;
 
 type UseExpandable = (opts: {
   initialLevel?: number;
   layout?: string[][];
-}) => { level: number; visibleSections: string[]; cycle: () => void };
+  isDisabled?: boolean;
+  sections: Section | Section[];
+  callback?: (opts: {
+    level?: number;
+    sectionNames?: string[];
+    cycle: () => void;
+  }) => void;
+}) => {
+  level: number;
+  sectionNames: string[];
+  sections: VisibleSection | VisibleSection[];
+  cycle: () => void;
+};
 
-const useExpandable: UseExpandable = (
-  { initialLevel, layout = [] },
+const useExpandable: UseExpandable = ({
+  initialLevel,
+  layout = [],
+  isDisabled = false,
+  sections: rawSections,
   callback = identity
-) => {
+}) => {
   const maxCount = layout.length > 0 ? layout.length - 1 : 0;
   const initialCount = initialLevel ? initialLevel : maxCount;
 
@@ -19,13 +43,27 @@ const useExpandable: UseExpandable = (
     maxCount
   });
 
-  const visibleSections = layout[level] || [];
+  const sectionNames = layout[level] || [];
+
+  const sections = Children.map(rawSections, (child, index) => {
+    if (isDisabled) {
+      return index === 0 ? child : null;
+    }
+
+    if (isEmpty(layout)) {
+      return child;
+    }
+
+    const { name } = child.props;
+    const isVisible = contains(name, sectionNames);
+    return cloneElement(child, { ...child.props, isVisible });
+  });
 
   useEffect(() => {
-    callback({ level, visibleSections });
+    callback({ level, sectionNames, cycle });
   }, [level]);
 
-  return { level, visibleSections, cycle };
+  return { level, sectionNames, sections, cycle };
 };
 
 export default useExpandable;

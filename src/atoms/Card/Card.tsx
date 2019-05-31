@@ -18,6 +18,7 @@ const Card = styled.div.attrs(({ theme, affordance }: CardProps) => {
 })<CardProps>`
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: stretch;
   border-bottom: ${({ borderBottom }) => borderBottom};
   background: ${({ background }) => background};
@@ -27,8 +28,8 @@ const Card = styled.div.attrs(({ theme, affordance }: CardProps) => {
     border-color: ${({ hoverBorderColor }) => hoverBorderColor};
   }
   section {
-    &:last-child {
-      border-bottom: none;
+    &:first-child {
+      border-top: none;
     }
   }
   ${width}
