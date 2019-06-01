@@ -1,36 +1,20 @@
-import React, {
-  Fragment,
-  useState,
-  useEffect,
-  useCallback,
-  FunctionComponent,
-  ReactElement,
-  Children,
-  cloneElement
-} from "react";
-import posed, { PoseGroup } from "react-pose";
-import styled from "styled-components";
-import { Card, Text, Section, SectionType, Button } from "atoms";
-import { identity, isEmpty, contains, isNil, omit } from "ramda";
+import React, { FunctionComponent } from "react";
+import { useTransition, animated } from "react-spring";
+import { Card as BasicCard, Section } from "atoms";
 import { Variant, Affordance, Direction } from "enums";
-import { Card as CardType } from "types";
+import { Card as CardType, Section as SectionType } from "types";
 import { useExpandable } from "hooks";
+import styled from "styled-components";
 
-const AnimSection = posed(Section)({
-  visible: {
-    opacity: ({ isVisible }) => (isVisible ? 1 : 0),
-    height: ({ isVisible }) => (isVisible ? "auto" : 0)
-  },
-  invisible: {
-    opacity: ({ isVisible }) => (isVisible ? 1 : 0),
-    height: ({ isVisible }) => (isVisible ? "auto" : 0)
+const Card = styled(BasicCard)`
+  > * {
+    &:first-child {
+      > ${Section} {
+        border-top: none;
+      }
+    }
   }
-});
-
-const AnimCard = posed(Card)({
-  visible: { staggerChildren: 300 },
-  invisible: { staggerChildren: 300, staggerDirection: -1 }
-});
+`;
 
 type CardProps = {
   affordance?: Affordance.EXPANDABLE | Affordance.SELECTABLE | Affordance.NONE;
@@ -50,7 +34,6 @@ const ExpandableCard: FunctionComponent<CardProps> = ({
   onCardResize: callback
 }) => {
   const isExpandable = affordance === Affordance.EXPANDABLE;
-  const [on, setOn] = useState(false);
   const isDisabled = variant === Variant.DISABLED;
   const { level, sections, cycle } = useExpandable({
     initialLevel,
@@ -59,23 +42,22 @@ const ExpandableCard: FunctionComponent<CardProps> = ({
     callback
   });
 
-  console.log("0", level);
-
-  useEffect(() => {
-    console.log("1", level);
-    setOn(!on);
-  }, [level]);
+  const transitions = useTransition(sections, section => section!.key, {
+    from: { opacity: 0, transform: "translate3d(-40px,0, 0)" },
+    enter: { opacity: 1, transform: "translate3d(0px,0, 0)" },
+    leave: { opacity: 0, transform: "translate3d(-40px,0, 0)" }
+  }).map(({ item, props, key }) => {
+    return (
+      <animated.div key={key} style={props}>
+        {item}
+      </animated.div>
+    );
+  });
 
   return (
-    <AnimCard
-      pose={on ? "invisible" : "visible"}
-      affordance={isExpandable ? Affordance.SELECTABLE : Affordance.NONE}
-    >
-      {sections.map(({ props }, index) => {
-        const { name, ...rest } = props;
-        return <AnimSection key={name} {...rest} />;
-      })}
-    </AnimCard>
+    <Card affordance={isExpandable ? Affordance.SELECTABLE : Affordance.NONE}>
+      {transitions}
+    </Card>
   );
 };
 

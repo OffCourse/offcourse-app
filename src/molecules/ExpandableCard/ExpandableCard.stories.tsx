@@ -24,11 +24,7 @@ const Debug = () => {
     <div style={{ display: "flex", alignItems: "flex-start" }}>
       <Card
         onCardResize={setDebugState}
-        layout={[
-          ["heading"],
-          ["heading", "body" ],
-          ["heading", "body", "body2"]
-        ]}
+        layout={[["heading"], ["heading", "body"], ["heading", "body", "else"]]}
       >
         <Section name="heading">
           <Heading>Hello World</Heading>
@@ -36,7 +32,7 @@ const Debug = () => {
         <Section name="body">
           <Heading>How Are You?</Heading>
         </Section>
-        <Section name="body2">
+        <Section name="else">
           <Heading>How Are You?</Heading>
         </Section>
       </Card>

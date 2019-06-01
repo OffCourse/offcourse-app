@@ -1,25 +1,27 @@
 import system from "system-components";
 import styled from "styled-components";
 import { width, space, opacity } from "styled-system";
-import { Affordance } from "enums";
+import { Affordance, Direction } from "enums";
 import { Theme, Card as CardType } from "types";
+import Section from "../Section";
 
-type CardProps = CardType & { theme: Theme };
+type CardProps = CardType & { theme: Theme; direction: DIRECTION };
 
-const Card = styled.div.attrs(({ theme, affordance }: CardProps) => {
+const Card = styled.div.attrs(({ theme, affordance, direction }: CardProps) => {
   const [noBorder, _, normalBorder] = theme.borders;
   return {
     borderBottom:
       affordance === Affordance.SELECTABLE ? normalBorder : noBorder,
     background: theme.grayScale[0],
     borderColor: theme.grayScale[2],
-    hoverBorderColor: theme.colors.primary
+    hoverBorderColor: theme.colors.primary,
+    flexDirection: direction === Direction.HORIZONTAL ? "row" : "column"
   };
 })<CardProps>`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${({ flexDirection }) => flexDirection};
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: flex-start;
   border-bottom: ${({ borderBottom }) => borderBottom};
   background: ${({ background }) => background};
   border-color: ${({ borderColor }) => borderColor};
@@ -27,7 +29,7 @@ const Card = styled.div.attrs(({ theme, affordance }: CardProps) => {
   &:hover {
     border-color: ${({ hoverBorderColor }) => hoverBorderColor};
   }
-  section {
+  > ${Section} {
     &:first-child {
       border-top: none;
     }

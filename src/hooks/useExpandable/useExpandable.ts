@@ -7,7 +7,7 @@ import {
 } from "react";
 import { identity, contains, isEmpty } from "ramda";
 import useCount from "../useCount";
-import { SectionType as Section } from "atoms";
+import { Section } from "types";
 
 type VisibleSection = Section | null;
 
@@ -56,7 +56,10 @@ const useExpandable: UseExpandable = ({
 
     const { name } = child.props;
     const isVisible = contains(name, sectionNames);
-    return cloneElement(child, { ...child.props, isVisible });
+    if (isVisible) {
+      return child;
+    }
+    return null;
   });
 
   useEffect(() => {

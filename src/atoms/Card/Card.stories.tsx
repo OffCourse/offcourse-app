@@ -8,6 +8,7 @@ import { DocContainer as Container } from "helpers";
 
 import Card from "./Card";
 import Heading from "../Heading";
+import Section from "../Section";
 import { Direction, Affordance, Size, ErrorState } from "enums";
 
 storiesOf("Atoms|Card", module)
@@ -15,7 +16,9 @@ storiesOf("Atoms|Card", module)
   .add("selectable by default", () => {
     return (
       <Card>
-        <Heading>Hello World</Heading>
+        <Section>
+          <Heading>Hello World</Heading>
+        </Section>
       </Card>
     );
   })
@@ -23,6 +26,18 @@ storiesOf("Atoms|Card", module)
     return (
       <Card affordance={Affordance.NONE}>
         <Heading>Hello World</Heading>
+      </Card>
+    );
+  })
+  .add("horizontal", () => {
+    return (
+      <Card width="36rem" direction={Direction.HORIZONTAL}>
+        <Section>
+          <Heading>Hello World</Heading>
+        </Section>
+        <Section>
+          <Heading>Hello World</Heading>
+        </Section>
       </Card>
     );
   });

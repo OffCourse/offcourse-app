@@ -9,14 +9,12 @@ type SectionProps = {
   name?: string;
 };
 
-export type SectionType = ReactElement<{ name: string }>;
-
 const Section = styled.section.attrs(
-  ({ theme, direction = Direction.HORIZONTAL }: SectionProps) => {
+  ({ theme, direction = Direction.HORIZONTAL, ...rest }: SectionProps) => {
     return {
       borderColor: theme.grayScale[1],
       borderTop: theme.borders[1],
-      padding: `${theme.space[0]} ${theme.space[6]}`,
+      padding: `${theme.space[6]} ${theme.space[6]}`,
       flexDirection: direction === Direction.VERTICAL ? "column" : "row",
       alignItems: direction === Direction.VERTICAL ? "flex-start" : "center",
       justifyContent:
