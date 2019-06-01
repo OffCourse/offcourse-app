@@ -9,11 +9,10 @@ const useCount = ({
   initialCount = 0,
   maxCount = 5,
   minCount = 0,
-  direction = Direction.DOWN
+  direction = Direction.UP
 }) => {
   const [count, setCount] = useState(initialCount);
   const [isRewinding, setRewinding] = useState(false);
-  const [isUnwinding, setUnwinding] = useState(false);
 
   const nextLevel = count + 1;
   const increase = useCallback(() => setCount(nextLevel), [count]);
@@ -21,22 +20,17 @@ const useCount = ({
   const decrease = useCallback(() => setCount(previousLevel), [count]);
 
   useEffect(() => {
-    if (count <= minCount) {
+    if (direction === Direction.UP && count <= minCount) {
+      return setRewinding(false);
+    }
+
+    if (direction === Direction.DOWN && count >= maxCount) {
       return setRewinding(false);
     }
     if (isRewinding) {
-      return decrease();
+      return direction === Direction.UP ? decrease() : increase();
     }
   }, [count, isRewinding]);
-
-  useEffect(() => {
-    if (count >= maxCount) {
-      return setUnwinding(false);
-    }
-    if (isUnwinding) {
-      return increase();
-    }
-  }, [count, isUnwinding]);
 
   const reset = useCallback(() => {
     setCount(initialCount);
@@ -54,12 +48,8 @@ const useCount = ({
     !isRewinding ? setRewinding(true) : null;
   }, [isRewinding]);
 
-  const unwind = useCallback(() => {
-    !isUnwinding ? setUnwinding(true) : null;
-  }, [isUnwinding]);
-
   const cycleUp = nextLevel <= maxCount ? increase : rewind;
-  const cycleDown = previousLevel >= minCount ? decrease : unwind;
+  const cycleDown = previousLevel >= minCount ? decrease : rewind;
 
   return {
     count,
