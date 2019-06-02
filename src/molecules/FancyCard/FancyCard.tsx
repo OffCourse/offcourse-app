@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import { Variant, Affordance, Direction } from "enums";
 import { animated, useSpring, config } from "react-spring";
-import { map, contains, flatten } from "ramda";
+import { map, contains, flatten, isEmpty, isNil } from "ramda";
 
 import { Section } from "types";
 import { Card } from "atoms";
@@ -25,26 +25,32 @@ const FancyCard: FunctionComponent<CardProps> = ({
   layout,
   children
 }) => {
-  const isExpandable = affordance === Affordance.EXPANDABLE;
   const isDisabled = variant === Variant.DISABLED;
-  const sectionNames = layout[level] || [];
   const sectionsArray = flatten([children]);
+  const isExpandable = affordance === Affordance.EXPANDABLE;
+
+  if (isDisabled) {
+    return <Card affordance={Affordance.NONE}>{sectionsArray[0]}</Card>;
+  }
+
+  if (!isExpandable || isNil(level) || isEmpty(layout)) {
+    return <Card affordance={Affordance.SELECTABLE}>{sectionsArray}</Card>;
+  }
+
+  const sectionNames = layout[level] || [];
 
   const [ref, { height }] = useMeasure();
 
-  const visibleSections = map(
-    item => {
-      const { name } = item.props;
-      const isVisible = contains(name, sectionNames);
+  const createSection = (item: Section) => {
+    const { name } = item.props;
+    const isVisible = contains(name, sectionNames);
 
-      return (
-        <FancySection name={name} isVisible={isVisible}>
-          {item}
-        </FancySection>
-      );
-    },
-    sectionsArray as Section[]
-  );
+    return (
+      <FancySection key={name} isVisible={isVisible}>
+        {item}
+      </FancySection>
+    );
+  };
 
   return (
     <FancyCardWrapper
@@ -52,9 +58,9 @@ const FancyCard: FunctionComponent<CardProps> = ({
       style={{
         ...useSpring({ height, config: config.gentle })
       }}
-      affordance={isExpandable ? Affordance.SELECTABLE : Affordance.NONE}
+      affordance={Affordance.SELECTABLE}
     >
-      <div ref={ref}>{isDisabled ? visibleSections[0] : visibleSections}</div>
+      <div ref={ref}>{map(createSection, sectionsArray as Section[])}</div>
     </FancyCardWrapper>
   );
 };

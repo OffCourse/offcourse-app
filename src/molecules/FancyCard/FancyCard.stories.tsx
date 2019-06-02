@@ -49,17 +49,17 @@ storiesOf("Molecules|ExpandableCard", module)
   .add("selectable by default", () => {
     return <Debug />;
   })
-  .add("can be turned off", () => {
+  .add("all fancy stuff can be turned off", () => {
     return (
-      <Card
-        affordance={Affordance.NONE}
-        layout={[["heading"], ["heading", "body"]]}
-      >
-        <Section section="heading">
+      <Card>
+        <Section name="heading" direction={Direction.HORIZONTAL}>
           <Heading>Hello World</Heading>
         </Section>
-        <Section section="body">
+        <Section name="body">
           <Heading>How Are You?</Heading>
+        </Section>
+        <Section name="else">
+          <Heading>And You?</Heading>
         </Section>
       </Card>
     );

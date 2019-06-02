@@ -4,17 +4,14 @@ import { Section } from "types";
 
 type SectionProps = {
   children: Section;
-  name: string;
   isVisible: boolean;
 };
 
 const FancySection: FunctionComponent<SectionProps> = ({
   children,
-  name,
   isVisible
 }) => (
   <animated.div
-    key={name}
     style={{
       visibility: isVisible ? "visible" : "hidden",
       height: isVisible ? "auto" : 0,
