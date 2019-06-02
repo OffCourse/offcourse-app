@@ -11,16 +11,15 @@ import { Button, Icon, Heading, Section, Text } from "atoms";
 import { Direction, Variant, Affordance, Size, ErrorState } from "enums";
 import { useCount } from "hooks";
 
-const Debug = () => {
-  const layout = [
-    ["heading"],
-    ["heading", "stats"],
-    ["heading", "stats", "body", "else"]
-  ];
+const layout = [
+  ["heading"],
+  ["heading", "stats"],
+  ["heading", "stats", "body", "else"]
+];
 
-  const maxCount = layout.length > 0 ? layout.length - 1 : 0;
+const Debug = () => {
   const { count: level, cycle } = useCount({
-    maxCount
+    maxCount: layout.length > 0 ? layout.length - 1 : 0
   });
 
   return (

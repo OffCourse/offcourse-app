@@ -21,7 +21,7 @@ const FancyCard: FunctionComponent<CardProps> = ({
   affordance = Affordance.EXPANDABLE,
   variant = Variant.DEFAULT,
   level,
-  layout,
+  layout = [],
   children
 }) => {
   const isDisabled = variant === Variant.DISABLED;
@@ -36,12 +36,11 @@ const FancyCard: FunctionComponent<CardProps> = ({
     return <Card affordance={Affordance.SELECTABLE}>{sectionsArray}</Card>;
   }
 
-  const sectionNames = layout[level] || [];
-
   const [ref, { height }] = useMeasure();
 
   const createSection = (item: Section) => {
     const { name } = item.props;
+    const sectionNames = layout[level];
     const isVisible = contains(name, sectionNames);
 
     return (
