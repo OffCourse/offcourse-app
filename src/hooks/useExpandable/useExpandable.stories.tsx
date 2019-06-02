@@ -7,6 +7,7 @@ import { map, values, identity, equals } from "ramda";
 import { DocContainer as Container } from "helpers";
 
 import useExpandable from "./useExpandable";
+import useCount from "../useCount";
 import { Card, Button, Icon, Heading, Section, Text } from "atoms";
 import { Direction, Affordance, Size, ErrorState } from "enums";
 
@@ -14,20 +15,24 @@ storiesOf("Hooks|useExpandable", module)
   .addDecorator(withKnobs)
   .add("selectable by default", () => {
     const Component = () => {
-      const { level, visibleSections, cycle } = useExpandable({
-        layout: [["HI"], ["Hello"], ["Bye Bye"]]
+      const layout = [["a"], ["a", "b"]];
+      const maxCount = layout.length > 0 ? layout.length - 1 : 0;
+      const { count: level, cycle } = useCount({ maxCount });
+      const sections = [
+        <Section key="a" direction={Direction.VERTICAL}>
+          <Text>Show Something</Text>
+        </Section>,
+        <Section key="b" direction={Direction.VERTICAL}>
+          <Text>{`Current Level: ${level}`}</Text>
+        </Section>
+      ];
+
+      const visibleSections = useExpandable({
+        level,
+        layout,
+        sections
       });
-      return (
-        <Card>
-          <Section direction={Direction.VERTICAL}>
-            <Text>{`Current Level: ${level}`}</Text>
-            <Text>{`Visible Sections: ${visibleSections.join(" ")}`}</Text>
-          </Section>
-          <Section direction={Direction.VERTICAL}>
-            <Button onClick={cycle}>Change Level</Button>
-          </Section>
-        </Card>
-      );
+      return <Card onClick={cycle}>{visibleSections}</Card>;
     };
     return <Component />;
   });

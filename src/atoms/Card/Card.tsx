@@ -5,19 +5,21 @@ import { Affordance, Direction } from "enums";
 import { Theme, Card as CardType } from "types";
 import Section from "../Section";
 
-type CardProps = CardType & { theme: Theme; direction: DIRECTION };
+type CardProps = CardType & { theme: Theme; direction?: Direction };
 
-const Card = styled.div.attrs(({ theme, affordance, direction }: CardProps) => {
-  const [noBorder, _, normalBorder] = theme.borders;
-  return {
-    borderBottom:
-      affordance === Affordance.SELECTABLE ? normalBorder : noBorder,
-    background: theme.grayScale[0],
-    borderColor: theme.grayScale[2],
-    hoverBorderColor: theme.colors.primary,
-    flexDirection: direction === Direction.HORIZONTAL ? "row" : "column"
-  };
-})<CardProps>`
+const Card = styled.div.attrs(
+  ({ theme, affordance, direction = Direction.Vertical }: CardProps) => {
+    const [noBorder, _, normalBorder] = theme.borders;
+    return {
+      borderBottom:
+        affordance === Affordance.SELECTABLE ? normalBorder : noBorder,
+      background: theme.grayScale[0],
+      borderColor: theme.grayScale[2],
+      hoverBorderColor: theme.colors.primary,
+      flexDirection: direction === Direction.HORIZONTAL ? "row" : "column"
+    };
+  }
+)<CardProps>`
   display: flex;
   flex-direction: ${({ flexDirection }) => flexDirection};
   justify-content: flex-start;

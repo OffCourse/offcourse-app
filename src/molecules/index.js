@@ -1,7 +1,7 @@
 export { default as Breadcrumbs } from "./Breadcrumbs";
 export { default as ButtonGroup } from "./ButtonGroup";
 export { default as CheckItem } from "./CheckItem";
-export { default as ExpandableCard } from "./ExpandableCard";
+export { default as FancyCard } from "./FancyCard";
 // export { default as IconGroup } from "./IconGroup";
 // export { default as InfiniteScroll } from "./InfiniteScroll";
 // export { default as InputField } from "./InputField";
