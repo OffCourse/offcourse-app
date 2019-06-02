@@ -13,9 +13,8 @@ type CardProps = {
   affordance?: Affordance.EXPANDABLE | Affordance.SELECTABLE | Affordance.NONE;
   variant?: Variant;
   children: Section | Section[];
-  onCardResize?: (opts: any) => void;
-  level: number;
-  layout: string[][];
+  level?: number;
+  layout?: string[][];
 };
 
 const FancyCard: FunctionComponent<CardProps> = ({
