@@ -7,9 +7,9 @@ import { map, values, identity, equals } from "ramda";
 import { DocContainer as Container } from "helpers";
 
 import Card from "./FancyCard";
-import { Card as BasicCard, Button, Icon, Heading, Section, Text } from "atoms";
+import { Button, Icon, Heading, Section, Text } from "atoms";
 import { Direction, Variant, Affordance, Size, ErrorState } from "enums";
-import { useCount, useExpandable } from "hooks";
+import { useCount } from "hooks";
 
 const Debug = () => {
   const layout = [
@@ -25,19 +25,19 @@ const Debug = () => {
 
   return (
     <Card layout={layout} level={level}>
-      <Section key="heading" direction={Direction.HORIZONTAL}>
+      <Section name="heading" direction={Direction.HORIZONTAL}>
         <Heading>Hello World</Heading>
         <Button variant={Variant.POSITIVE} onClick={cycle}>
           Resize
         </Button>
       </Section>
-      <Section key="stats" direction={Direction.VERTICAL}>
+      <Section name="stats" direction={Direction.VERTICAL}>
         <Text>{`Current Level: ${level}`}</Text>
       </Section>
-      <Section key="body">
+      <Section name="body">
         <Heading>How Are You?</Heading>
       </Section>
-      <Section key="else">
+      <Section name="else">
         <Heading>And You?</Heading>
       </Section>
     </Card>

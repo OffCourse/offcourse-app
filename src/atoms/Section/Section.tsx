@@ -9,26 +9,17 @@ type SectionProps = {
   name?: string;
 };
 
-const Section = styled.section.attrs(
-  ({ theme, direction = Direction.HORIZONTAL, ...rest }: SectionProps) => {
-    return {
-      borderColor: theme.grayScale[1],
-      borderTop: theme.borders[1],
-      padding: `${theme.space[6]} ${theme.space[6]}`,
-      flexDirection: direction === Direction.VERTICAL ? "column" : "row",
-      alignItems: direction === Direction.VERTICAL ? "flex-start" : "center",
-      justifyContent:
-        direction === Direction.VERTICAL ? "flex-start" : "space-between"
-    };
-  }
-)<SectionProps>`
+const Section = styled.section<SectionProps>`
   display: flex;
-  align-items: ${({ alignItems }) => alignItems};
-  justify-content: ${({ justifyContent }) => justifyContent};
-  flex-direction: ${({ flexDirection }) => flexDirection};
-  padding: ${({ padding }) => padding};
-  border-top: ${({ borderTop }) => borderTop};
-  border-color: ${({ borderColor }) => borderColor};
+  flex-direction: ${({ direction = Direction.HORIZONTAL }) =>
+    direction === Direction.HORIZONTAL ? "row" : "column"};
+  align-items: ${({ direction }) =>
+    direction === Direction.VERTICAL ? "flex-start" : "center"};
+  justify-content: ${({ direction }) =>
+    direction === Direction.VERTICAL ? "flex-start" : "space-between"};
+  padding: ${({ theme }) => `${theme.space[6]} ${theme.space[6]}`};
+  border-top: ${({ theme }) => theme.borders[1]};
+  border-color: ${({ theme }) => theme.grayScale[1]};
 `;
 
 export default Section;

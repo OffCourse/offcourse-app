@@ -7,29 +7,19 @@ import Section from "../Section";
 
 type CardProps = CardType & { theme: Theme; direction?: Direction };
 
-const Card = styled.div.attrs(
-  ({ theme, affordance, direction = Direction.Vertical }: CardProps) => {
-    const [noBorder, _, normalBorder] = theme.borders;
-    return {
-      borderBottom:
-        affordance === Affordance.SELECTABLE ? normalBorder : noBorder,
-      background: theme.grayScale[0],
-      borderColor: theme.grayScale[2],
-      hoverBorderColor: theme.colors.primary,
-      flexDirection: direction === Direction.HORIZONTAL ? "row" : "column"
-    };
-  }
-)<CardProps>`
+const Card = styled.div<CardProps>`
   display: flex;
-  flex-direction: ${({ flexDirection }) => flexDirection};
+  flex-direction: ${({ direction }) =>
+    direction === Direction.HORIZONTAL ? "row" : "column"};
   justify-content: flex-start;
   align-items: flex-start;
-  border-bottom: ${({ borderBottom }) => borderBottom};
-  background: ${({ background }) => background};
-  border-color: ${({ borderColor }) => borderColor};
+  border-bottom: ${({ theme, affordance }) =>
+    affordance === Affordance.SELECTABLE ? theme.borders[2] : theme.borders[0]};
+  background: ${({ theme }) => theme.grayScale[0]};
+  border-color: ${({ theme }) => theme.grayScale[2]};
   box-sizing: border-box;
   &:hover {
-    border-color: ${({ hoverBorderColor }) => hoverBorderColor};
+    border-color: ${({ theme }) => theme.colors.primary};
   }
   > ${Section} {
     &:first-child {
