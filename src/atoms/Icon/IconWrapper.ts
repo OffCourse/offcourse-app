@@ -1,26 +1,31 @@
 import styled from "styled-components";
-import {space, border}  from "styled-system";
+import { Variant } from "enums";
 
-const IconWrapper = styled.i<{mx?: number, target: string, type?: string, color?: string, href?: string}>`
+const IconWrapper = styled.i<{
+  target: string;
+  type?: string;
+  variant: Variant;
+  href?: string;
+}>`
   box-sizing: border-box;
-  color: ${({theme, color}) => theme.colors[color || "black"]};
+  color: ${({ theme, variant }) => theme.colors[variant]};
   background-color: transparent;
-  border: ${({theme}) => theme.borders[0]};
-  font-size: 1;
-  margin: 0 ${({ mx, theme }) => mx ? theme.space[mx] : 0 };
+  border: ${({ theme }) => theme.borders[0]};
+  margin-right: 0;
   padding: 0;
   line-height: 1;
 
   &:hover {
     color: ${({ onClick, href, theme }) =>
-      onClick || href ? theme.colors.primary : theme.colors.black};
+      onClick || href
+        ? theme.colors[Variant.INFO]
+        : theme.colors[Variant.DEFAULT]};
   }
 
   &:focus {
     outline: none;
     color: ${({ theme }) => theme.colors.primary};
   }
-
 `;
 
 export default IconWrapper;

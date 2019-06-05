@@ -12,44 +12,26 @@ type BarProps = {
   variant: Variant.NEGATIVE | Variant.DEFAULT;
 };
 
-const Bar: any = styled.div.attrs(
-  ({
-    zIndex = 0,
-    theme,
-    height = "2.25rem",
-    width = "30rem",
-    variant = Variant.NEGATIVE,
-    direction = Direction.HORIZONTAL
-  }: BarProps) => {
-    const { primary, black, white } = theme.colors;
-    const [backgroundColor, textColor] =
-      variant === Variant.NEGATIVE ? [black, white] : [white, black];
-    const [w, h] =
-      direction === Direction.HORIZONTAL ? ["100%", height] : [width, "100%"];
-    return {
-      primaryColor: primary,
-      backgroundColor,
-      textColor,
-      height: h,
-      width: w
-    };
-  }
-)<BarProps>`
+const Bar = styled.div<BarProps>`
   display: flex;
   flex: 1;
   box-sizing: border-box;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: ${({ backgroundColor }) => backgroundColor};
-  color: ${({ textColor }) => textColor};
+  background-color: ${({ theme, variant }) =>
+    variant === Variant.NEGATIVE ? theme.grayScale[4] : theme.grayScale[0]};
+  color: ${({ theme, variant }) =>
+    variant === Variant.NEGATIVE ? theme.grayScale[0] : theme.grayScale[4]};
   pointer-events: auto;
   &:hover {
-    border-color: ${({ primaryColor }) => primaryColor};
+    border-color: ${({ theme }) => theme.colors[Variant.INFO]};
   }
-  height: ${({ height }) => height};
-  width: ${({ width }) => width};
-  z-index: ${({ zIndex }) => zIndex};
+  height: ${({ direction }) =>
+    direction === Direction.VERTICAL ? "100%" : "2.25rem"};
+  width: ${({ direction }) =>
+    direction === Direction.HORIZONTAL ? "30rem" : "100%"};
+  z-index: 0;
 `;
 
 export default Bar;

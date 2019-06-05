@@ -7,11 +7,11 @@ import { map, values } from "ramda";
 import { DocContainer as Container } from "helpers";
 
 import IconGroup from "./IconGroup";
-import { Direction, Affordance, Size, ErrorState } from "enums";
+import { Direction, Variant, Affordance, Size, ErrorState } from "enums";
 const icons = [
   { name: "hamburger" },
   { name: "twitter" },
-  { name: "rocket" },
+  { name: "rocket", variant: Variant.POSITIVE },
   { name: "video" },
   { name: "document" }
 ];

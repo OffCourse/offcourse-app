@@ -86,15 +86,12 @@ const grayScale = [
 ];
 
 const colors = {
-  grayScale,
-  primary: baseColors.green,
-  disabled: grayScale[2],
-  positive: baseColors.blue,
-  warning: baseColors.yellow,
-  info: baseColors.blue,
-  negative: baseColors.red,
-  white: baseColors.white,
-  black: baseColors.black
+  [DEFAULT]: baseColors.black,
+  [DISABLED]: grayScale[2],
+  [INFO]: baseColors.blue,
+  [WARNING]: baseColors.yellow,
+  [POSITIVE]: baseColors.green,
+  [NEGATIVE]: baseColors.red
 };
 
 const fonts = {
@@ -158,7 +155,7 @@ const units = {
 const signalColors = {
   [DEFAULT]: { color: grayScale[3] },
   [DISABLED]: { color: colors.disabled },
-  [INFO]: { color: colors.primary },
+  [INFO]: { color: colors.blue },
   [WARNING]: { color: colors.warning },
   [POSITIVE]: { color: colors.positive },
   [NEGATIVE]: { color: colors.negative }
@@ -167,62 +164,62 @@ const signalColors = {
 const signalColorCombos = {
   [DEFAULT]: {
     backgroundColor: grayScale[3],
-    borderColor: colors.primary,
-    color: colors.white,
+    borderColor: colors[Variant.POSITIVE],
+    color: grayScale[0],
     "&:hover": {
-      backgroundColor: colors.primary,
-      color: colors.white,
+      backgroundColor: colors[Variant.POSITIVE],
+      color: grayScale[0],
       borderColor: grayScale[3]
     }
   },
   [DISABLED]: {
-    backgroundColor: colors.disabled,
-    borderColor: colors.disabled,
+    backgroundColor: colors[Variant.DISABLED],
+    borderColor: colors[Variant.DISABLED],
     color: grayScale[1],
     "&:hover": {
-      backgroundColor: colors.disabled,
-      color: colors.white,
-      borderColor: colors.disabled
+      backgroundColor: colors[Variant.DISABLED],
+      color: grayScale[0],
+      borderColor: colors[Variant.DISABLEDJ]
     }
   },
   [INFO]: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors[Variant.INFO],
     borderColor: grayScale[3],
-    color: colors.white,
+    color: grayScale[4],
     "&:hover": {
       backgroundColor: grayScale[3],
-      color: colors.white,
-      borderColor: colors.primary
+      color: grayScale[0],
+      borderColor: colors[Variant.INFO]
     }
   },
   [POSITIVE]: {
-    backgroundColor: colors.positive,
+    backgroundColor: colors[Variant.POSITIVE],
     borderColor: grayScale[3],
-    color: colors.black,
+    color: grayScale[0],
     "&:hover": {
       backgroundColor: grayScale[3],
-      color: colors.white,
-      borderColor: colors.positive
+      color: grayScale[0],
+      borderColor: colors[Variant.POSITIVE]
     }
   },
   [WARNING]: {
-    backgroundColor: colors.warning,
+    backgroundColor: colors[Variant.WARNING],
     borderColor: grayScale[3],
-    color: colors.black,
+    color: grayScale[4],
     "&:hover": {
       backgroundColor: grayScale[3],
-      color: colors.white,
-      borderColor: colors.warning
+      color: grayScale[0],
+      borderColor: colors[Variant.WARNING]
     }
   },
   [NEGATIVE]: {
-    backgroundColor: colors.negative,
+    backgroundColor: colors[Variant.NEGATIVE],
     borderColor: grayScale[3],
-    color: colors.white,
+    color: grayScale[0],
     "&:hover": {
       backgroundColor: grayScale[3],
-      color: colors.white,
-      borderColor: colors.negative
+      color: grayScale[0],
+      borderColor: colors[Variant.NEGATIVE]
     }
   }
 };
@@ -303,7 +300,6 @@ const theme = {
   grayScale,
   globals,
   signalColorCombos,
-  signalColors,
   widths
 };
 

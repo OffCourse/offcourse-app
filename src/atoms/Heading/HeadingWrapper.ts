@@ -14,8 +14,7 @@ const HeadingWrapper = styled.h1<{
   isActive: boolean;
 }>`
   display: block;
-  color: ${({ isActive, theme }) =>
-    isActive ? theme.colors.black : theme.grayScale[2]};
+  color: ${({ isActive, theme }) => theme.grayScale[isActive ? 4 : 2]};
   line-height: ${({ theme, size }) =>
     theme.fontSizes[textProps[size].lineHeight]};
   font-size: ${({ theme, size }) => theme.fontSizes[textProps[size].fontSize]};
@@ -26,10 +25,10 @@ const HeadingWrapper = styled.h1<{
   &:hover {
     color: ${({ isActive, href, onClick, theme }) =>
       isActive && (href || onClick)
-        ? theme.colors.primary
+        ? theme.colors[Variant.POSITIVE]
         : isActive
-        ? theme.colors.black
-        : theme.colors.grayScale[2]};
+        ? theme.grayScale[4]
+        : theme.grayScale[2]};
   }
 `;
 

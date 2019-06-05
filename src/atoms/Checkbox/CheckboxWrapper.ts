@@ -6,14 +6,14 @@ const boxProps = {
   [Size.LARGE]: { boxSize: "1.66666667rem", labelSize: "1.333333rem" }
 };
 
-const CheckboxWrapper = styled.div<{size: Size.NORMAL | Size.LARGE}>`
-  width: ${({size}) => boxProps[size]["boxSize"]};
-  height: ${({size}) => boxProps[size]["boxSize"]};
+const CheckboxWrapper = styled.div<{ size: Size.NORMAL | Size.LARGE }>`
+  width: ${({ size }) => boxProps[size]["boxSize"]};
+  height: ${({ size }) => boxProps[size]["boxSize"]};
   display: grid;
   justify-content: center;
   align-items: center;
   user-select: none;
-  background-color: ${({theme}) => theme.colors.grayScale[0]};
+  background-color: ${({ theme }) => theme.grayScale[0]};
 
   grid-template-areas: "checkbox";
 
@@ -23,10 +23,10 @@ const CheckboxWrapper = styled.div<{size: Size.NORMAL | Size.LARGE}>`
 
   > label {
     display: none;
-    background-color: ${({theme}) => theme.colors.grayScale[0]};
-    color: ${({theme}) => theme.colors.grayScale[4]};
-    width: ${({size}) => boxProps[size]["labelSize"]};
-    height: ${({size}) => boxProps[size]["labelSize"]};
+    background-color: ${({ theme }) => theme.grayScale[0]};
+    color: ${({ theme }) => theme.grayScale[4]};
+    width: ${({ size }) => boxProps[size]["labelSize"]};
+    height: ${({ size }) => boxProps[size]["labelSize"]};
     grid-area: checkbox;
     box-sizing: border-box;
   }

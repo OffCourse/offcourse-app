@@ -19,9 +19,9 @@ const textProps = {
 
 const LinkWrapper = styled.a.attrs(
   ({ theme, size, isBasic, isActive, isDisabled }: LinkWrapperProps) => {
-    const { fonts, colors } = theme;
-    const { base, bold } = fonts;
-    const { disabled, black, primary } = colors;
+    const { base, bold } = theme.fonts;
+    const primary = theme.colors[Variant.DEFAULT];
+    const [_, __, disabled, ___, black] = theme.grayScale;
     const lineHeight = theme.lineHeights[textProps[size].lineHeight];
     return {
       disabled: isDisabled,

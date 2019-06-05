@@ -3,27 +3,27 @@ import PropTypes from "prop-types";
 import { isEmpty } from "ramda";
 import IconGroupWrapper from "./IconGroupWrapper";
 import { Icon } from "atoms";
-import { Size, Direction } from "enums";
+import { Variant, Size, Direction } from "enums";
 
 type IconType = {
   name: string;
   tabIndex?: number;
   onClick?: any;
+  variant?: Variant;
 };
 
 type IconGroupProps = {
   icons: IconType[];
-  direction: Direction.HORIZONTAL | Direction.VERTICAL;
+  direction?: Direction.HORIZONTAL | Direction.VERTICAL;
   children?: any;
-  size: Size;
-  color: "string";
+  size?: Size;
 };
 
 const IconGroup: FunctionComponent<IconGroupProps> = ({
   icons = [],
   direction = Direction.HORIZONTAL,
   children,
-  size
+  size = Size.NORMAL
 }) => {
   if (isEmpty(icons)) {
     const renderedChildren = Children.map(children, child => {
@@ -40,9 +40,17 @@ const IconGroup: FunctionComponent<IconGroupProps> = ({
     );
   }
 
-  const renderedIcons = icons.map(({ name, tabIndex, onClick }, index) => (
-    <Icon tabIndex={tabIndex} size={size} name={name} onClick={onClick} />
-  ));
+  const renderedIcons = icons.map(
+    ({ name, tabIndex, onClick, variant }, index) => (
+      <Icon
+        tabIndex={tabIndex}
+        size={size}
+        name={name}
+        onClick={onClick}
+        variant={variant}
+      />
+    )
+  );
 
   return (
     <IconGroupWrapper direction={direction}>{renderedIcons}</IconGroupWrapper>

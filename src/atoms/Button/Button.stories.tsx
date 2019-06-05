@@ -21,7 +21,7 @@ storiesOf("Atoms|Button", module)
               variant={variant}
               onClick={action("clicked")}
             >
-              {label}
+              {variant}
             </Button>
           ),
           values(Variant)
