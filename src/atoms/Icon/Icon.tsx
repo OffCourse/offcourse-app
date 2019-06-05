@@ -1,4 +1,5 @@
 import React, { FunctionComponent, MouseEvent } from "react";
+import styled from "styled-components";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as icons from "./icons";
@@ -14,7 +15,8 @@ const iconProps = {
   EXTRA_LARGE: { iconSize: "2x" }
 };
 
-type IconProps =  {
+type IconProps = {
+  className?: string;
   name: string;
   size?: Size;
   color?: string;
@@ -23,12 +25,23 @@ type IconProps =  {
   onClick?: (event: MouseEvent<any>) => void;
   href?: string;
   mx?: number;
-}
+};
 
-const Icon: FunctionComponent<IconProps> = ({ size = Size.NORMAL, name, color, tabIndex = 0, href, is, onClick, mx = 0}) => {
+const Icon: FunctionComponent<IconProps> = ({
+  className,
+  size = Size.NORMAL,
+  name,
+  color,
+  tabIndex = 0,
+  href,
+  is,
+  onClick,
+  mx = 0
+}) => {
   const { iconSize } = iconProps[size];
   return (
     <IconWrapper
+      className={className}
       as={is || (href && "a") || (onClick && "button")}
       type={(is === "button" && "button") || (onClick && "button")}
       mx={mx}
@@ -43,4 +56,4 @@ const Icon: FunctionComponent<IconProps> = ({ size = Size.NORMAL, name, color, t
   );
 };
 
-export default Icon;
+export default styled(Icon)``;

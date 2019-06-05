@@ -5,8 +5,7 @@ import styled from "styled-components";
 import { Button } from "atoms";
 import { Size, Variant, Direction } from "enums";
 import { Theme, Button as ButtonType } from "types";
-const { SMALL, NORMAL, LARGE } = Size;
-const { DEFAULT, INFO, POSITIVE, WARNING, NEGATIVE } = Variant;
+
 const mapIndexed = addIndex(map);
 
 type ButtonGroupProps = {

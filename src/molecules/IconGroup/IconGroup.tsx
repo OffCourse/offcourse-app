@@ -1,92 +1,52 @@
-import React, { Children, Component } from "react";
+import React, { FunctionComponent, Children, Component } from "react";
 import PropTypes from "prop-types";
-import { mapIndexed } from "../helpers";
 import { isEmpty } from "ramda";
 import IconGroupWrapper from "./IconGroupWrapper";
-import { Icon } from "@offcourse/atoms";
-import { sizes, directions } from "@offcourse/constants";
+import { Icon } from "atoms";
+import { Size, Direction } from "enums";
 
-const { SMALL, NORMAL, LARGE, EXTRA_LARGE } = sizes;
-const { HORIZONTAL, VERTICAL } = directions;
-
-const styleProps = {
-  [HORIZONTAL]: {
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "center"
-  },
-  [VERTICAL]: {
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center"
-  }
+type IconType = {
+  name: string;
+  tabIndex?: number;
+  onClick?: any;
 };
 
-const IconGroup = ({
-  icons,
-  direction,
-  children,
-  justifyContent,
-  size: groupSize,
-  color: groupColor
-}) => {
-  const renderIcons = () => {
-    return mapIndexed(
-      ({ name, size, tabIndex, is, color, onClick }, index) => (
-        <Icon
-          is={is}
-          tabIndex={tabIndex}
-          color={color || groupColor}
-          key={index}
-          size={size || groupSize}
-          name={name}
-          onClick={onClick}
-        />
-      ),
-      icons
-    );
-  };
+type IconGroupProps = {
+  icons: IconType[];
+  direction: Direction.HORIZONTAL | Direction.VERTICAL;
+  children?: any;
+  size: Size;
+  color: "string";
+};
 
-  const renderChildren = () => {
-    return Children.map(children, child => {
+const IconGroup: FunctionComponent<IconGroupProps> = ({
+  icons = [],
+  direction = Direction.HORIZONTAL,
+  children,
+  size
+}) => {
+  if (isEmpty(icons)) {
+    const renderedChildren = Children.map(children, child => {
       return React.cloneElement(child, {
-        size: groupSize,
-        color: groupColor,
+        size,
         ...child.props
       });
     });
-  };
 
-  const groupProps = styleProps[direction];
+    return (
+      <IconGroupWrapper direction={direction}>
+        renderedChildren}
+      </IconGroupWrapper>
+    );
+  }
+
+  const renderedIcons = icons.map(({ name, tabIndex, onClick }, index) => (
+    <Icon tabIndex={tabIndex} size={size} name={name} onClick={onClick} />
+  ));
+
   return (
-    <IconGroupWrapper
-      {...groupProps}
-      justifyContent={justifyContent || groupProps.justifyContent}
-    >
-      {isEmpty(icons) ? renderChildren() : renderIcons()}
-    </IconGroupWrapper>
+    <IconGroupWrapper direction={direction}>{renderedIcons}</IconGroupWrapper>
   );
 };
 
-IconGroup.Icon = Icon;
-
-IconGroup.propTypes = {
-  directions: PropTypes.oneOf([HORIZONTAL, VERTICAL]),
-  icons: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      onClick: PropTypes.func
-    })
-  ),
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element)
-  ]),
-  size: PropTypes.oneOf([SMALL, NORMAL, LARGE, EXTRA_LARGE])
-};
-
-IconGroup.defaultProps = {
-  direction: HORIZONTAL,
-  icons: []
-};
 export default IconGroup;
