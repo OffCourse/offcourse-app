@@ -1,31 +1,23 @@
-import { useState, useEffect } from "react";
+import React, { FunctionComponent, useEffect, useState } from "react";
+import { identity } from "ramda";
+import { useInView } from "react-intersection-observer";
 
-const useInfiniteScroll = callback => {
-  const [isFetching, setIsFetching] = useState(false);
+const useInfiniteScroll: (opts: {
+  hasMore: boolean;
+  loadMore: () => void;
+}) => { scrollRef: (node: Element | null) => void } = ({
+  loadMore = () => null,
+  hasMore = true
+}) => {
+  const [scrollRef, inView, entry] = useInView({ threshold: 1 });
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    if (inView && hasMore) {
+      loadMore();
+    }
+  }, [inView, hasMore]);
 
-  useEffect(() => {
-    if (!isFetching) return;
-    callback(() => {
-      console.log("called back");
-    });
-  }, [isFetching]);
-
-  function handleScroll() {
-    if (
-      window.innerHeight + document.documentElement.scrollTop !==
-        document.documentElement.offsetHeight ||
-      isFetching
-    )
-      return;
-    setIsFetching(true);
-  }
-
-  return [isFetching, setIsFetching];
+  return { scrollRef };
 };
 
 export default useInfiniteScroll;

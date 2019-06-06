@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { reduceWhile, inc, identity } from "ramda";
-import useSize from "../useSize";
+import useMeasure from "../useMeasure";
 
 const getNumberOfColumns: (
   containerWidth: number,
@@ -22,7 +22,7 @@ const useColumns: (
   callback
 ) => {
   const [numberOfColumns, setNumberOfColumns] = useState(1);
-  const { width, height, ref } = useSize();
+  const [ref, { width, height }] = useMeasure();
 
   useEffect(() => {
     const proposal = getNumberOfColumns(width, breakpoints);
