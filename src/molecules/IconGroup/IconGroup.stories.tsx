@@ -10,10 +10,10 @@ import IconGroup from "./IconGroup";
 import { Direction, Variant, Affordance, Size, ErrorState } from "enums";
 const icons = [
   { name: "hamburger" },
+  { name: "rocket", variant: Variant.NEGATIVE },
+  { name: "video", variant: Variant.WARNING },
   { name: "twitter" },
-  { name: "rocket", variant: Variant.POSITIVE },
-  { name: "video" },
-  { name: "document" }
+  { name: "document", variant: Variant.POSITIVE }
 ];
 
 storiesOf("Molecules|IconGroup", module)
