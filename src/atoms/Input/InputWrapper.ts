@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Size } from "enums";
+import { Variant, Size } from "enums";
 
 const InputWrapper = styled.div<{
   hasErrors: boolean;
@@ -8,20 +8,21 @@ const InputWrapper = styled.div<{
 }>`
   display: flex;
   flex: 1;
-  alignitems: center;
+  align-items: center;
   padding: ${({ theme }) => theme.space[4]} 0;
   border: ${({ theme, hasErrors }) =>
     hasErrors ? theme.borders[2] : theme.borders[0]};
   margin: 0;
   box-sizing: border-box;
   grid-template-areas: "input";
-  border-color: ${({ theme }) => theme.colors.negative};
+  border-color: ${({ theme }) => theme.colors[Variant.NEGATIVE]};
   background-color: ${({ theme }) => theme.grayScale[1]};
+
   .icons,
   button {
     padding: 0;
     background-color: rgba(255, 255, 255, 0);
-    color: ${({ theme }) => theme.colors.grayScale[2]};
+    color: ${({ theme }) => theme.grayScale[2]};
     grid-area: input;
     justify-self: end;
     z-index: 1;
@@ -42,15 +43,18 @@ const InputWrapper = styled.div<{
     line-height: ${({ theme, size }) =>
       size === Size.SMALL ? theme.lineHeights[1] : theme.lineHeights[3]};
     box-sizing: border-box;
-    color: ${({ isDisabled, theme }) =>
-      isDisabled ? theme.colors.disabled : theme.colors.black};
+    color: ${({ theme }) => theme.grayScale[4]};
 
     ::placeholder {
-      color: ${({ theme }) => theme.colors.grayScale[3]};
+      color: ${({ theme }) => theme.grayScale[3]};
     }
 
-    ::selection {
-      background: ${({ theme }) => theme.colors.primary};
+    :disabled {
+      color: ${({ theme }) => theme.colors[Variant.DISABLED]};
+    }
+
+    :selection {
+      background: ${({ theme }) => theme.colors[Variant.POSITIVE]};
       color: white;
     }
 
@@ -65,6 +69,7 @@ const InputWrapper = styled.div<{
     height: 6rem;
     resize: none;
   }
+
   > div {
     display: flex;
     flex-direction: column;

@@ -154,15 +154,15 @@ const units = {
 
 const signalColors = {
   [DEFAULT]: { color: grayScale[3] },
-  [DISABLED]: { color: colors.disabled },
-  [INFO]: { color: colors.blue },
-  [WARNING]: { color: colors.warning },
-  [POSITIVE]: { color: colors.positive },
-  [NEGATIVE]: { color: colors.negative }
+  [DISABLED]: { color: colors[DISABLED] },
+  [INFO]: { color: colors[INFO] },
+  [WARNING]: { color: colors[WARNING] },
+  [POSITIVE]: { color: colors[POSITIVE] },
+  [NEGATIVE]: { color: colors[NEGATIVE] }
 };
 
 const signalColorCombos = {
-  [DEFAULT]: {
+  [Variant.DEFAULT]: {
     backgroundColor: grayScale[3],
     borderColor: colors[Variant.POSITIVE],
     color: grayScale[0],
@@ -172,7 +172,7 @@ const signalColorCombos = {
       borderColor: grayScale[3]
     }
   },
-  [DISABLED]: {
+  [Variant.DISABLED]: {
     backgroundColor: colors[Variant.DISABLED],
     borderColor: colors[Variant.DISABLED],
     color: grayScale[1],
@@ -182,7 +182,7 @@ const signalColorCombos = {
       borderColor: colors[Variant.DISABLEDJ]
     }
   },
-  [INFO]: {
+  [Variant.INFO]: {
     backgroundColor: colors[Variant.INFO],
     borderColor: grayScale[3],
     color: grayScale[4],
@@ -192,7 +192,7 @@ const signalColorCombos = {
       borderColor: colors[Variant.INFO]
     }
   },
-  [POSITIVE]: {
+  [Variant.POSITIVE]: {
     backgroundColor: colors[Variant.POSITIVE],
     borderColor: grayScale[3],
     color: grayScale[0],
@@ -202,7 +202,7 @@ const signalColorCombos = {
       borderColor: colors[Variant.POSITIVE]
     }
   },
-  [WARNING]: {
+  [Variant.WARNING]: {
     backgroundColor: colors[Variant.WARNING],
     borderColor: grayScale[3],
     color: grayScale[4],
@@ -212,7 +212,7 @@ const signalColorCombos = {
       borderColor: colors[Variant.WARNING]
     }
   },
-  [NEGATIVE]: {
+  [Variant.NEGATIVE]: {
     backgroundColor: colors[Variant.NEGATIVE],
     borderColor: grayScale[3],
     color: grayScale[0],
@@ -299,6 +299,7 @@ const theme = {
   fonts,
   grayScale,
   globals,
+  signalColors,
   signalColorCombos,
   widths
 };

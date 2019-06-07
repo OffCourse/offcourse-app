@@ -1,9 +1,13 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { mapIndexed, move } from "../helpers";
-import { Input } from "@offcourse/atoms";
-import { SortableList, LinkGroup } from "..";
+import { identity } from "ramda";
+import { Input } from "atoms";
+// import { SortableList, LinkGroup } from "..";
 import Handles from "./Handles";
+
+const SortableList = identity;
+const LinkGroup = identity;
 
 const InputList = ({
   arrangeable,

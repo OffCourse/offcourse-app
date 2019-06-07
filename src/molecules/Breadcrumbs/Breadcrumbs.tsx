@@ -17,7 +17,7 @@ const Breadcrumbs = styled.div.attrs(({ trail = [] }: BreadcrumbsProps) => {
   return { children, display: isEmpty(trail) ? "none" : "flex" };
 })<BreadcrumbsProps>`
   display: ${({ display }) => display};
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
   flex: 1;

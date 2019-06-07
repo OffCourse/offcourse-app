@@ -1,109 +1,119 @@
-import React, { PureComponent } from "react";
+import React, { FunctionComponent } from "react";
 import PropTypes from "prop-types";
-import { isEmpty } from "ramda";
+import { isEmpty, identity } from "ramda";
 import { compact } from "../helpers";
-import { Label, Input } from "@offcourse/atoms";
-import { MessageGroup } from "..";
+import { Label, Input } from "atoms";
+// import { MessageGroup } from "..";
 import InputFieldWrapper from "./InputFieldWrapper";
+import { Variant, Size } from "enums";
 
-class InputField extends PureComponent {
-  renderLabel() {
-    const { title, disabled, name } = this.props;
-    return title ? (
-      <Label
-        color={disabled ? "grayScale.2" : "black"}
-        pb={4}
-        px={6}
-        htmlFor={name}
-      >
-        {title}
-      </Label>
-    ) : null;
-  }
-
-  renderErrors() {
-    const { errors } = this.props;
-    const hasErrors = errors && !isEmpty(compact(errors));
-
-    return hasErrors ? (
-      <MessageGroup
-        px={6}
-        pb={6}
-        basic
-        messages={MessageGroup.formatMessages(errors)}
-      />
-    ) : null;
-  }
-
-  renderChildren() {
-    const {
-      name,
-      placeholder,
-      autoFocus,
-      autoComplete,
-      disabled,
-      value,
-      onChange,
-      onBlur,
-      children,
-      errors,
-      FieldComponent,
-      unformatted,
-      variant
-    } = this.props;
-    const hasErrors = errors && !isEmpty(compact(errors));
-
-    return (
-      children || (
-        <FieldComponent
-          name={name}
-          autoComplete={autoComplete}
-          autoFocus={autoFocus}
-          value={value}
-          disabled={disabled}
-          placeholder={placeholder}
-          onChange={onChange}
-          onBlur={onBlur}
-          unformatted={unformatted}
-          mb={3}
-          hasErrors={hasErrors}
-          variant={variant}
-        />
-      )
-    );
-  }
-
-  render() {
-    return (
-      <InputFieldWrapper>
-        {this.renderLabel()}
-        {this.renderErrors()}
-        {this.renderChildren()}
-      </InputFieldWrapper>
-    );
-  }
-}
-
-InputField.propTypes = {
-  disabled: PropTypes.bool,
-  unformatted: PropTypes.bool,
-  autoComplete: PropTypes.bool,
-  autoFocus: PropTypes.bool,
-  name: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  placeholder: PropTypes.string,
-  value: PropTypes.string,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func,
-  errors: PropTypes.array,
-  variant: PropTypes.oneOf(["default", "textarea", "small"]),
-  FieldComponent: PropTypes.func,
-  children: PropTypes.node
+const formatMessages = (errors = [], { variant = NEGATIVE, px } = {}) => {
+  return map(message => {
+    return { message, variant, px };
+  }, errors);
 };
 
-InputField.defaultProps = {
-  FieldComponent: Input,
-  errors: []
+const MessageGroup = identity;
+
+type InputFieldProps = {
+  autoComplete?: boolean;
+  autoFocus?: boolean;
+  name: string;
+  placeholder: string;
+  title: string;
+  variant: Variant.DEFAULT | Variant.DISABLED;
+  value: string;
+  FieldComponent: any;
+  errors: string[];
 };
+
+const InputField: FunctionComponent<InputFieldProps> = ({
+  FieldComponent = Input,
+  name,
+  value,
+  children,
+  placeholder,
+  title,
+  variant,
+  autoFocus = false,
+  autoComplete = false,
+  errors = []
+}) => {
+  const hasErrors = errors && !isEmpty(compact(errors));
+  const labelSection = title && (
+    <Label variant={variant} htmlFor={name}>
+      {title}
+    </Label>
+  );
+
+  const inputSection = children || (
+    <FieldComponent
+      placeholder={placeholder}
+      name={name}
+      value={value}
+      variant={variant}
+      autoComplete={`${autoComplete}`}
+      autoFocus={autoFocus}
+      hasErrors={hasErrors}
+    />
+  );
+
+  return (
+    <InputFieldWrapper>
+      {labelSection}
+      {/* {this.renderErrors()} */}
+      {inputSection}
+    </InputFieldWrapper>
+  );
+};
+
+//   renderErrors() {
+//     return hasErrors ? (
+//       <MessageGroup
+//         px={6}
+//         pb={6}
+//         basic
+//         messages={MessageGroup.formatMessages(errors)}
+//       />
+//     ) : null;
+//   }
+
+//   renderChildren() {
+//     const {
+//       onChange,
+//       onBlur,
+//       unformatted,
+//     } = this.props;
+//
+//     return (
+//       children || (
+//         <FieldComponent
+//           onChange={onChange}
+//           onBlur={onBlur}
+//           unformatted={unformatted}
+//         />
+//       )
+//     );
+//   }
+
+//   render() {
+//     return (
+//       <InputFieldWrapper>
+//         {this.renderErrors()}
+//         {this.renderChildren()}
+//       </InputFieldWrapper>
+//     );
+//   }
+// }
+
+// InputField.propTypes = {
+//   unformatted: PropTypes.bool,
+//   autoComplete: PropTypes.bool,
+//   autoFocus: PropTypes.bool,
+//   onBlur: PropTypes.func,
+//   onChange: PropTypes.func,
+//   errors: PropTypes.array,
+//   variant: PropTypes.oneOf(["default", "textarea", "small"]),
+// };
 
 export default InputField;

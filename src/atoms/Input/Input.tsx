@@ -1,7 +1,8 @@
 import React, { FunctionComponent, ChangeEvent, FormEvent } from "react";
+import styled from "styled-components";
 import PropTypes from "prop-types";
 import { formatTitle, lowerCase } from "../helpers";
-import { Size } from "enums";
+import { Size, Variant } from "enums";
 import InputWrapper from "./InputWrapper";
 
 type InputProps = {
@@ -17,9 +18,9 @@ type InputProps = {
   hasErrors?: boolean;
   size?: Size.SMALL | Size.NORMAL;
   isTextArea?: boolean;
-  isDisabled?: boolean;
   unformatted?: boolean;
   inputType?: string;
+  variant: Variant.DEFAULT | Variant.DISABLED;
 };
 
 const Input: FunctionComponent<InputProps> = ({
@@ -27,7 +28,7 @@ const Input: FunctionComponent<InputProps> = ({
   autoFocus = false,
   isTextArea = false,
   size = Size.NORMAL,
-  isDisabled = false,
+  variant = Variant.DEFAULT,
   hasErrors = false,
   unformatted = false,
   placeholder = "Enter Something",
@@ -38,6 +39,7 @@ const Input: FunctionComponent<InputProps> = ({
   onChange,
   onBlur
 }) => {
+  const isDisabled = variant === Variant.DISABLED;
   const formatValue = () => {
     if (!value) {
       return value;
@@ -91,4 +93,4 @@ const Input: FunctionComponent<InputProps> = ({
   );
 };
 
-export default Input;
+export default styled(Input)``;

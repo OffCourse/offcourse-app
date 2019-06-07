@@ -15,7 +15,7 @@ import {
   uniq,
   values
 } from "ramda";
-import { arrayMove } from "react-sortable-hoc";
+//import { arrayMove } from "react-sortable-hoc";
 
 const formatTitle = compose(
   titleCase,
@@ -23,7 +23,7 @@ const formatTitle = compose(
 );
 const mapIndexed = addIndex(map);
 const compact = filter(identity);
-const move = arrayMove;
+const move = identity;
 const mapObject = mapObjIndexed;
 
 export { compact, formatTitle, mapIndexed, move };
