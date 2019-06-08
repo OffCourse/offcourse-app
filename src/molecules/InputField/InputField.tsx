@@ -1,31 +1,29 @@
-import React, { FunctionComponent } from "react";
-import PropTypes from "prop-types";
-import { isEmpty, identity } from "ramda";
-import { compact } from "../helpers";
-import { Label, Input } from "atoms";
-// import { MessageGroup } from "..";
-import InputFieldWrapper from "./InputFieldWrapper";
+import React, { FunctionComponent, ChangeEvent, FormEvent } from "react";
+import { filter, isEmpty, identity } from "ramda";
+import { Label, Input, Message } from "atoms";
 import { Variant, Size } from "enums";
-
-const formatMessages = (errors = [], { variant = NEGATIVE, px } = {}) => {
-  return map(message => {
-    return { message, variant, px };
-  }, errors);
-};
-
-const MessageGroup = identity;
+import MessageGroup from "../MessageGroup";
+import InputFieldWrapper from "./InputFieldWrapper";
 
 type InputFieldProps = {
   autoComplete?: boolean;
   autoFocus?: boolean;
   name: string;
   placeholder: string;
-  title: string;
-  variant: Variant.DEFAULT | Variant.DISABLED;
-  value: string;
-  FieldComponent: any;
-  errors: string[];
+  title?: string;
+  variant?: Variant.DEFAULT | Variant.DISABLED;
+  value?: string;
+  FieldComponent?: any;
+  errors?: string[];
+  size?: Size.SMALL | Size.NORMAL;
+  isTextArea?: boolean;
+  onChange: (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
+  onBlur?: (event: FormEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 };
+
+const compact = filter(identity as any);
 
 const InputField: FunctionComponent<InputFieldProps> = ({
   FieldComponent = Input,
@@ -34,10 +32,14 @@ const InputField: FunctionComponent<InputFieldProps> = ({
   children,
   placeholder,
   title,
-  variant,
+  variant = Variant.DEFAULT,
+  size = Size.NORMAL,
   autoFocus = false,
   autoComplete = false,
-  errors = []
+  isTextArea = false,
+  errors = [],
+  onChange,
+  onBlur
 }) => {
   const hasErrors = errors && !isEmpty(compact(errors));
   const labelSection = title && (
@@ -46,8 +48,11 @@ const InputField: FunctionComponent<InputFieldProps> = ({
     </Label>
   );
 
-  const inputSection = children || (
+  const inputSection = (
     <FieldComponent
+      size={size}
+      onChange={onChange}
+      onBlur={onBlur}
       placeholder={placeholder}
       name={name}
       value={value}
@@ -55,28 +60,30 @@ const InputField: FunctionComponent<InputFieldProps> = ({
       autoComplete={`${autoComplete}`}
       autoFocus={autoFocus}
       hasErrors={hasErrors}
-    />
+      isTextArea={isTextArea}
+    >
+      {children}
+    </FieldComponent>
+  );
+
+  const errorsSection = (
+    <MessageGroup isBasic={true}>
+      {errors.map((error, index) => (
+        <Message key={index} variant={Variant.NEGATIVE}>
+          {error}
+        </Message>
+      ))}
+    </MessageGroup>
   );
 
   return (
     <InputFieldWrapper>
       {labelSection}
-      {/* {this.renderErrors()} */}
+      {errorsSection}
       {inputSection}
     </InputFieldWrapper>
   );
 };
-
-//   renderErrors() {
-//     return hasErrors ? (
-//       <MessageGroup
-//         px={6}
-//         pb={6}
-//         basic
-//         messages={MessageGroup.formatMessages(errors)}
-//       />
-//     ) : null;
-//   }
 
 //   renderChildren() {
 //     const {
@@ -108,11 +115,8 @@ const InputField: FunctionComponent<InputFieldProps> = ({
 
 // InputField.propTypes = {
 //   unformatted: PropTypes.bool,
-//   autoComplete: PropTypes.bool,
-//   autoFocus: PropTypes.bool,
 //   onBlur: PropTypes.func,
 //   onChange: PropTypes.func,
-//   errors: PropTypes.array,
 //   variant: PropTypes.oneOf(["default", "textarea", "small"]),
 // };
 

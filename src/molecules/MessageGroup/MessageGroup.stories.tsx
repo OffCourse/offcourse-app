@@ -28,14 +28,12 @@ storiesOf("Molecules|MessageGroup", module)
       { message: "hello world" },
       { message: "where are you?", variant: Variant.NEGATIVE }
     ];
-    return <MessageGroup variant={Variant.DISABLED} messages={messages} />;
+    return <MessageGroup messages={messages} />;
   })
   .add("can be basic messages", () => {
     const messages = [
       { message: "hello world" },
       { message: "where are you?", variant: Variant.NEGATIVE }
     ];
-    return (
-      <MessageGroup isBasic variant={Variant.DISABLED} messages={messages} />
-    );
+    return <MessageGroup isBasic messages={messages} />;
   });

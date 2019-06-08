@@ -6,6 +6,7 @@ import { withKnobs, text, select } from "@storybook/addon-knobs";
 import { map, values } from "ramda";
 import { DocContainer as Container } from "helpers";
 
+import { Icon } from "atoms";
 import InputField from "./InputField";
 import { Direction, Variant, Size, ErrorState } from "enums";
 
@@ -14,13 +15,19 @@ storiesOf("Molecules|InputField", module)
   .add("text input", () => {
     const placeholder = "Enter your name";
     return (
-      <InputField title="normal" name="normal" placeholder={placeholder} />
+      <InputField
+        onChange={action("changed")}
+        title="normal"
+        name="normal"
+        placeholder={placeholder}
+      />
     );
   })
   .add("disabled text input", () => {
     const placeholder = "Enter your name";
     return (
       <InputField
+        onChange={action("changed")}
         variant={Variant.DISABLED}
         title="normal"
         name="normal"
@@ -31,9 +38,11 @@ storiesOf("Molecules|InputField", module)
   })
   .add("text input with errors", () => {
     const placeholder = "Enter your name";
-    const errors = ["something"];
+    const errors = ["something went wrong", "terribly wrong"];
     return (
       <InputField
+        onChange={action("changed")}
+        onBlur={action("blurred")}
         title="normal"
         name="normal"
         value="HELLO"
@@ -41,26 +50,51 @@ storiesOf("Molecules|InputField", module)
         errors={errors}
       />
     );
+  })
+  .add("with icons", () => {
+    const placeholder = "Enter some text";
+    const errors = ["something went wrong", "terribly wrong"];
+    return (
+      <InputField
+        onChange={action("changed")}
+        onBlur={action("blurred")}
+        title="normal"
+        name="normal"
+        value="HELLO"
+        placeholder={placeholder}
+        errors={errors}
+      >
+        <Icon name="hamburger" />
+      </InputField>
+    );
+  })
+  .add("small", () => {
+    const placeholder = "Enter some text";
+    return (
+      <InputField
+        size={Size.SMALL}
+        onChange={action("changed")}
+        onBlur={action("blurred")}
+        name="normal"
+        value="HELLO"
+        placeholder={placeholder}
+      >
+        <Icon name="hamburger" />
+      </InputField>
+    );
+  })
+  .add("textArea", () => {
+    const placeholder = "Enter some text";
+    return (
+      <InputField
+        isTextArea={true}
+        onChange={action("changed")}
+        onBlur={action("blurred")}
+        name="normal"
+        value="HELLO"
+        placeholder={placeholder}
+      >
+        <Icon name="hamburger" />
+      </InputField>
+    );
   });
-// .add("password input", () => {
-//   const placeholder = "Enter your password";
-//   return (
-//     <Input name="password" inputType="password" placeholder={placeholder} />
-//   );
-// })
-// .add("with errors", () => {
-//   const placeholder = "correct your mistake";
-//   return <Input name="errors" hasErrors placeholder={placeholder} />;
-// })
-// .add("textarea", () => {
-//   const placeholder = "Enter some text";
-//   return <Input name="textarea" isTextArea placeholder={placeholder} />;
-// })
-// .add("with icons", () => {
-//   const placeholder = "Enter some text";
-//   return (
-//     <Input name="textarea" placeholder={placeholder}>
-//       <Icon name="hamburger" />
-//     </Input>
-//   );
-// });

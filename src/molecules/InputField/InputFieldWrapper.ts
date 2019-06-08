@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Label } from "atoms";
+import MessageGroup from "../MessageGroup";
 
 export default styled.div`
   display: flex;
@@ -7,6 +8,10 @@ export default styled.div`
   padding: 0;
   .handlers {
     grid-area: input;
+  }
+
+  ${MessageGroup} {
+    padding-bottom: ${({ theme }) => theme.space[4]};
   }
 
   ${Label} {

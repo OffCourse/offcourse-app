@@ -7,13 +7,11 @@ import { Link as LinkType } from "types";
 import LinkWrapper from "./LinkWrapper";
 
 type LinkProps = LinkType & {
-  className?: string;
-  children: string;
-  isBasic?: boolean;
-  isActive?: boolean;
-};
+  className: string;
+}
 
 const Link: FunctionComponent<LinkProps> = ({
+  title,
   children,
   className,
   href,
@@ -38,7 +36,7 @@ const Link: FunctionComponent<LinkProps> = ({
       className={className}
       size={size}
     >
-      {formatTitle(children)}
+      {formatTitle(title || children)}
     </LinkWrapper>
   );
 };
