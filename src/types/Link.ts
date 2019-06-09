@@ -9,8 +9,7 @@ type LinkShared = {
   tabIndex?: number;
   isBasic?: boolean;
   isActive?: boolean;
-  title?: string
+  title?: string;
 };
-
 
 export default Link;

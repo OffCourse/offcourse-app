@@ -23,11 +23,7 @@ storiesOf("Atoms|Bar", module)
   ))
   .add("different variants", () => (
     <Fragment>
-      {map(
-        variant => (
-          <Bar key={variant} variant={variant} />
-        ),
-        [Variant.NEGATIVE, Variant.DEFAULT]
-      )}
+      <Bar variant={Variant.NEGATIVE} />
+      <Bar variant={Variant.DEFAULT} />
     </Fragment>
   ));

@@ -1,15 +1,14 @@
-import { width, height, zIndex } from "styled-system";
 import styled from "styled-components";
 import { Variant, Direction } from "enums";
 import { Theme } from "types";
 
 type BarProps = {
   theme: Theme;
-  width: string;
-  zIndex: number;
-  height: string;
-  direction: Direction;
-  variant: Variant.NEGATIVE | Variant.DEFAULT;
+  width?: string;
+  zIndex?: number;
+  height?: string;
+  direction?: Direction.HORIZONTAL | Direction.VERTICAL;
+  variant?: Variant.NEGATIVE | Variant.DEFAULT;
 };
 
 const Bar = styled.div<BarProps>`
@@ -30,7 +29,7 @@ const Bar = styled.div<BarProps>`
   height: ${({ direction }) =>
     direction === Direction.VERTICAL ? "100%" : "2.25rem"};
   width: ${({ direction }) =>
-    direction === Direction.HORIZONTAL ? "30rem" : "100%"};
+    direction === Direction.VERTICAL ? "30rem" : "100%"};
   z-index: 0;
 `;
 

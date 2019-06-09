@@ -6,57 +6,43 @@ import { Theme, Button as ButtonType } from "types";
 
 type ButtonWrapperProps = ButtonType & {
   theme: Theme;
-  type: "submit" | "button";
-  isDisabled: boolean;
 };
 
-const ButtonWrapper = styled.button.attrs(
-  ({ theme, isDisabled }: ButtonWrapperProps) => {
-    const buttonStyle = v({
-      key: "signalColorCombos"
-    });
-    const buttonSize = style({
-      prop: "size",
-      cssProperty: "width",
-      key: "buttonSizes"
-    });
-    return {
-      disabled: isDisabled,
-      border: theme.borders[0],
-      borderBottom: theme.borders[2],
-      padding: `${theme.space[4]} ${theme.space[6]}`,
-      fontFamily: theme.fonts.bold,
-      fontSize: theme.fontSizes[1],
-      lineHeight: theme.lineHeights[1],
-      buttonStyle,
-      buttonSize
-    };
-  }
-)<ButtonWrapperProps>`
+const buttonStyle = v({
+  key: "signalColorCombos"
+});
+
+const buttonSize = style({
+  prop: "size",
+  cssProperty: "width",
+  key: "buttonSizes"
+});
+
+const ButtonWrapper = styled.button<ButtonWrapperProps>`
   display: flex;
   align-items: center;
-  height: 2.813rem;
-  border: ${({ border }) => border};
-  border-bottom: ${({ borderBottom }) => borderBottom};
-  padding: ${({ padding }) => padding};
-  font-family: ${({ fontFamily }) => fontFamily};
-  font-size: ${({ fontSize }) => fontSize};
   justify-content: center;
-  line-height: ${({ lineHeight }) => lineHeight};
+  height: 2.813rem;
   box-sizing: border-box;
   user-select: none;
+  text-decoration: inherit;
+  border: ${({ theme }) => theme.borders[0]};
+  border-bottom: ${({ theme }) => theme.borders[2]};
+  padding: ${({ theme }) => `${theme.space[4]} ${theme.space[6]}`};
+  font-family: ${({ theme }) => theme.fonts.bold};
+  font-size: ${({ theme }) => theme.fontSizes[1]};
+  line-height: ${({ theme }) => theme.lineHeights[1]};
 
   :focus {
     outline: none;
   }
+
   :disabled {
     cursor: default;
   }
 
-  text-decoration: inherit;
-
-  ${({ buttonStyle }) => buttonStyle}
-  ${({ buttonSize }) => buttonSize}
+  ${buttonStyle}
+  ${buttonSize}
 `;
 
 export default ButtonWrapper;
