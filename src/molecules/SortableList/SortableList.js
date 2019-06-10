@@ -1,38 +1,48 @@
-import React, { Children, Component } from "react";
-import PropTypes from "prop-types";
-import { SortableContainer, SortableElement } from "react-sortable-hoc";
-import { move } from "../helpers";
-import { List as SimpleList } from "..";
+import React, { Children, useState } from "react";
+import List from "../List";
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { identity, sortBy } from "ramda";
+import styled from "styled-components";
+import useSortChildren from "./useSortChildren";
 
-const SortableItem = SortableElement(({ children }) => children);
-const List = SortableContainer(SimpleList);
+const DragItem = styled.div`
+  margin-bottom: ${({ theme }) => theme.space[4]};
 
-class SortableList extends Component {
-  static propTypes = {};
-  static Item = SimpleList.Item;
-  static move = move;
-
-  renderItems() {
-    const { children } = this.props;
-    return Children.map(children, (child, index) => {
-      return <SortableItem index={index}>{child}</SortableItem>;
-    });
+  &:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
   }
+`;
 
-  render() {
-    const { children, direction, onSort } = this.props;
+const SortableList = ({ children }) => {
+  const [sortedChildren, sortChildren] = useSortChildren(children);
+
+  const items = Children.map(sortedChildren, (child, index) => {
     return (
-      <List
-        pressDelay={200}
-        direction={direction}
-        axis={direction === "horizontal" ? "x" : "y"}
-        lockAxis={direction === "horizontal" ? "x" : "y"}
-        onSortEnd={onSort}
-      >
-        {this.renderItems()}
-      </List>
+      <Draggable draggableId={child.key} index={index}>
+        {({ innerRef, draggableProps, dragHandleProps }) => (
+          <DragItem ref={innerRef} {...draggableProps} {...dragHandleProps}>
+            {child}
+          </DragItem>
+        )}
+      </Draggable>
     );
-  }
-}
+  });
+
+  return (
+    <DragDropContext onDragEnd={sortChildren}>
+      <Droppable droppableId="droppable">
+        {({ innerRef, droppableProps, placeholder }, snapshot) => {
+          return (
+            <List ref={innerRef} {...droppableProps}>
+              {items}
+              {placeholder}
+            </List>
+          );
+        }}
+      </Droppable>
+    </DragDropContext>
+  );
+};
 
 export default SortableList;

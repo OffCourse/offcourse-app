@@ -40,6 +40,7 @@
     "react": "^16.8.2",
     "react-adopt": "^0.6.0",
     "react-apollo": "^2.2.4",
+    "react-beautiful-dnd": "^11.0.3",
     "react-dom": "^16.8.2",
     "react-hot-loader": "^4.3.4",
     "react-intersection-observer": "^8.23.0",

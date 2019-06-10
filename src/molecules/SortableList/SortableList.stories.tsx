@@ -5,23 +5,23 @@ import { action } from "@storybook/addon-actions";
 import { withKnobs, text, select } from "@storybook/addon-knobs";
 import { map, values, identity } from "ramda";
 
-import InputList from "./InputList";
+import SortableList from "./SortableList";
 import { ListItem } from "atoms";
 import { Direction, Variant, Size, ErrorState } from "enums";
 
-storiesOf("Molecules|InputList", module)
+storiesOf("Molecules|SortableList", module)
   .addDecorator(withKnobs)
   .add("just a wrapper", () => {
     return (
-      <InputList>
-        <ListItem name="a">Hello text</ListItem>
-        <ListItem name="b">Hello text</ListItem>
-        <ListItem name="c" href="./jsdfdjklfs">
+      <SortableList>
+        <ListItem key="a">Hello text</ListItem>
+        <ListItem key="b">Hello text</ListItem>
+        <ListItem key="c" href="./jsdfdjklfs">
           Hello link
         </ListItem>
-        <ListItem name="d" onClick={identity}>
+        <ListItem key="d" onClick={identity}>
           Hello button
         </ListItem>
-      </InputList>
+      </SortableList>
     );
   });
