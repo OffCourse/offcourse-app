@@ -1,27 +1,9 @@
 import React, { FunctionComponent, ChangeEvent, FormEvent } from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import { formatTitle, lowerCase } from "../helpers";
 import { Size, Variant } from "enums";
+import { Input as InputType } from "types";
 import InputWrapper from "./InputWrapper";
-
-type InputProps = {
-  autoComplete?: boolean;
-  autoFocus?: boolean;
-  name: string;
-  value?: string;
-  onChange?: (
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => void;
-  onBlur?: (event: FormEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-  placeholder?: string;
-  hasErrors?: boolean;
-  size?: Size.SMALL | Size.NORMAL;
-  isTextArea?: boolean;
-  unformatted?: boolean;
-  inputType?: string;
-  variant: Variant.DEFAULT | Variant.DISABLED;
-};
 
 const Input: FunctionComponent<InputProps> = ({
   autoComplete = false,
@@ -70,7 +52,7 @@ const Input: FunctionComponent<InputProps> = ({
           name={name}
           disabled={isDisabled}
           value={value}
-          placeholder={placeholder}
+          placeholder={formatTitle(placeholder)}
           onChange={onChange}
           onBlur={onBlur}
         />

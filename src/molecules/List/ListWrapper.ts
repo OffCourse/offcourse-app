@@ -1,46 +1,20 @@
-import system from "system-components";
 import styled from "styled-components";
+import { ListItem } from "atoms";
 
-const itemSpacing = (spacing, theme) => {
-  const spaceTable = {
-    wide: theme.space[6],
-    normal: theme.space[4],
-    tight: theme.space[3],
-    none: theme.space[0]
-  };
-  return spaceTable[spacing];
-};
+export default styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  margin: 0;
+  padding: 0;
 
-const ListWrapper = system(
-  {
-    is: "ul",
-    display: "flex",
-    flexDirection: "row",
-    flex: 1,
-    alignContent: "stretch",
-    m: 0,
-    p: 0
-  },
-  props => ({
-    marginBottom:
-      props.direction === "vertical" || props.direction === "both"
-        ? `-${itemSpacing(props.spacing, props.theme)}`
-        : 0,
-    marginRight:
-      props.direction === "horizontal" || props.direction === "both"
-        ? `-${itemSpacing(props.spacing, props.theme)}`
-        : 0
-  })
-);
+  ${ListItem} {
+    margin-bottom: ${({ theme }) => theme.space[4]};
 
-export default styled(ListWrapper)`
-  li {
-    margin-right: ${({ theme, direction, spacing }) =>
-      direction === "horizontal" || direction === "both"
-        ? itemSpacing(spacing, theme)
-        : 0};
-    margin-bottom: ${({ theme, direction, spacing }) =>
-      direction === "vertical" || direction === "both"
-        ? itemSpacing(spacing, theme)
-        : 0}
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+      }
+    }
+  }
 `;

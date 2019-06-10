@@ -23,7 +23,19 @@ const MessageGroup: FunctionComponent<MessageGroupProps> = ({
   isBasic = false,
   children
 }) => {
-  if (isEmpty(messages)) {
+  if (!isEmpty(messages)) {
+    return (
+      <MessageGroupWrapper className={className}>
+        {messages.map(({ message, variant = Variant.DEFAULT }, index) => (
+          <Message isBasic={isBasic} variant={variant} key={index}>
+            {message}
+          </Message>
+        ))}
+      </MessageGroupWrapper>
+    );
+  }
+
+  if (!isEmpty(children)) {
     return (
       <MessageGroupWrapper className={className}>
         {Children.map(
@@ -33,15 +45,8 @@ const MessageGroup: FunctionComponent<MessageGroupProps> = ({
       </MessageGroupWrapper>
     );
   }
-  return (
-    <MessageGroupWrapper className={className}>
-      {messages.map(({ message, variant = Variant.DEFAULT }, index) => (
-        <Message isBasic={isBasic} variant={variant} key={index}>
-          {message}
-        </Message>
-      ))}
-    </MessageGroupWrapper>
-  );
+
+  return null;
 };
 
 export default styled(MessageGroup)``;

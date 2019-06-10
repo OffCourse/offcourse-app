@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import styled from "styled-components";
 import { formatTitle } from "../helpers";
 import { ListItem as ListItemType } from "types";
 import { Link } from "atoms";
@@ -33,4 +34,4 @@ const ListItem: FunctionComponent<ListItemProps> = ({
   return <ListItemWrapper className={className}>{children}</ListItemWrapper>;
 };
 
-export default ListItem;
+export default styled(ListItem)``;

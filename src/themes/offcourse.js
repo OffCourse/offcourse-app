@@ -286,12 +286,12 @@ const widths = {
 
 const theme = {
   name: "offcourse",
+  avatars,
   buttonSizes,
   breakpoints,
   fontSizes,
   lineHeights,
   logo,
-  avatars,
   space,
   colors,
   borders,

@@ -8,7 +8,7 @@ type AvatarProps = {
   theme: Theme;
   onClick?: (event: MouseEvent<HTMLDivElement>) => void;
   size?: Size;
-  error?: ErrorState | Variant.DEFAULT;
+  avatarType?: ErrorState | Variant.DEFAULT;
 };
 
 const multiplier = {
@@ -21,11 +21,11 @@ const multiplier = {
 const Avatar = styled.div.attrs(
   ({
     theme,
-    error = Variant.DEFAULT,
+    avatarType = Variant.DEFAULT,
     onClick = identity,
     size = Size.SMALL
   }: AvatarProps) => {
-    const avatar = theme.avatars[error];
+    const avatar = theme.avatars[avatarType];
     const multiply = multiplier[size];
     return {
       ...avatar,

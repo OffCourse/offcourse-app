@@ -15,7 +15,7 @@ storiesOf("Atoms|Avatar", module)
       <Fragment>
         {map(
           error => (
-            <Avatar key={error} error={error} />
+            <Avatar key={error} avatarType={error} />
           ),
           values(ErrorState)
         )}

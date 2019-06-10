@@ -1,50 +1,37 @@
 import styled from "styled-components";
 import { Theme } from "types";
 import { Link } from "atoms";
+import { Variant } from "enums";
 
 type ListItemWrapperProps = {
   theme: Theme;
   isLink?: boolean;
 };
 
-const ListItemWrapper = styled.li.attrs(
-  ({ theme, isLink = false }: ListItemWrapperProps) => {
-    const { black, white, primary } = theme.colors;
-    return {
-      backgroundColor: theme.grayScale[1],
-      textColor: black,
-      fontFamily: theme.fonts.bold,
-      hoverBackgroundColor: primary,
-      hoverTextColor: white,
-      lineHeight: theme.lineHeights[2],
-      fontSize: theme.fontSizes[1],
-      padding: `${theme.space[4]} ${theme.space[4]}`
-    };
-  }
-)<ListItemWrapperProps>`
+const ListItemWrapper = styled.li<ListItemWrapperProps>`
   display: grid;
-  padding: ${({ padding }) => padding};
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  background-color: ${({ backgroundColor }) => backgroundColor};
-  color: ${({ textColor }) => textColor};
-  font-family: ${({ fontFamily }) => fontFamily};
-  font-size: ${({ fontSize }) => fontSize};
-  line-height: ${({ lineHeight }) => lineHeight};
+  padding: ${({ theme }) => `${theme.space[4]} ${theme.space[4]}`};
+  background-color: ${({ theme }) => theme.grayScale[1]};
+  color: ${({ theme }) => theme.grayScale[4]};
+  font-family: ${({ theme }) => theme.fonts.bold};
+  font-size: ${({ theme }) => theme.fontSizes[1]};
+  line-height: ${({ theme }) => theme.lineHeights[1]};
+
   user-select: none;
+
   :hover {
-    background: ${({ hoverBackgroundColor }) => hoverBackgroundColor};
-  }
-  :hover {
-    color: ${({ hoverTextColor }) => hoverTextColor};
+    background: ${({ theme }) => theme.colors[Variant.POSITIVE]};
+    color: ${({ theme }) => theme.grayScale[0]};
     > ${Link} {
-      color: ${({ hoverTextColor }) => hoverTextColor};
+      color: ${({ theme }) => theme.grayScale[0]};
     }
   }
 
   > ${Link} {
-    font-family: ${({ fontFamily }) => fontFamily};
+    font-family: ${({ theme }) => theme.fonts.bold};
   }
 `;
 

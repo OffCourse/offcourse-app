@@ -51,6 +51,9 @@ const InputWrapper = styled.div<{
 
     :disabled {
       color: ${({ theme }) => theme.colors[Variant.DISABLED]};
+      ::placeholder {
+        color: ${({ theme }) => theme.grayScale[2]};
+      }
     }
 
     :selection {
