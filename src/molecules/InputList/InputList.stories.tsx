@@ -12,16 +12,14 @@ import { Direction, Variant, Size, ErrorState } from "enums";
 storiesOf("Molecules|InputList", module)
   .addDecorator(withKnobs)
   .add("just a wrapper", () => {
-    return (
-      <InputList>
-        <ListItem name="a">Hello text</ListItem>
-        <ListItem name="b">Hello text</ListItem>
-        <ListItem name="c" href="./jsdfdjklfs">
-          Hello link
-        </ListItem>
-        <ListItem name="d" onClick={identity}>
-          Hello button
-        </ListItem>
-      </InputList>
-    );
+    const FieldComponent = ListItem;
+    const Component = () => {
+      const items = [
+        { id: "abc", title: "hello" },
+        { id: "bcd", title: "word" }
+      ];
+      // const [order, reorder] = useReorder(["a", "b", "c", "d"]);
+      return <InputList onReorder={console.log} items={items} />;
+    };
+    return <Component />;
   });

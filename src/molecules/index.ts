@@ -18,7 +18,7 @@ export { default as FancyCard } from "./FancyCard";
 // export { default as SearchBar } from "./SearchBar";
 // export { default as Share } from "./Share";
 // export { default as Sidebar } from "./Sidebar";
-// export { default as SortableList } from "./SortableList";
+export { default as SortableList } from "./SortableList";
 // export { default as Stat } from "./Stat";
 // export { default as StatGroup } from "./StatGroup";
 // export { default as TagGroup } from "./TagGroup";

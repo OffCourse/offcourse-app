@@ -5,12 +5,12 @@ import { action } from "@storybook/addon-actions";
 import { withKnobs, text, select } from "@storybook/addon-knobs";
 import { map, values, identity } from "ramda";
 
-import SortableList from "./SortableList";
 import { ListItem } from "atoms";
-import { useReorder } from "hooks";
+import { SortableList } from "molecules";
 import { Direction, Variant, Size, ErrorState } from "enums";
+import useReorder from "./useReorder";
 
-storiesOf("Molecules|SortableList", module)
+storiesOf("Hooks|UseReorder", module)
   .addDecorator(withKnobs)
   .add("just a wrapper", () => {
     const Component = () => {

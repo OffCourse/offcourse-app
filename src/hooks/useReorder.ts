@@ -1,21 +1,17 @@
-import { Children, useState } from "react";
+import { useState } from "react";
+import { DropResult } from "react-beautiful-dnd";
 
-const reorder = (list, startIndex, endIndex) => {
+const reorder = (list: string[], startIndex: number, endIndex: number) => {
   const result = Array.from(list);
   const [removed] = result.splice(startIndex, 1);
   result.splice(endIndex, 0, removed);
-
   return result;
 };
 
-const useSortChildren = children => {
-  const initialOrder = Children.map(children, ({ key }) => {
-    return key;
-  });
-
+const useReorder = (initialOrder: string[]) => {
   const [order, setOrder] = useState(initialOrder);
 
-  function sort({ destination, source }) {
+  function sort({ destination, source }: DropResult) {
     if (!destination) {
       return;
     }
@@ -28,11 +24,7 @@ const useSortChildren = children => {
     setOrder(newOrder);
   }
 
-  const sortedChildren = order.map(id =>
-    children.find(({ key }) => id === key)
-  );
-
-  return [sortedChildren, sort];
+  return [order, sort] as [string[], (result: DropResult) => void];
 };
 
-export default useSortChildren;
+export default useReorder;

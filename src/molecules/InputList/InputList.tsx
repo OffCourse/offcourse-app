@@ -1,14 +1,37 @@
-import React, { Children, cloneElement, Fragment } from "react";
+import React, { FunctionComponent, useEffect } from "react";
 import PropTypes from "prop-types";
-import { mapIndexed, move } from "../helpers";
 import { identity } from "ramda";
 import { ListItem, Input } from "atoms";
 import SortableList from "../SortableList";
 import Handles from "./Handles";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { useReorder } from "hooks";
 
-const InputList = ({ children }) => {
-  return <SortableList>{children}</SortableList>;
+type InputListProps = {
+  items: any[];
+  FieldComponent: any;
+  onReorder: any;
+};
+
+const InputList: FunctionComponent<InputListProps> = ({
+  items,
+  FieldComponent = Input,
+  onReorder
+}) => {
+  const [order, reorder] = useReorder(items.map(({ id }) => id));
+
+  useEffect(
+    () => onReorder(order.map(id => items.find(item => id === item.id))),
+    [order]
+  );
+
+  return (
+    <SortableList order={order} reorder={reorder}>
+      {items.map(({ id, title }) => (
+        <FieldComponent onChange={identity} key={id} placeholder={title} />
+      ))}
+    </SortableList>
+  );
 };
 // const SortableList = identity;
 // const LinkGroup = identity;
