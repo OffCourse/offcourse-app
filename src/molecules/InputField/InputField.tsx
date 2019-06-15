@@ -4,23 +4,12 @@ import { Label, Input, Message } from "atoms";
 import { Variant, Size } from "enums";
 import MessageGroup from "../MessageGroup";
 import InputFieldWrapper from "./InputFieldWrapper";
+import { Input as InputType } from "types";
 
-type InputFieldProps = {
-  autoComplete?: boolean;
-  autoFocus?: boolean;
-  name: string;
-  placeholder: string;
+type InputFieldProps = InputType & {
   title?: string;
-  variant?: Variant.DEFAULT | Variant.DISABLED;
-  value?: string;
   FieldComponent?: any;
   errors?: string[];
-  size?: Size.SMALL | Size.NORMAL;
-  isTextArea?: boolean;
-  onChange: (
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => void;
-  onBlur?: (event: FormEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 };
 
 const compact = filter(identity as any);
@@ -36,6 +25,7 @@ const InputField: FunctionComponent<InputFieldProps> = ({
   size = Size.NORMAL,
   autoFocus = false,
   autoComplete = false,
+  isNormalized = true,
   isTextArea = false,
   errors = [],
   onChange,
@@ -61,6 +51,7 @@ const InputField: FunctionComponent<InputFieldProps> = ({
       autoFocus={autoFocus}
       hasErrors={hasErrors}
       isTextArea={isTextArea}
+      isNormalized={isNormalized}
     >
       {children}
     </FieldComponent>
@@ -84,40 +75,5 @@ const InputField: FunctionComponent<InputFieldProps> = ({
     </InputFieldWrapper>
   );
 };
-
-//   renderChildren() {
-//     const {
-//       onChange,
-//       onBlur,
-//       unformatted,
-//     } = this.props;
-//
-//     return (
-//       children || (
-//         <FieldComponent
-//           onChange={onChange}
-//           onBlur={onBlur}
-//           unformatted={unformatted}
-//         />
-//       )
-//     );
-//   }
-
-//   render() {
-//     return (
-//       <InputFieldWrapper>
-//         {this.renderErrors()}
-//         {this.renderChildren()}
-//       </InputFieldWrapper>
-//     );
-//   }
-// }
-
-// InputField.propTypes = {
-//   unformatted: PropTypes.bool,
-//   onBlur: PropTypes.func,
-//   onChange: PropTypes.func,
-//   variant: PropTypes.oneOf(["default", "textarea", "small"]),
-// };
 
 export default InputField;

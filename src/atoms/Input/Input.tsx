@@ -5,6 +5,8 @@ import { Size, Variant } from "enums";
 import { Input as InputType } from "types";
 import InputWrapper from "./InputWrapper";
 
+type InputProps = InputType;
+
 const Input: FunctionComponent<InputProps> = ({
   autoComplete = false,
   autoFocus = false,
@@ -12,7 +14,7 @@ const Input: FunctionComponent<InputProps> = ({
   size = Size.NORMAL,
   variant = Variant.DEFAULT,
   hasErrors = false,
-  unformatted = false,
+  isNormalized = true,
   placeholder = "Enter Something",
   inputType = "text",
   name,
@@ -26,16 +28,20 @@ const Input: FunctionComponent<InputProps> = ({
     if (!value) {
       return value;
     }
-    return unformatted ? value : formatTitle(value);
+    return isNormalized ? formatTitle(value) : value;
   };
 
   const handleChange: (event: ChangeEvent<HTMLInputElement>) => void = e => {
     if (!onChange) {
       return;
     }
+    if (!isNormalized) {
+      return onChange(e);
+    }
+
     const value = lowerCase(e.target.value);
     e.target.value = value;
-    onChange(e);
+    return onChange(e);
   };
 
   return (
@@ -65,7 +71,7 @@ const Input: FunctionComponent<InputProps> = ({
           disabled={isDisabled}
           value={formatValue()}
           placeholder={formatTitle(placeholder)}
-          onChange={onChange && !unformatted ? handleChange : onChange}
+          onChange={handleChange}
           onBlur={onBlur}
         />
       )}

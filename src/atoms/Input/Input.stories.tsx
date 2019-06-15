@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
@@ -15,6 +15,39 @@ storiesOf("Atoms|Input", module)
   .add("text input", () => {
     const placeholder = "Enter your name";
     return <Input name="normal" placeholder={placeholder} />;
+  })
+  .add("wit normalization", () => {
+    const placeholder = "Enter your name";
+    const Component = () => {
+      const [value, setValue] = useState("");
+      return (
+        <Input
+          name="normal"
+          onChange={({ target }) => setValue(target.value)}
+          value={value}
+          placeholder={placeholder}
+        />
+      );
+    };
+
+    return <Component />;
+  })
+  .add("without normalization", () => {
+    const placeholder = "Enter your name";
+    const Component = () => {
+      const [value, setValue] = useState("");
+      return (
+        <Input
+          isNormalized={false}
+          name="normal"
+          onChange={({ target }) => setValue(target.value)}
+          value={value}
+          placeholder={placeholder}
+        />
+      );
+    };
+
+    return <Component />;
   })
   .add("password input", () => {
     const placeholder = "Enter your password";

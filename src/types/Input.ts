@@ -14,8 +14,8 @@ type Input = {
   hasErrors?: boolean;
   size?: Size.SMALL | Size.NORMAL;
   isTextArea?: boolean;
-  unformatted?: boolean;
-  inputType?: string;
+  isNormalized?: boolean;
+  inputType?: "text" | "password";
   variant?: Variant.DEFAULT | Variant.DISABLED;
 };
 
