@@ -4,4 +4,4 @@ export { default as useColumns } from "./useColumns";
 export { default as useMasonry } from "./useMasonry";
 export { default as useCount } from "./useCount";
 export { default as useMeasure } from "./useMeasure";
-export { default as useReorder } from "./useReorder";
+export { default as useArrangable } from "./useArrangable";

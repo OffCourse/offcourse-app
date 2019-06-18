@@ -8,23 +8,23 @@ import { map, values, identity } from "ramda";
 import { ListItem } from "atoms";
 import { SortableList } from "molecules";
 import { Direction, Variant, Size, ErrorState } from "enums";
-import useReorder from "./useReorder";
+import useArrangable from "./useArrangable";
 
-storiesOf("Hooks|UseReorder", module)
+storiesOf("Hooks|UseArrangable", module)
   .addDecorator(withKnobs)
   .add("just a wrapper", () => {
     const Component = () => {
-      const [order, reorder] = useReorder(["a", "b", "c", "d"]);
+      const items = [
+        { id: "a", title: "hello world" },
+        { id: "b", title: "sello world" },
+        { id: "c", title: "ello world" }
+      ];
+      const [arrangedItems, arrangeItems] = useArrangable(items);
       return (
-        <SortableList order={order} reorder={reorder}>
-          <ListItem key="a">Hello text</ListItem>
-          <ListItem key="b">Hello text</ListItem>
-          <ListItem key="c" href="./jsdfdjklfs">
-            Hello link
-          </ListItem>
-          <ListItem key="d" onClick={identity}>
-            Hello button
-          </ListItem>
+        <SortableList reorder={arrangeItems}>
+          {arrangedItems.map(({ id, title }) => (
+            <ListItem key={id}>{title}</ListItem>
+          ))}
         </SortableList>
       );
     };

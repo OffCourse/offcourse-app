@@ -11,20 +11,14 @@ import Dragger from "./Dragger";
 
 type SortableListProps = {
   children: any[];
-  order: string[];
   reorder: (result: DropResult) => void;
 };
 
 const SortableList: FunctionComponent<SortableListProps> = ({
   children,
-  order,
   reorder = identity
 }) => {
-  const sortedChildren = order
-    ? order.map(id => children.find(({ key }) => id === key))
-    : children;
-
-  const dragItems = Children.map(sortedChildren, (child, index) => (
+  const dragItems = Children.map(children, (child, index) => (
     <Dragger index={index}>{child}</Dragger>
   ));
 

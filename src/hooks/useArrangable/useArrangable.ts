@@ -8,8 +8,8 @@ const reorder = (list: string[], startIndex: number, endIndex: number) => {
   return result;
 };
 
-const useReorder = (initialOrder: string[]) => {
-  const [order, setOrder] = useState(initialOrder);
+const useArrangable = (initialItems: any[]) => {
+  const [items, setItems] = useState(initialItems);
 
   function sort({ destination, source }: DropResult) {
     if (!destination) {
@@ -20,11 +20,11 @@ const useReorder = (initialOrder: string[]) => {
       return;
     }
 
-    const newOrder = reorder(order, source.index, destination.index);
-    setOrder(newOrder);
+    const newOrder = reorder(items, source.index, destination.index);
+    setItems(newOrder);
   }
 
-  return [order, sort] as [string[], (result: DropResult) => void];
+  return [items, sort] as [any[], (result: DropResult) => void];
 };
 
-export default useReorder;
+export default useArrangable;
