@@ -1,8 +1,6 @@
-import React, { FunctionComponent, Children, useState } from "react";
+import React, { FunctionComponent } from "react";
 import { Draggable } from "react-beautiful-dnd";
-import { identity } from "ramda";
-import SortableListWrapper from "./SortableListWrapper";
-import DragItem from "./DragItem";
+import { DragItem } from "atoms";
 
 type DraggerProps = {
   index: number;

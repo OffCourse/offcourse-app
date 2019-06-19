@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { ListItem } from "atoms";
+import { DragItem, ListItem } from "atoms";
 import List from "../List";
-import DragItem from "./DragItem";
 
 const SortableListWrapper = styled(List)`
   ${ListItem} :last-child {

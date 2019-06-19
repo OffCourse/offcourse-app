@@ -4,6 +4,7 @@ export { default as Bar } from "./Bar";
 export { default as Button } from "./Button";
 export { default as Card } from "./Card";
 export { default as Checkbox } from "./Checkbox";
+export { default as DragItem } from "./DragItem";
 export { default as Heading } from "./Heading";
 export { default as Icon } from "./Icon";
 export { default as Input } from "./Input";

@@ -44,6 +44,7 @@ const IconGroup: FunctionComponent<IconGroupProps> = ({
     ({ name, tabIndex, onClick, variant }, index) => (
       <Icon
         tabIndex={tabIndex}
+        key={index}
         size={size}
         name={name}
         onClick={onClick}

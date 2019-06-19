@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { DropResult } from "react-beautiful-dnd";
 
 const reorder = (list: string[], startIndex: number, endIndex: number) => {
@@ -10,8 +10,22 @@ const reorder = (list: string[], startIndex: number, endIndex: number) => {
 
 const useArrangable = (initialItems: any[]) => {
   const [items, setItems] = useState(initialItems);
+  const itemsRef = useRef(items);
 
-  function sort({ destination, source }: DropResult) {
+  useEffect(() => {
+    itemsRef.current = items;
+  });
+
+  const remove = (index: number) => {
+    itemsRef.current.splice(index, 1);
+    setItems([...itemsRef.current]);
+  };
+
+  const add = () => {
+    setItems([...itemsRef.current, ""]);
+  };
+
+  const move = ({ destination, source }: DropResult) => {
     if (!destination) {
       return;
     }
@@ -22,9 +36,16 @@ const useArrangable = (initialItems: any[]) => {
 
     const newOrder = reorder(items, source.index, destination.index);
     setItems(newOrder);
-  }
+  };
 
-  return [items, sort] as [any[], (result: DropResult) => void];
+  return [items, { move, remove, add }] as [
+    any[],
+    {
+      move: (result: DropResult) => void;
+      remove: (index: number) => void;
+      add: () => void;
+    }
+  ];
 };
 
 export default useArrangable;

@@ -1,13 +1,10 @@
-import React, { memo } from "react";
-import PropTypes from "prop-types";
+import React, { FunctionComponent } from "react";
+import styled from "styled-components";
 import { identity } from "ramda";
-import { IconGroup } from "..";
-import { sizes, directions } from "@offcourse/constants";
+import IconGroup from "../IconGroup";
+import { Size, Direction } from "enums";
 
-const { NORMAL } = sizes;
-const { VERTICAL } = directions;
-
-const Handles = ({ remove, index }) => {
+const Handles = ({ remove, index, className }) => {
   const icons = [
     {
       is: "button",
@@ -19,17 +16,12 @@ const Handles = ({ remove, index }) => {
   ];
   return (
     <IconGroup
+      className={className}
       icons={icons}
-      color="grayScale.2"
-      direction={VERTICAL}
-      size={NORMAL}
+      direction={Direction.VERTICAL}
+      size={Size.NORMAL}
     />
   );
 };
 
-Handles.propTypes = {
-  remove: PropTypes.func,
-  index: PropTypes.number.isRequired
-};
-
-export default memo(Handles);
+export default styled(Handles)``;

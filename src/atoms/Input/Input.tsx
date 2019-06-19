@@ -5,9 +5,10 @@ import { Size, Variant } from "enums";
 import { Input as InputType } from "types";
 import InputWrapper from "./InputWrapper";
 
-type InputProps = InputType;
+type InputProps = InputType & { className: string };
 
 const Input: FunctionComponent<InputProps> = ({
+  className,
   autoComplete = false,
   autoFocus = false,
   isTextArea = false,
@@ -46,6 +47,7 @@ const Input: FunctionComponent<InputProps> = ({
 
   return (
     <InputWrapper
+      className={className}
       size={isTextArea ? Size.SMALL : size}
       isDisabled={isDisabled}
       hasErrors={hasErrors}

@@ -19,7 +19,7 @@ storiesOf("Hooks|UseArrangable", module)
         { id: "b", title: "sello world" },
         { id: "c", title: "ello world" }
       ];
-      const [arrangedItems, arrangeItems] = useArrangable(items);
+      const [arrangedItems, { move }] = useArrangable(items);
       return (
         <SortableList reorder={arrangeItems}>
           {arrangedItems.map(({ id, title }) => (
