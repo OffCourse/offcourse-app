@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 import { identity } from "ramda";
 import { Size, Direction } from "enums";
+import IconGroup from "../IconGroup";
 import SortHandlesWrapper from "./SortHandlesWrapper";
 
 type SortHandlesProps = {
@@ -11,7 +12,8 @@ type SortHandlesProps = {
 
 const SortHandles: FunctionComponent<SortHandlesProps> = ({
   remove,
-  className
+  className,
+  ...rest
 }) => {
   const icons = [
     {
@@ -23,12 +25,14 @@ const SortHandles: FunctionComponent<SortHandlesProps> = ({
     { is: "button", name: "sort", tabIndex: -1, onClick: identity }
   ];
   return (
-    <SortHandlesWrapper
-      className={className}
-      icons={icons}
-      size={Size.LARGE}
-      direction={Direction.VERTICAL}
-    />
+    <SortHandlesWrapper {...rest}>
+      <IconGroup
+        className={className}
+        icons={icons}
+        size={Size.LARGE}
+        direction={Direction.VERTICAL}
+      />
+    </SortHandlesWrapper>
   );
 };
 

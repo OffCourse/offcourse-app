@@ -53,7 +53,11 @@ storiesOf("Molecules|SortableList", module)
         { author: "scd", title: "word" },
         { publisher: "xxxz", author: "abc", title: "hello" }
       ];
-      const [arrangedItems, operations] = useArrangable(items);
+      const [arrangedItems, operations] = useArrangable(items, {
+        author: "",
+        title: "",
+        publisher: ""
+      });
       return (
         <SortableList hasControls operations={operations}>
           {arrangedItems.map((item, index) => (

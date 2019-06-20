@@ -2,7 +2,7 @@ import styled from "styled-components";
 import IconGroup from "../IconGroup";
 import { Icon } from "atoms";
 
-const SortHandlesWrapper = styled(IconGroup)`
+const SortHandlesWrapper = styled.div`
   padding: 0 ${({ theme }) => theme.space[0]};
   justify-content: center;
 

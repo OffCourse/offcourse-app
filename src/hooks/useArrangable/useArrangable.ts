@@ -8,10 +8,9 @@ const reorder = (list: string[], startIndex: number, endIndex: number) => {
   return result;
 };
 
-const useArrangable = (initialItems: any[]) => {
+const useArrangable = (initialItems: any[], newItem: any) => {
   const [items, setItems] = useState(initialItems);
   const itemsRef = useRef(items);
-  console.log(items);
 
   useEffect(() => {
     itemsRef.current = items;
@@ -23,7 +22,7 @@ const useArrangable = (initialItems: any[]) => {
   };
 
   const add = () => {
-    setItems([...itemsRef.current, ""]);
+    setItems([...itemsRef.current, newItem || ""]);
   };
 
   const move = ({ destination, source }: DropResult) => {
