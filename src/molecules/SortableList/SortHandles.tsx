@@ -1,27 +1,35 @@
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 import { identity } from "ramda";
-import IconGroup from "../IconGroup";
 import { Size, Direction } from "enums";
+import SortHandlesWrapper from "./SortHandlesWrapper";
 
-const Handles = ({ remove, index, className }) => {
+type SortHandlesProps = {
+  remove: (index: number) => void;
+  className?: string;
+};
+
+const SortHandles: FunctionComponent<SortHandlesProps> = ({
+  remove,
+  className
+}) => {
   const icons = [
     {
       is: "button",
-      onClick: () => remove(index),
+      onClick: remove,
       name: "remove",
       tabIndex: -1
     },
     { is: "button", name: "sort", tabIndex: -1, onClick: identity }
   ];
   return (
-    <IconGroup
+    <SortHandlesWrapper
       className={className}
       icons={icons}
+      size={Size.LARGE}
       direction={Direction.VERTICAL}
-      size={Size.NORMAL}
     />
   );
 };
 
-export default styled(Handles)``;
+export default styled(SortHandles)``;

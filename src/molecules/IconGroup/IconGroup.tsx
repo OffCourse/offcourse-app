@@ -1,4 +1,5 @@
 import React, { FunctionComponent, Children, Component } from "react";
+import styled from "styled-components";
 import PropTypes from "prop-types";
 import { isEmpty } from "ramda";
 import IconGroupWrapper from "./IconGroupWrapper";
@@ -17,10 +18,12 @@ type IconGroupProps = {
   direction?: Direction.HORIZONTAL | Direction.VERTICAL;
   children?: any;
   size?: Size;
+  className?: string;
 };
 
 const IconGroup: FunctionComponent<IconGroupProps> = ({
   icons = [],
+  className,
   direction = Direction.HORIZONTAL,
   children,
   size = Size.NORMAL
@@ -54,8 +57,10 @@ const IconGroup: FunctionComponent<IconGroupProps> = ({
   );
 
   return (
-    <IconGroupWrapper direction={direction}>{renderedIcons}</IconGroupWrapper>
+    <IconGroupWrapper className={className} direction={direction}>
+      {renderedIcons}
+    </IconGroupWrapper>
   );
 };
 
-export default IconGroup;
+export default styled(IconGroup)``;

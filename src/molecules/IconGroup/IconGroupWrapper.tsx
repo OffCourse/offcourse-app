@@ -15,8 +15,8 @@ const IconGroupWrapper = styled.div<IconGroupProps>`
     direction === Direction.HORIZONTAL ? "row" : "column"};
   justify-content: ${({ direction }) =>
     direction === Direction.HORIZONTAL ? "flex-start" : "center"};
-
   align-items: center;
+
    ${Icon} {
     margin-right: ${({ theme, direction }) =>
       direction === Direction.HORIZONTAL ? theme.space[4] : 0};

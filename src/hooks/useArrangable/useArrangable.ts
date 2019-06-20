@@ -11,6 +11,7 @@ const reorder = (list: string[], startIndex: number, endIndex: number) => {
 const useArrangable = (initialItems: any[]) => {
   const [items, setItems] = useState(initialItems);
   const itemsRef = useRef(items);
+  console.log(items);
 
   useEffect(() => {
     itemsRef.current = items;

@@ -5,7 +5,7 @@ import { Size, Variant } from "enums";
 import { Input as InputType } from "types";
 import InputWrapper from "./InputWrapper";
 
-type InputProps = InputType & { className: string };
+type InputProps = InputType & { className?: string };
 
 const Input: FunctionComponent<InputProps> = ({
   className,

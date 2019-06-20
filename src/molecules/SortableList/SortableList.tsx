@@ -8,33 +8,53 @@ import {
 import { identity } from "ramda";
 import SortableListWrapper from "./SortableListWrapper";
 import Dragger from "./Dragger";
+import List from "../List";
+import LinkGroup from "../LinkGroup";
 
 type SortableListProps = {
   children: any[];
-  reorder: (result: DropResult) => void;
+  operations: { move: any; add: any; remove: any };
+  hasControls?: boolean;
 };
 
 const SortableList: FunctionComponent<SortableListProps> = ({
   children,
-  reorder = identity
+  operations,
+  hasControls = false
 }) => {
   const dragItems = Children.map(children, (child, index) => (
-    <Dragger index={index}>{child}</Dragger>
+    <Dragger
+      remove={operations && operations.remove}
+      hasControls={hasControls}
+      index={index}
+    >
+      {child}
+    </Dragger>
   ));
 
   return (
-    <DragDropContext onDragEnd={reorder}>
-      <Droppable droppableId="droppable">
-        {({ innerRef, droppableProps, placeholder }, snapshot) => {
-          return (
-            <SortableListWrapper ref={innerRef} {...droppableProps}>
+    <SortableListWrapper>
+      <DragDropContext onDragEnd={operations && operations.move}>
+        <Droppable droppableId="droppable">
+          {({ innerRef, droppableProps, placeholder }, snapshot) => (
+            <List ref={innerRef} {...droppableProps}>
               {dragItems}
               {placeholder}
-            </SortableListWrapper>
-          );
-        }}
-      </Droppable>
-    </DragDropContext>
+            </List>
+          )}
+        </Droppable>
+      </DragDropContext>
+      {hasControls && (
+        <LinkGroup
+          links={[
+            {
+              onClick: operations && operations.add,
+              title: "Add"
+            }
+          ]}
+        />
+      )}
+    </SortableListWrapper>
   );
 };
 

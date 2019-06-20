@@ -5,7 +5,6 @@ export { default as FancyCard } from "./FancyCard";
 export { default as IconGroup } from "./IconGroup";
 // export { default as InfiniteScroll } from "./InfiniteScroll";
 export { default as InputField } from "./InputField";
-export { default as InputList } from "./InputList";
 export { default as LinkGroup } from "./LinkGroup";
 export { default as List } from "./List";
 // export { default as Loading } from "./Loading";
