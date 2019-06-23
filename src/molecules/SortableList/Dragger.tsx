@@ -18,14 +18,22 @@ const Dragger: FunctionComponent<DraggerProps> = ({
 }) => {
   return (
     <Draggable draggableId={children.key} index={index}>
-      {({ innerRef, draggableProps, dragHandleProps }) => (
-        <DragItemWrapper ref={innerRef} {...draggableProps}>
-          {children}
-          {hasControls && (
+      {({ innerRef, draggableProps, dragHandleProps }) => {
+        return hasControls ? (
+          <DragItemWrapper ref={innerRef} {...draggableProps}>
+            {children}
             <SortHandles {...dragHandleProps} remove={() => remove(index)} />
-          )}
-        </DragItemWrapper>
-      )}
+          </DragItemWrapper>
+        ) : (
+          <DragItemWrapper
+            ref={innerRef}
+            {...dragHandleProps}
+            {...draggableProps}
+          >
+            {children}
+          </DragItemWrapper>
+        );
+      }}
     </Draggable>
   );
 };

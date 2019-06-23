@@ -7,8 +7,8 @@ import { Variant } from "enums";
 type LabelProps = {
   children: string;
   className?: string;
-  variant: Variant.DEFAULT | Variant.DISABLED;
-  htmlFor: string;
+  variant?: Variant.DEFAULT | Variant.DISABLED;
+  htmlFor?: string;
 };
 
 const Label: FunctionComponent<LabelProps> = ({

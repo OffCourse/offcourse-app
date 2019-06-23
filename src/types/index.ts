@@ -6,3 +6,4 @@ export { default as Link } from "./Link";
 export { default as Input } from "./Input";
 export { default as ListItem } from "./ListItem";
 export { default as Section } from "./Section";
+export { default as Tag } from "./Tag";

@@ -4,16 +4,18 @@ import { formatTitle } from "../helpers";
 import { Text } from "..";
 import { Size } from "enums";
 import TagWrapper from "./TagWrapper";
+import { Tag as TagType } from "types";
 
 import styled from "styled-components";
 
-type TagProps = {
-  children: string;
-  href: string;
-  onClick?: (opts: { tag: string }) => void;
-};
+type TagProps = TagType;
 
-const Tag: FunctionComponent<TagProps> = ({ onClick, children, href }) => {
+const Tag: FunctionComponent<TagProps> = ({
+  onClick,
+  className,
+  children,
+  href
+}) => {
   const handleClick = useCallback(event => {
     if (onClick) {
       event.preventDefault();
@@ -22,10 +24,10 @@ const Tag: FunctionComponent<TagProps> = ({ onClick, children, href }) => {
   }, []);
   const title = formatTitle(children);
   return (
-    <TagWrapper onClick={handleClick} href={href}>
+    <TagWrapper className={className} onClick={handleClick} href={href}>
       <Text size={Size.SMALL}>{title}</Text>
     </TagWrapper>
   );
 };
 
-export default Tag;
+export default styled(Tag)``;

@@ -8,7 +8,7 @@ import { Link as LinkType } from "types";
 
 type LinkGroupProps = {
   className?: string;
-  links: LinkType[];
+  links?: LinkType[];
   direction?: Direction.HORIZONTAL | Direction.VERTICAL;
 };
 
