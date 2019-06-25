@@ -6,21 +6,24 @@ import { map, contains, flatten, isEmpty, isNil } from "ramda";
 import { Section } from "types";
 import { Card } from "atoms";
 import { useMeasure } from "hooks";
-import FancyCardWrapper from "./FancyCardWrapper";
 import FancySection from "./FancySection";
+import styled from "styled-components";
+import FancyCardWrapper from "./FancyCardWrapper";
 
-type CardProps = {
+type FancyCardProps = {
   affordance?: Affordance.EXPANDABLE | Affordance.SELECTABLE | Affordance.NONE;
   variant?: Variant;
   children: Section | Section[];
+  width: string[];
   level?: number;
   layout?: string[][];
 };
 
-const FancyCard: FunctionComponent<CardProps> = ({
+const FancyCard: FunctionComponent<FancyCardProps> = ({
   affordance = Affordance.EXPANDABLE,
   variant = Variant.DEFAULT,
   level,
+  width = ["100%", "18rem", "18rem"],
   layout = [],
   children
 }) => {
@@ -37,6 +40,7 @@ const FancyCard: FunctionComponent<CardProps> = ({
   }
 
   const [ref, { height }] = useMeasure();
+  const styles = useSpring({ height, config: config.gentle });
 
   const createSection = (item: Section) => {
     const { name } = item.props;
@@ -52,13 +56,13 @@ const FancyCard: FunctionComponent<CardProps> = ({
 
   return (
     <FancyCardWrapper
-      as={animated.div}
-      style={{
-        ...useSpring({ height, config: config.gentle })
-      }}
       affordance={Affordance.SELECTABLE}
+      width={width}
+      style={{
+        ...styles
+      }}
     >
-      <div ref={ref}>{map(createSection, sectionsArray as Section[])}</div>
+      <Card ref={ref}>{map(createSection, sectionsArray as Section[])}</Card>
     </FancyCardWrapper>
   );
 };
